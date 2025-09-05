@@ -83,7 +83,7 @@ const TestimonialsSection = () => {
                     <StarRating rating={testimonial.rating} />
                   </div>
                   <p className="text-gray-300 flex-grow mb-6">
-                    "{testimonial.text}"
+                    &ldquo;{testimonial.text}&rdquo;
                   </p>
                   <div className="mt-auto flex items-center justify-between pt-6 border-t border-gray-700/50">
                     <Image
@@ -117,7 +117,7 @@ const TestimonialsSection = () => {
                       <StarRating rating={testimonial.rating} />
                     </div>
                     <p className="text-gray-300 flex-grow mb-6">
-                      "{testimonial.text}"
+                      &ldquo;{testimonial.text}&rdquo;
                     </p>
                     <div className="mt-auto flex items-center justify-between pt-6 border-t border-gray-700/50">
                       <Image

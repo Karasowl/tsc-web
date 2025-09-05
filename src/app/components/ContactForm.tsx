@@ -36,7 +36,7 @@ const ContactForm = () => {
         const errorData = await response.json();
         throw new Error(errorData.error || "Algo salió mal.");
       }
-    } catch (error: any) {
+    } catch {
       setStatus('error');
       setErrorMessage(t('contactForm.error'));
     }
