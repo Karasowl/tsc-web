@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html class="no-js" lang="es">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>ANGLESIDE - TSC Private Security Consulting</title>
+<meta name="description" content="Propuesta Técnico-Económica para el servicio de Seguridad Privada para ANGLESIDE">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+<!-- CSS here -->
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+<link rel="stylesheet" href="fontawesome/css/all.min.css">
+<link rel="stylesheet" href="css/dripicons.css">
+<link rel="stylesheet" href="css/slick.css">
+<link rel="stylesheet" href="css/default.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/botones.css">
+<link rel="stylesheet" href="css/custom-hamburger-menu.css">
+<link rel="stylesheet" href="css/header-mobile-adjustments.css">
+<link rel="stylesheet" href="css/language-selector.css">
+
+<style>
+    :root {
+        --primary-red: #df2919;
+        --dark-bg: #1a1a1d;
+        --darker-bg: #222327;
+        --accent-gold: #ffd700;
+    }
+
+    .cotizacion-hero {
+        background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+        padding: 150px 0 80px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cotizacion-hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('img/bg/quote_bg.png') no-repeat center center;
+        opacity: 0.1;
+        z-index: 1;
+    }
+
+    .cotizacion-hero-content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .strategic-header {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    .strategic-header .subtitle {
+        color: var(--accent-gold);
+        font-size: 1.2rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+    }
+
+    .strategic-header h1 {
+        font-size: clamp(2.5rem, 6vw, 4rem);
+        color: #fff;
+        margin-bottom: 20px;
+        font-weight: 700;
+        background: linear-gradient(135deg, #fff 0%, var(--primary-red) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .strategic-header .tagline {
+        font-size: 1.3rem;
+        color: #ccc;
+        margin-bottom: 30px;
+        font-weight: 500;
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .client-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+        color: white;
+        padding: 15px 40px;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        font-weight: 700;
+        box-shadow: 0 10px 30px rgba(223, 41, 25, 0.3);
+    }
+
+    .tsc-strategic-logo {
+        max-width: 300px;
+        filter: brightness(0) invert(1);
+        transition: transform 0.3s ease;
+    }
+    
+    .download-section-hero {
+        background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+        padding: 60px 40px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+        margin-top: 40px;
+    }
+
+    .download-section-hero h3 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    .download-section-hero p {
+        font-size: 1.1rem;
+        opacity: 0.9;
+    }
+
+    .value-section {
+        padding: 100px 0;
+        background: var(--dark-bg);
+    }
+
+    .value-section.alt {
+        background: var(--darker-bg);
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 80px;
+    }
+
+    .section-header .section-tag {
+        display: inline-block;
+        background: var(--primary-red);
+        color: white;
+        padding: 8px 25px;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 20px;
+    }
+
+    .section-header h2 {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        color: #fff;
+        margin-bottom: 20px;
+        font-weight: 700;
+    }
+
+    .section-header p {
+        font-size: 1.2rem;
+        color: #ccc;
+        max-width: 800px;
+        margin: 0 auto;
+        line-height: 1.6;
+    }
+    
+    /* Estilos mejorados para las ubicaciones */
+    .location-highlight {
+        font-size: 1.4rem;
+        color: #fff;
+        background: linear-gradient(135deg, rgba(223, 41, 25, 0.2) 0%, rgba(255, 215, 0, 0.1) 100%);
+        border-left: 4px solid var(--primary-red);
+        padding: 15px 25px;
+        border-radius: 10px;
+        margin: 20px auto;
+        font-weight: 600;
+        display: inline-block;
+        box-shadow: 0 5px 15px rgba(223, 41, 25, 0.2);
+    }
+    
+    .location-highlight strong {
+        color: var(--accent-gold);
+        font-size: 1.5rem;
+    }
+
+    .value-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 40px;
+        margin-top: 60px;
+    }
+
+    .value-card {
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+        border: 1px solid rgba(223, 41, 25, 0.2);
+        border-radius: 20px;
+        padding: 40px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .value-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+    }
+
+    .value-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
+        border-color: var(--primary-red);
+    }
+
+    .value-card:hover::before {
+        transform: scaleX(1);
+    }
+
+    .value-card-icon {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 25px;
+        font-size: 2rem;
+        color: white;
+    }
+
+    .value-card h3 {
+        color: #fff;
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+        font-weight: 700;
+    }
+    
+          
+    .value-card p {
+        color: #ccc;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .value-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .value-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 12px;
+        color: #ccc;
+        font-size: 0.95rem;
+    }
+
+    .value-list li::before {
+        content: '\f058';
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        color: var(--accent-gold);
+        margin-right: 12px;
+        font-size: 1rem;
+        margin-top: 4px;
+    }
+
+    .pricing-section {
+        padding: 100px 0;
+        background: var(--dark-bg);
+    }
+
+    .pricing-section.alt {
+        background: var(--darker-bg);
+    }
+
+    .price-table {
+        background: var(--darker-bg);
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        margin: 60px 0;
+        border: 1px solid rgba(223, 41, 25, 0.2);
+    }
+
+    .price-table table {
+        width: 100%;
+        margin: 0;
+        border-collapse: collapse;
+    }
+
+    .price-table th {
+        background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+        color: #fff;
+        padding: 25px 20px;
+        text-align: left;
+        font-weight: 700;
+        border: none;
+        font-size: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .price-table td {
+        padding: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        color: #fff;
+        vertical-align: middle;
+    }
+
+    .price-table tr:last-child td {
+        border-bottom: none;
+    }
+
+    .price-table tr:hover {
+        background: rgba(223, 41, 25, 0.1);
+    }
+
+    .location-cell {
+        font-weight: 700;
+        color: var(--accent-gold);
+        font-size: 1.1rem;
+    }
+
+    .total-row {
+        background: rgba(223, 41, 25, 0.2);
+        font-weight: 700;
+        font-size: 1.3em;
+    }
+
+    .total-row td {
+        padding: 30px 20px;
+        text-align: right;
+        color: var(--accent-gold);
+        font-size: 1.5rem;
+    }
+
+    .total-row td:first-child {
+        text-align: left;
+    }
+    
+    .iva-note-row td {
+        text-align: center !important;
+        font-style: italic;
+        color: #ccc;
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+    
+    .download-section {
+        background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+        padding: 80px 0;
+        text-align: center;
+    }
+
+    .download-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .download-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 15px;
+        background: #fff;
+        color: var(--primary-red);
+        padding: 20px 40px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        min-width: 280px;
+    }
+
+    .download-btn.secondary {
+        background: transparent;
+        color: #fff;
+        border: 2px solid #fff;
+    }
+
+    .download-btn:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+        color: var(--primary-red);
+        text-decoration: none;
+    }
+
+    .download-btn.secondary:hover {
+        background: #fff;
+        color: var(--primary-red);
+    }
+
+    .download-btn i {
+        font-size: 1.5rem;
+    }
+
+    .image-gallery {
+        padding: 100px 0;
+        background: var(--dark-bg);
+    }
+
+    .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 60px;
+    }
+
+    .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 15px;
+        height: 250px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(223, 41, 25, 0.2);
+    }
+
+    .gallery-item img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+        border-color: var(--primary-red);
+    }
+
+    .gallery-item:hover img {
+        transform: scale(1.1);
+    }
+
+    .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+    }
+
+    .company-info {
+        background: var(--darker-bg);
+        padding: 80px 0;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #ccc;
+    }
+
+    .contact-item i {
+        color: var(--primary-red);
+        font-size: 20px;
+    }
+    
+    .tech-feature-visual {
+        width: 120px;
+        height: 120px;
+        background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 30px;
+        font-size: 3rem;
+        color: white;
+        box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+        animation: pulse 2s infinite;
+    }
+
+    @media (max-width: 991px) {
+        .price-table thead {
+            display: none;
+        }
+
+        .price-table tbody tr, .price-table tfoot tr {
+            display: block;
+            margin-bottom: 2rem;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 10px;
+            padding: 10px;
+        }
+        
+        .price-table tfoot .total-row {
+             padding: 0;
+        }
+
+        .price-table td {
+            display: block;
+            padding: 15px;
+            border: none;
+            position: relative;
+            text-align: right;
+        }
+
+        .price-table td::before {
+            content: attr(data-label);
+            font-weight: 700;
+            color: var(--accent-gold);
+            display: block;
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            text-align: left;
+            position: absolute;
+            left: 15px;
+        }
+        
+        .price-table tfoot .total-row td,
+        .price-table tfoot .iva-note-row td {
+            display: block;
+            width: 100%;
+        }
+        
+        .price-table tfoot .total-row td[colspan] {
+            text-align: left;
+            padding-bottom: 0;
+        }
+         .price-table tfoot .total-row td:last-child {
+            text-align: right;
+            font-size: 1.8rem;
+            padding-top: 10px;
+        }
+        
+        .price-table tfoot .total-row td::before {
+             display: none;
+        }
+
+        .iva-note-row td {
+            text-align: center !important;
+            font-size: 0.9rem;
+        }
+        
+        .iva-note-row td::before {
+            display: none;
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .value-grid {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .gallery-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .gallery-item {
+            height: 200px;
+        }
+
+        .gallery-item img {
+            object-fit: contain;
+            object-position: center center;
+            background-color: #0a0a0a;
+        }
+        
+        .download-section-hero {
+            padding: 40px 20px;
+        }
+
+        .download-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .legal-icon-mobile {
+            order: -1 !important;
+            margin-bottom: 30px;
+        }
+
+        .tsc-strategic-logo {
+            max-width: 200px;
+        }
+    }
+</style>
+</head>
+<body class="dark">
+<!-- header -->
+<header class="header-area header">
+<div id="header-sticky" class="menu-area">
+<div class="container-fluid">
+<div class="second-menu">
+<div class="row align-items:center">
+<div class="col-xl-2 col-lg-2">
+<div class="logo">
+<a href="/"><img src="img/logo peque-02.png" alt="TSC Logo" style="max-height: 55px;"></a>
+</div>
+</div>
+<div class="col-xl-4 col-lg-4 col-md-6">
+<div class="main-menu">
+<nav id="mobile-menu">
+<ul>
+<li><a href="/">Inicio</a></li>
+<li><a href="/#work">Nosotros</a></li>
+<li><a href="/#services">Servicios</a></li>
+<li><a href="/#formulario-contacto" class="boton-principal-moderno">
+Contáctanos
+</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
+<div class="header-cta">
+<ul>
+<li>
+<div class="call-box">
+<div class="text">
+Tel: 2202834673<br>TSC Seguridad Privada
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- header-end -->
+
+<main>
+    <!-- Hero Section Estratégico -->
+    <section class="cotizacion-hero">
+        <div class="container">
+            <div class="cotizacion-hero-content">
+                <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="subtitle">Propuesta de Servicio de Seguridad Privada</div>
+                    <h1>ANGLESIDE</h1>
+                    <p class="tagline">Solución de Seguridad Privada para <strong>Srta. Valeria</strong></p>
+                    <div class="client-badge">
+                        <i class="fas fa-user-shield"></i>
+                        ATN. SRTA. VALERIA
+                    </div>
+                    <div class="tsc-logo-section mt-4">
+                        <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
+                    </div>
+
+                    <!-- Botones de Descarga Inmediatos -->
+                    <div class="download-section-hero mt-5">
+                        <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <h3 class="text-white mb-4">Un Entorno Seguro para su Negocio</h3>
+                            <p class="text-white mb-5">Descargue nuestras propuestas detalladas y elija la que mejor se adapte a sus necesidades.</p>
+                            <div class="download-buttons">
+                                <a href="img/cotizaciones/angleside/ANGLESIDE.pdf" class="download-btn"
+                                    download="cotizacion-ANGLESIDE.pdf" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    Descargar cotización detallada
+                                </a>
+                                <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                    <i class="fas fa-presentation"></i>
+                                    Descargar Presentación Ejecutiva
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tabla Planta COHISA Edificio 1 -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">PLANTA COHISA - Edificio 1</div>
+                <h2>Inversión Mensual Detallada</h2>
+                <p class="location-highlight">Ubicación: <strong>Estado de México (C.P. 50450)</strong></p>
+            </div>
+
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DESCRIPCIÓN</th>
+                            <th>DÍAS</th>
+                            <th>TURNO</th>
+                            <th>MODALIDAD</th>
+                            <th>CANT.</th>
+                            <th>TARIFA MENSUAL</th>
+                            <th>TARIFA POR HORA</th>
+                            <th>TOTAL MENSUAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Jefe de Servicio</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x12</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">1</td>
+                            <td data-label="TARIFA MENSUAL">$28,000.00</td>
+                            <td data-label="TARIFA POR HORA">$155.56</td>
+                            <td data-label="TOTAL MENSUAL">$28,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Jefe de Turno</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x12</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">3</td>
+                            <td data-label="TARIFA MENSUAL">$24,000.00</td>
+                            <td data-label="TARIFA POR HORA">$115.38</td>
+                            <td data-label="TOTAL MENSUAL">$72,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Guardia</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">8hrs al día</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">10</td>
+                            <td data-label="TARIFA MENSUAL">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$107.21</td>
+                            <td data-label="TOTAL MENSUAL">$223,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Cubre Descansos</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">8 hrs al día</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">2</td>
+                            <td data-label="TARIFA MENSUAL">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$107.21</td>
+                            <td data-label="TOTAL MENSUAL">$44,600.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="7"><strong>TOTAL EDIFICIO 1:</strong></td>
+                            <td><strong>$367,600.00</strong></td>
+                        </tr>
+                        <tr class="iva-note-row">
+                            <td colspan="8"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla Planta COHISA Edificio 2 -->
+    <section class="pricing-section alt">
+        <div class="container">
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">PLANTA COHISA - Edificio 2</div>
+                <h2>Inversión Mensual Detallada</h2>
+                <p class="location-highlight">Ubicación: <strong>Estado de México (C.P. 50450)</strong></p>
+            </div>
+
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                 <table>
+                    <thead>
+                        <tr>
+                            <th>DESCRIPCIÓN</th>
+                            <th>DÍAS</th>
+                            <th>TURNO</th>
+                            <th>MODALIDAD</th>
+                            <th>CANT.</th>
+                            <th>TARIFA MENSUAL</th>
+                            <th>TARIFA POR HORA</th>
+                            <th>TOTAL MENSUAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Jefe de Turno</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">8hrs/día</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">1</td>
+                            <td data-label="TARIFA MENSUAL">$24,000.00</td>
+                            <td data-label="TARIFA POR HORA">$115.38</td>
+                            <td data-label="TOTAL MENSUAL">$24,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Guardia</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">8hrs/día</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">9</td>
+                            <td data-label="TARIFA MENSUAL">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$107.21</td>
+                            <td data-label="TOTAL MENSUAL">$200,700.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Cubre Descansos</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">8hrs/día</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">2</td>
+                            <td data-label="TARIFA MENSUAL">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$107.21</td>
+                            <td data-label="TOTAL MENSUAL">$44,600.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="7"><strong>TOTAL EDIFICIO 2:</strong></td>
+                            <td><strong>$269,300.00</strong></td>
+                        </tr>
+                        <tr class="iva-note-row">
+                            <td colspan="8"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Tablas Adicionales -->
+    <section class="pricing-section">
+        <div class="container">
+            <!-- Planta LERMA -->
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">PLANTA LERMA</div>
+                <h2>Inversión Mensual</h2>
+                <p class="location-highlight">Ubicación: <strong>Estado de México (C.P. 52000)</strong></p>
+            </div>
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DESCRIPCIÓN</th>
+                            <th>DÍAS</th>
+                            <th>TURNO</th>
+                            <th>MODALIDAD</th>
+                            <th>CANT.</th>
+                            <th>TARIFA</th>
+                            <th>TARIFA POR HORA</th>
+                            <th>TOTAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Guardia</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x24</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">6</td>
+                            <td data-label="TARIFA">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$123.89</td>
+                            <td data-label="TOTAL">$133,800.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="7"><strong>TOTAL LERMA:</strong></td>
+                            <td><strong>$133,800.00</strong></td>
+                        </tr>
+                        <tr class="iva-note-row">
+                            <td colspan="8"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Planta TOLUCA -->
+            <div class="section-header wow fadeInUp mt-5" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">PLANTA TOLUCA</div>
+                <h2>Inversión Mensual</h2>
+                <p class="location-highlight">Ubicación: <strong>Estado de México (C.P. 50160)</strong></p>
+            </div>
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DESCRIPCIÓN</th>
+                            <th>DÍAS</th>
+                            <th>TURNO</th>
+                            <th>MODALIDAD</th>
+                            <th>CANT.</th>
+                            <th>TARIFA MENSUAL</th>
+                            <th>TARIFA POR HORA</th>
+                            <th>TOTAL MENSUAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Jefe de Turno</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x12</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">1</td>
+                            <td data-label="TARIFA MENSUAL">$24,000.00</td>
+                            <td data-label="TARIFA POR HORA">$133.33</td>
+                            <td data-label="TOTAL MENSUAL">$24,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Guardia</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">24x24</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">6</td>
+                            <td data-label="TARIFA MENSUAL">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$61.94</td>
+                            <td data-label="TOTAL MENSUAL">$133,800.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="7"><strong>TOTAL TOLUCA:</strong></td>
+                            <td><strong>$157,800.00</strong></td>
+                        </tr>
+                        <tr class="iva-note-row">
+                            <td colspan="8"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="pricing-section alt">
+        <div class="container">
+            <!-- Planta VESTA PARK -->
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">PLANTA VESTA PARK</div>
+                <h2>Inversión Mensual</h2>
+                <p class="location-highlight">Ubicación: <strong>Toluca (C.P. 50230)</strong></p>
+            </div>
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                <table>
+                     <thead>
+                        <tr>
+                            <th>DESCRIPCIÓN</th>
+                            <th>DÍAS</th>
+                            <th>TURNO</th>
+                            <th>MODALIDAD</th>
+                            <th>CANT.</th>
+                            <th>TARIFA MENSUAL</th>
+                            <th>TARIFA POR HORA</th>
+                            <th>TOTAL MENSUAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Recepcionista</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x12</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">1</td>
+                            <td data-label="TARIFA MENSUAL">$23,000.00</td>
+                            <td data-label="TARIFA POR HORA">$127.78</td>
+                            <td data-label="TOTAL MENSUAL">$23,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Jefe de Turno</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x12</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">1</td>
+                            <td data-label="TARIFA MENSUAL">$24,000.00</td>
+                            <td data-label="TARIFA POR HORA">$133.33</td>
+                            <td data-label="TOTAL MENSUAL">$24,000.00</td>
+                        </tr>
+                         <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Guardia</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">12x12</td>
+                            <td data-label="MODALIDAD">Guardias Tipo B</td>
+                            <td data-label="CANT.">5</td>
+                            <td data-label="TARIFA MENSUAL">$23,000.00</td>
+                            <td data-label="TARIFA POR HORA">$127.78</td>
+                            <td data-label="TOTAL MENSUAL">$115,000.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="7"><strong>TOTAL VESTA PARK:</strong></td>
+                            <td><strong>$162,000.00</strong></td>
+                        </tr>
+                         <tr class="iva-note-row">
+                            <td colspan="8"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+
+            <!-- Planta SANTA FE -->
+            <div class="section-header wow fadeInUp mt-5" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">PLANTA SANTA FE</div>
+                <h2>Inversión Mensual</h2>
+                <p class="location-highlight">Ubicación: <strong>Ciudad de México (C.P. 01210)</strong></p>
+            </div>
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>DESCRIPCIÓN</th>
+                            <th>DÍAS</th>
+                            <th>TURNO</th>
+                            <th>MODALIDAD</th>
+                            <th>CANT.</th>
+                            <th>TARIFA MENSUAL</th>
+                            <th>TARIFA POR HORA</th>
+                            <th>TOTAL MENSUAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="DESCRIPCIÓN"><span class="location-cell">Guardia</span></td>
+                            <td data-label="DÍAS">Lunes a Sábado</td>
+                            <td data-label="TURNO">24x24</td>
+                            <td data-label="MODALIDAD">Guardia Tipo B</td>
+                            <td data-label="CANT.">2</td>
+                            <td data-label="TARIFA MENSUAL">$22,300.00</td>
+                            <td data-label="TARIFA POR HORA">$61.94</td>
+                            <td data-label="TOTAL MENSUAL">$44,600.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                            <td colspan="7"><strong>TOTAL SANTA FE:</strong></td>
+                            <td><strong>$44,600.00</strong></td>
+                        </tr>
+                         <tr class="iva-note-row">
+                            <td colspan="8"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla Resumen -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">RESUMEN DE INVERSIÓN</div>
+                <h2>Consolidado General</h2>
+                <p>A continuación se presenta el resumen de la inversión mensual por cada planta, así como el total general del servicio.</p>
+            </div>
+            <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>PLANTA</th>
+                            <th>PERSONAL TOTAL</th>
+                            <th>TOTAL MENSUAL</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="PLANTA"><span class="location-cell">COHISA</span></td>
+                            <td data-label="PERSONAL TOTAL">28</td>
+                            <td data-label="TOTAL MENSUAL">$636,900.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="PLANTA"><span class="location-cell">LERMA</span></td>
+                            <td data-label="PERSONAL TOTAL">6</td>
+                            <td data-label="TOTAL MENSUAL">$133,800.00</td>
+                        </tr>
+                         <tr>
+                            <td data-label="PLANTA"><span class="location-cell">TOLUCA</span></td>
+                            <td data-label="PERSONAL TOTAL">7</td>
+                            <td data-label="TOTAL MENSUAL">$157,800.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="PLANTA"><span class="location-cell">VESTA PARK</span></td>
+                            <td data-label="PERSONAL TOTAL">7</td>
+                            <td data-label="TOTAL MENSUAL">$162,000.00</td>
+                        </tr>
+                        <tr>
+                            <td data-label="PLANTA"><span class="location-cell">SANTA FE</span></td>
+                            <td data-label="PERSONAL TOTAL">2</td>
+                            <td data-label="TOTAL MENSUAL">$44,600.00</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr class="total-row">
+                             <td data-label="TOTAL PERSONAL" colspan="1"><strong>TOTAL PERSONAL: 50</strong></td>
+                            <td data-label="GRAN TOTAL"><strong>GRAN TOTAL MENSUAL:</strong></td>
+                            <td><strong>$1,135,100.00</strong></td>
+                        </tr>
+                         <tr class="iva-note-row">
+                            <td colspan="3"><span>* IVA NO INCLUIDO</span></td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Valor Diferencial TSC -->
+    <section class="value-section alt">
+        <div class="container">
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">Nuestra Propuesta Incluye</div>
+                <h2>Más que Vigilancia, una Estrategia de Seguridad Integral</h2>
+                <p>Nuestra propuesta va más allá de colocar personal en un punto fijo. Ofrecemos una solución completa que incluye supervisión, tecnología, equipamiento profesional y un marco legal sólido, todo incluido sin costos adicionales.</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-broadcast-tower"></i>
+                    </div>
+                    <h3>Equipo de Comunicación y Supervisión</h3>
+                    <p>Aseguramos una comunicación fluida y una supervisión constante para una respuesta efectiva.</p>
+                    <ul class="value-list">
+                        <li>Supervisión física (supervisores y gerente de zona) y virtual (Centro de Monitoreo Remoto CAS 24/7).</li>
+                        <li>1 Equipo Celular de red para reportes entre el servicio y nuestra base TSC.</li>
+                        <li>Centro de Monitoreo 24/7 Remoto.</li>
+                        <li>Supervisión Operativa con patrulla rotulada Attitude.</li>
+                        <li>Radio Troncal (1 por elemento).</li>
+                    </ul>
+                </div>
+
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3>Control y Confianza Garantizados</h3>
+                    <p>Implementamos rigurosos controles para asegurar la integridad y confiabilidad de nuestro personal.</p>
+                    <ul class="value-list">
+                        <li>Expediente electrónico completo de cada elemento.</li>
+                        <li>Carta de antecedentes no penales de cada elemento.</li>
+                        <li>Alta del elemento ante la SSP.</li>
+                        <li>Carga social completa (IMSS, Infonavit, fondo para el retiro, caja de ahorro).</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Equipamiento Táctico por Guardia</h3>
+                    <p>Cada elemento está equipado para responder adecuadamente a diversas situaciones.</p>
+                    <ul class="value-list">
+                        <li>2 Uniformes completos por elemento.</li>
+                        <li>1 Chaleco táctico por guardia.</li>
+                        <li>1 Lámpara taser "choque eléctrico".</li>
+                        <li>1 Gas pimienta.</li>
+                        <li>1 Bastón policial retráctil.</li>
+                        <li>Equipo de lluvia (manga impermeable, botas de hule).</li>
+                    </ul>
+                </div>
+                
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Gestión Integral del Servicio</h3>
+                    <p>Nos encargamos de toda la logística y gestión para que usted no tenga que hacerlo.</p>
+                    <ul class="value-list">
+                        <li>1 Análisis de Riesgos entregado a los 15 días de haber iniciado el servicio.</li>
+                        <li>Cobertura de ausencias, faltas o permisos en un tiempo máximo de 2 horas.</li>
+                        <li>Atención a urgencias o emergencias en 30-60 minutos.</li>
+                        <li>Asignación de un ejecutivo de cuenta y una persona administrativa.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Imágenes -->
+    <section class="image-gallery">
+        <div class="container">
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">Nuestro Equipo</div>
+                <h2>Personal y Unidades de Supervisión en Campo</h2>
+                <p>Técnicos en seguridad y unidades de supervisión listos para proteger sus instalaciones.</p>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <img src="img/cotizaciones/img1.png" alt="Personal de Seguridad TSC" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <img src="img/cotizaciones/img2.png" alt="Equipo TSC" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <img src="img/cotizaciones/patrullas y guardias.JPG" alt="Patrullas y Guardias TSC"
+                        loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                    <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+                <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
+                    <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy">
+                    <div class="gallery-overlay"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Condiciones Comerciales y Operativas -->
+    <section class="value-section">
+        <div class="container">
+            <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                <div class="section-tag">Términos del Servicio</div>
+                <h2>Condiciones Comerciales y Operativas</h2>
+                <p>Detalles clave sobre la contratación, facturación e implementación de nuestro servicio de seguridad.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-file-contract"></i>
+                    </div>
+                    <h3>Condiciones Comerciales</h3>
+                    <ul class="value-list">
+                        <li>Contrato inicial a 24 meses.</li>
+                        <li>Los pagos se harán de manera quincenal dentro del mes corriente del servicio.</li>
+                        <li>La facturación se enviará los días 1° y 16 de cada mes.</li>
+                        <li>Días festivos o de descanso obligatorio se cobrarán como día extra.</li>
+                        <li>Ajustes (descuentos, cargos, etc.) se realizarán dentro de la facturación del mes siguiente.</li>
+                        <li>Pagos por transferencia o cheque a cuenta SANTANDER CTA. 65-50933818-4, CLABE. 014427655093381844.</li>
+                    </ul>
+                </div>
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Condiciones Operativas</h3>
+                    <ul class="value-list">
+                        <li>Se requieren 30 días para instalar el servicio a partir de la firma del contrato.</li>
+                        <li>Se requiere conocer las consignas específicas del servicio para la capacitación inicial.</li>
+                        <li>Durante los primeros 30 a 45 días se entregarán los expedientes digitales del personal asignado.</li>
+                        <li>Durante los primeros 15 días habrá un supervisor de forma continua para capacitación de campo.</li>
+                        <li>Visita de supervisor (1/semana), Gerente de Operaciones (1/mes) y Directivo (1/trimestre).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Permisos y Legalidad -->
+    <section class="value-section alt">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-4 order-lg-2 wow fadeInUp legal-icon-mobile" data-animation="fadeInUp"
+                    data-delay=".4s">
+                    <div class="tech-feature-visual mx-auto mb-4">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                </div>
+                <div class="col-lg-8 order-lg-1 wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <div class="section-tag">Certeza y Respaldo Legal</div>
+                    <h2>Permisos Federales, Estatales y REPSE Vigentes</h2>
+                    <p class="mb-4">Operamos con total apego a la ley, contando con todos los permisos y fianzas vigentes para la prestación del servicio en el Estado de México y Permiso Federal para operar en todo el Territorio Nacional. Esto incluye Licencia de Funcionamiento, Vo. Bo. de Protección Civil y REPSE.</p>
+                    <ul class="value-list">
+                        <li>Registro REPSE vigente y actualizado.</li>
+                        <li>Permisos federales y estatales en regla.</li>
+                        <li>Pólizas de seguro de responsabilidad civil correspondientes.</li>
+                        <li>Oficinas centrales en Toluca a un costado del Aeropuerto.</li>
+                        <li>Cobertura legal completa desde el inicio del servicio.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botones de Descarga -->
+    <section class="download-section">
+        <div class="container">
+            <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                <h3 class="text-white mb-4">¿Listo para fortalecer la seguridad de su negocio?</h3>
+                <p class="text-white mb-5">Descargue nuevamente las propuestas detalladas para su análisis.</p>
+                <div class="download-buttons">
+                    <a href="img/cotizaciones/angleside/ANGLESIDE.pdf" class="download-btn"
+                        download="cotizacion-ANGLESIDE.pdf" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                        Descargar cotización detallada
+                    </a>
+                     <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                        <i class="fas fa-presentation"></i>
+                        Descargar Presentación Ejecutiva
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Company Info -->
+    <section class="company-info">
+        <div class="container">
+            <h3 class="text-white mb-2">TSC PRIVATE SECURITY CONSULTING</h3>
+            <p class="text-danger mb-4"><strong>FUERZA, TECNOLOGÍA Y EXPERIENCIA</strong></p>
+            <h4 class="text-white">ISMAEL LÓPEZ-SILVERO GUIMARAIS</h4>
+            <p class="text-muted">Chief Digital Officer</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>Ismael.sg@tscseguridadprivada.com.mx</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>2202834673</span>
+                </div>
+            </div>
+            <div class="mt-4">
+                <p class="text-muted text-center">
+                    <strong>ANGLESIDE - SRTA. VALERIA</strong>
+                </p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- footer -->
+<footer class="footer-bg footer-p">
+    <div class="footer-bottom-area">
+        <div class="container">
+            <div class="footer-border">
+                <div class="row d-flex align-items-center">
+                    <div class="col-xl-12">
+                        <div class="footer-copy-right text-center">
+                            <p>© 2025 TSC Private Security Consulting. Todos los derechos reservados.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer-end -->
+
+<!-- JS here -->
+<script src="js/vendor/jquery-3.6.0.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/one-page-nav-min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/ajax-form.js"></script>
+<script src="js/paroller.js"></script>
+<script src="js/wow.min.js"></script>
+<script src="js/parallax.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.counterup.min.js"></script>
+<script src="js/jquery.scrollUp.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/element-in-view.js"></script>
+<script src="js/jquery.meanmenu.min.js"></script>
+<script src="js/imagesloaded.min.js"></script>
+<script src="js/js_isotope.pkgd.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/custom-hamburger-menu.js"></script>
+
+  <script>
+    // Initialize animations
+    new WOW().init();
+</script>
+</body>
+</html>

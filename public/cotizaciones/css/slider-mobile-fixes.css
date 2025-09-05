@@ -1,0 +1,265 @@
+
+
+/* Mejoras generales para todos los sliders en móvil */
+@media (max-width: 768px) {
+  
+  /* ===== DOTS DE NAVEGACIÓN ===== */
+  
+  /* Dots del slider de testimonios */
+  .testimonial-active .slick-dots {
+    position: relative !important;
+    bottom: -20px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 12px !important;
+    padding: 20px 0 !important;
+    margin: 0 !important;
+    z-index: 100 !important;
+  }
+  
+  .testimonial-active .slick-dots li {
+    width: 44px !important;
+    height: 44px !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .testimonial-active .slick-dots li button {
+    width: 16px !important;
+    height: 16px !important;
+    border-radius: 50% !important;
+    border: 2px solid #fff !important;
+    background: rgba(255, 255, 255, 0.3) !important;
+    font-size: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+  }
+  
+  .testimonial-active .slick-dots li button:hover,
+  .testimonial-active .slick-dots li button:focus {
+    background: rgba(255, 255, 255, 0.6) !important;
+    transform: scale(1.1) !important;
+    outline: none !important;
+  }
+  
+  .testimonial-active .slick-dots li.slick-active button {
+    background: #fff !important;
+    width: 20px !important;
+    height: 20px !important;
+    border: 3px solid #e74c3c !important;
+    box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.3) !important;
+  }
+  
+  /* ===== FLECHAS DE NAVEGACIÓN ===== */
+  
+  /* Mostrar flechas en móvil para testimonios */
+  .testimonial-active .slick-prev,
+  .testimonial-active .slick-next {
+    display: block !important;
+    width: 50px !important;
+    height: 50px !important;
+    background: rgba(0, 0, 0, 0.7) !important;
+    border: 2px solid #fff !important;
+    border-radius: 50% !important;
+    z-index: 101 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .testimonial-active .slick-prev {
+    left: 15px !important;
+  }
+  
+  .testimonial-active .slick-next {
+    right: 15px !important;
+  }
+  
+  .testimonial-active .slick-prev:hover,
+  .testimonial-active .slick-next:hover,
+  .testimonial-active .slick-prev:focus,
+  .testimonial-active .slick-next:focus {
+    background: rgba(231, 76, 60, 0.9) !important;
+    border-color: #fff !important;
+    transform: scale(1.05) !important;
+    outline: none !important;
+  }
+  
+  .testimonial-active .slick-prev:before,
+  .testimonial-active .slick-next:before {
+    font-size: 20px !important;
+    color: #fff !important;
+    opacity: 1 !important;
+  }
+  
+  /* ===== MEJORAS PARA OTROS SLIDERS ===== */
+  
+  /* Dots para otros sliders */
+  .services-active .slick-dots,
+  .services-active2 .slick-dots,
+  .team-active .slick-dots,
+  .portfolio-active .slick-dots,
+  .portfolio-active2 .slick-dots,
+  .brand-active .slick-dots {
+    position: relative !important;
+    bottom: -15px !important;
+    display: flex !important;
+    justify-content: center !important;
+    gap: 10px !important;
+    padding: 15px 0 !important;
+    z-index: 100 !important;
+  }
+  
+  .services-active .slick-dots li,
+  .services-active2 .slick-dots li,
+  .team-active .slick-dots li,
+  .portfolio-active .slick-dots li,
+  .portfolio-active2 .slick-dots li,
+  .brand-active .slick-dots li {
+    width: 40px !important;
+    height: 40px !important;
+    margin: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  
+  .services-active .slick-dots li button,
+  .services-active2 .slick-dots li button,
+  .team-active .slick-dots li button,
+  .portfolio-active .slick-dots li button,
+  .portfolio-active2 .slick-dots li button,
+  .brand-active .slick-dots li button {
+    width: 14px !important;
+    height: 14px !important;
+    border-radius: 50% !important;
+    border: 2px solid #333 !important;
+    background: rgba(51, 51, 51, 0.3) !important;
+    font-size: 0 !important;
+    transition: all 0.3s ease !important;
+  }
+  
+  .services-active .slick-dots li.slick-active button,
+  .services-active2 .slick-dots li.slick-active button,
+  .team-active .slick-dots li.slick-active button,
+  .portfolio-active .slick-dots li.slick-active button,
+  .portfolio-active2 .slick-dots li.slick-active button,
+  .brand-active .slick-dots li.slick-active button {
+    background: #e74c3c !important;
+    border-color: #e74c3c !important;
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  /* ===== MEJORAS DE ACCESIBILIDAD ===== */
+  
+  /* Área de toque ampliada para todos los controles */
+  .slick-dots li {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  .slick-prev,
+  .slick-next {
+    min-width: 44px !important;
+    min-height: 44px !important;
+  }
+  
+  /* Mejoras de contraste */
+  .slick-dots li button:focus,
+  .slick-prev:focus,
+  .slick-next:focus {
+    outline: 2px solid #e74c3c !important;
+    outline-offset: 2px !important;
+  }
+  
+  /* ===== PREVENCIÓN DE CONFLICTOS ===== */
+  
+  /* Asegurar que los controles estén por encima del menú hamburguesa */
+  .slick-dots,
+  .slick-prev,
+  .slick-next {
+    z-index: 100 !important;
+  }
+  
+  /* Evitar que el menú hamburguesa interfiera */
+  .tsc-hamburger-btn {
+    z-index: 9999 !important;
+  }
+  
+  .tsc-menu-overlay {
+    z-index: 9998 !important;
+  }
+  
+  .tsc-menu-panel {
+    z-index: 9999 !important;
+  }
+}
+
+/* ===== MEJORAS PARA TABLETS ===== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  
+  /* Dots ligeramente más grandes en tablets */
+  .testimonial-active .slick-dots li {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .testimonial-active .slick-dots li button {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  .testimonial-active .slick-dots li.slick-active button {
+    width: 18px !important;
+    height: 18px !important;
+  }
+  
+  /* Flechas en tablets */
+  .testimonial-active .slick-prev,
+  .testimonial-active .slick-next {
+    width: 45px !important;
+    height: 45px !important;
+  }
+}
+
+/* ===== MEJORAS PARA PANTALLAS MUY PEQUEÑAS ===== */
+@media (max-width: 480px) {
+  
+  /* Dots más compactos en pantallas muy pequeñas */
+  .testimonial-active .slick-dots {
+    gap: 8px !important;
+    padding: 15px 0 !important;
+  }
+  
+  .testimonial-active .slick-dots li {
+    width: 40px !important;
+    height: 40px !important;
+  }
+  
+  .testimonial-active .slick-dots li button {
+    width: 14px !important;
+    height: 14px !important;
+  }
+  
+  /* Flechas más pequeñas pero aún accesibles */
+  .testimonial-active .slick-prev,
+  .testimonial-active .slick-next {
+    width: 45px !important;
+    height: 45px !important;
+    left: 10px !important;
+  }
+  
+  .testimonial-active .slick-next {
+    right: 10px !important;
+  }
+  
+  .testimonial-active .slick-prev:before,
+  .testimonial-active .slick-next:before {
+    font-size: 18px !important;
+  }
+}

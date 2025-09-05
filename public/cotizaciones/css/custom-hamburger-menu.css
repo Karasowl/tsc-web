@@ -1,0 +1,292 @@
+/* ===== MENÚ HAMBURGUESA PROFESIONAL TSC ===== */
+
+/* Botón hamburguesa */
+.tsc-hamburger-btn {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 9999;
+  width: 50px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.95);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.tsc-hamburger-btn:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Líneas del hamburguesa */
+.tsc-hamburger-line {
+  width: 24px;
+  height: 3px;
+  background: #333;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animación cuando está activo */
+.tsc-hamburger-btn.active .tsc-hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.tsc-hamburger-btn.active .tsc-hamburger-line:nth-child(2) {
+  opacity: 0;
+  transform: scale(0);
+}
+
+.tsc-hamburger-btn.active .tsc-hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Overlay del menú */
+.tsc-menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 9998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tsc-menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Panel del menú */
+.tsc-menu-panel {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 350px;
+  max-width: 90vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  overflow-y: auto;
+  box-shadow: -10px 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.tsc-menu-panel.active {
+  right: 0;
+}
+
+/* Header del menú */
+.tsc-menu-header {
+  padding: 30px 25px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+.tsc-menu-logo {
+  max-width: 120px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.tsc-menu-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* Navegación del menú */
+.tsc-menu-nav {
+  padding: 20px 0;
+}
+
+.tsc-menu-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tsc-menu-nav li {
+  margin: 0;
+}
+
+.tsc-menu-nav a {
+  display: flex;
+  align-items: center;
+  padding: 18px 25px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  border-left: 3px solid transparent;
+  position: relative;
+}
+
+.tsc-menu-nav a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-left-color: #e74c3c;
+  color: #e74c3c;
+  transform: translateX(5px);
+}
+
+.tsc-menu-nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, rgba(231, 76, 60, 0.1), transparent);
+  transition: width 0.3s ease;
+}
+
+.tsc-menu-nav a:hover::before {
+  width: 100%;
+}
+
+/* Iconos del menú */
+.tsc-menu-icon {
+  margin-right: 15px;
+  font-size: 18px;
+  width: 20px;
+  text-align: center;
+  opacity: 0.8;
+}
+
+/* Footer del menú */
+.tsc-menu-footer {
+  padding: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: auto;
+}
+
+.tsc-contact-info {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.tsc-contact-info strong {
+  color: #fff;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.tsc-cta-button {
+  display: inline-block;
+  width: 100%;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.3);
+}
+
+.tsc-cta-button:hover {
+  background: linear-gradient(135deg, #c0392b, #a93226);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(231, 76, 60, 0.4);
+  color: #fff;
+}
+
+/* Responsive */
+/* Asegurar que el menú hamburguesa esté oculto en desktop */
+@media (min-width: 992px) {
+  .tsc-hamburger-btn,
+  .tsc-menu-overlay,
+  .tsc-menu-panel {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .tsc-hamburger-btn {
+    display: flex !important;
+  }
+  
+  /* Ocultar menú original en móviles */
+  .main-menu {
+    display: none !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .tsc-hamburger-btn {
+    top: 15px;
+    right: 15px;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .tsc-menu-panel {
+    width: 300px;
+  }
+  
+  .tsc-hamburger-line {
+    width: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tsc-menu-panel {
+    width: 100vw;
+    right: -100vw;
+  }
+  
+  .tsc-menu-panel.active {
+    right: 0;
+  }
+}
+
+/* Animaciones adicionales */
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.tsc-menu-nav li {
+  animation: slideInRight 0.3s ease forwards;
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.tsc-menu-panel.active .tsc-menu-nav li:nth-child(1) { animation-delay: 0.1s; }
+.tsc-menu-panel.active .tsc-menu-nav li:nth-child(2) { animation-delay: 0.15s; }
+.tsc-menu-panel.active .tsc-menu-nav li:nth-child(3) { animation-delay: 0.2s; }
+.tsc-menu-panel.active .tsc-menu-nav li:nth-child(4) { animation-delay: 0.25s; }
+.tsc-menu-panel.active .tsc-menu-nav li:nth-child(5) { animation-delay: 0.3s; }
+.tsc-menu-panel.active .tsc-menu-nav li:nth-child(6) { animation-delay: 0.35s; }
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}

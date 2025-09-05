@@ -1,0 +1,1259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Cotizaciones</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        :root {
+            --primary-red: #df2919;
+            --dark-bg: #1a1a1d;
+        }
+        body { background: var(--dark-bg); color: #fff; }
+        .container { margin-top: 40px; }
+        .btn { margin-right: 5px; }
+        .table {
+            background: #181818;
+            color: #fff;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+        }
+        .table th, .table td {
+            vertical-align: middle;
+            border: none;
+            padding: 18px 14px;
+        }
+        .table thead th {
+            background: var(--primary-red);
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            letter-spacing: 1px;
+        }
+          .table-hover tbody tr:hover {
+            background: var(--primary-red);
+            color: #fff !important;
+            transition: background 0.2s;
+        }
+        .table-bordered {
+            border: none;
+        }
+        .table-bordered th, .table-bordered td {
+            border: none;
+        }
+        .table tbody tr {
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(223,41,25,0.04);
+        }
+        h1.mb-4 {
+            background: var(--primary-red);
+            color: #fff;
+            font-weight: 800;
+            font-size: 2.7rem;
+            letter-spacing: 2px;
+            padding: 10px 0 10px 16px;
+            border-radius: 12px;
+        }
+        #add-quote-btn {
+            background: var(--primary-red);
+            color: #fff;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 4px 16px rgba(223,41,25,0.18);
+        }
+        #add-quote-btn:hover {
+            background: #b91c1c;
+            color: #fff;
+        }
+        .btn-info, .btn-warning, .btn-danger {
+            border: none;
+            font-weight: 600;
+        }
+        .btn-info {
+            background: var(--primary-red);
+            color: #fff;
+        }
+        .btn-warning {
+            background: #ffd700;
+            color: #222;
+        }
+        .btn-danger {
+            background: #b91c1c;
+            color: #fff;
+        }
+        .btn-info:hover, .btn-warning:hover, .btn-danger:hover {
+            filter: brightness(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mb-4">Cotizaciones</h1>
+        <button id="add-quote-btn" class="btn btn-success mb-3">Agregar Cotización</button>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Cliente</th>
+                    <th>Fecha</th>
+                    <th>Contacto</th>
+                    <th>Total</th>
+                    <th>PDF</th>
+                    <th>Video</th>
+                    <th>Galería</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cotizaciones-tbody">
+                <!-- Cotizaciones dinámicas -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Modal para agregar/editar cotización -->
+    <div id="quote-modal" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.5);align-items:center;justify-content:center;z-index:1000;">
+      <form id="quote-form" style="background:#fff;color:#000;padding:20px;border-radius:8px;max-width:1100px;width:98vw;overflow:auto;max-height:98vh;min-width:700px;">
+        <input type="hidden" id="quote-id" />
+        <h3 style="text-align:center;margin-bottom:28px;font-size:2rem;font-weight:700;letter-spacing:1px;">Datos de cotizaciones</h3>
+        <div style="display:flex;gap:24px;margin-bottom:38px;justify-content:center;align-items:center;">
+          <div style="flex:1;display:flex;flex-direction:column;gap:22px;align-items:center;justify-content:center;">
+                        <h6 style="text-align:center;width:100%;font-size:1.18rem;font-weight:700;margin-bottom:18px;">Datos de la empresa que cotiza</h6>
+
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:600;font-size:1.1rem;">
+              Nombre de Empresa:
+              <input type="text" id="cliente" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Fecha:
+              <input type="text" id="fecha" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Contacto de Empresa:
+              <input type="text" id="contacto" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <!--<label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              PDF:
+              <input type="text" id="pdf" required style="flex:1;min-width:160px;max-width:220px;padding:8px 12px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1rem;transition:border 0.2s;outline:none;"/>
+            </label>-->
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Nombre PDF:
+              <input type="text" id="pdf_nombre" required style="flex:1;min-width:160px;max-width:220px;padding:8px 12px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Video:
+              <input type="text" id="video" required value="https://www.youtube.com/embed/a5WDscPBFjE" style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <!-- <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              URL de PDF:
+              <input type="text" id="pdf_url" placeholder="https://..." style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label> -->
+          </div>
+          <div style="flex:1;display:flex;flex-direction:column;gap:22px;align-items:center;justify-content:center;width:100%;">
+            <!--<label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Total:
+              <input type="number" id="total" required style="flex:1;min-width:160px;max-width:220px;padding:8px 12px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1rem;transition:border 0.2s;outline:none;"/>
+            </label>-->
+            <h6 style="text-align:center;width:100%;font-size:1.18rem;font-weight:700;margin-bottom:18px;">Datos de TSC Quien realiza la cotizacion</h6>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Nombre de Empresa:
+              <input type="text" id="empresa" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Representante:
+              <input type="text" id="representante" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Puesto:
+              <input type="text" id="puesto" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Email:
+              <input type="email" id="email" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+            <label style="width:100%;max-width:340px;display:flex;align-items:center;justify-content:flex-end;gap:10px;font-weight:500;font-size:1.08rem;">
+              Teléfono:
+              <input type="text" id="telefono" required style="flex:1;min-width:220px;max-width:220px;padding:10px 14px;border:1.5px solid #1976d2;border-radius:6px;background:#f4f8fb;font-size:1.08rem;transition:border 0.2s;outline:none;"/>
+            </label>
+          </div>
+        </div>
+        <label style="margin-top:32px;margin-bottom:10px;display:block;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;">Datos de tabla en cotizacion:</label>
+<div style="margin-bottom:10px;">
+  <span style="font-weight:500;">Selecciona las columnas a mostrar:</span><br/>
+  <label><input type="checkbox" class="col-linea-check" value="dias" checked> Días</label>
+  <label><input type="checkbox" class="col-linea-check" value="total" checked> Total</label>
+  <label><input type="checkbox" class="col-linea-check" value="turno" checked> Turno</label>
+  <label><input type="checkbox" class="col-linea-check" value="unitario" checked> Unitario</label>
+  <label><input type="checkbox" class="col-linea-check" value="elementos" checked> Elementos</label>
+  <label><input type="checkbox" class="col-linea-check" value="ubicacion" checked> Ubicación</label>
+  <label><input type="checkbox" class="col-linea-check" value="descripcion" checked> Descripción</label>
+</div>
+<div class="table-responsive mb-2" style="margin-bottom:38px;background:#f7fafc;border-radius:10px;box-shadow:0 2px 10px 0 rgba(30,60,90,0.07);padding:18px 18px 10px 18px;border:1.5px solid #e3e8ee;">
+  <table class="table table-bordered table-sm mb-0" style="background:#f8f9fa;color:#222;">
+    <thead>
+      <tr id="lineas-header-row">
+        <!-- Columnas dinámicas -->
+      </tr>
+    </thead>
+    <tbody id="lineas-container"></tbody>
+  </table>
+</div>
+<button type="button" id="add-linea" class="btn btn-sm btn-success mb-2">Agregar línea</button><br/>
+<script>
+const columnasLinea = [
+  { key: 'dias', label: 'Días' },
+  { key: 'total', label: 'Total' },
+  { key: 'turno', label: 'Turno' },
+  { key: 'unitario', label: 'Unitario' },
+  { key: 'elementos', label: 'Elementos' },
+  { key: 'ubicacion', label: 'Ubicación' },
+  { key: 'descripcion', label: 'Descripción' }
+];
+function getSelectedLineaColumns() {
+  return columnasLinea.filter(col => document.querySelector('.col-linea-check[value="'+col.key+'"]')?.checked);
+}
+function renderLineaHeader() {
+  const headerRow = document.getElementById('lineas-header-row');
+  headerRow.innerHTML = '';
+  getSelectedLineaColumns().forEach(col => {
+    const th = document.createElement('th');
+    th.textContent = col.label;
+    headerRow.appendChild(th);
+  });
+  const th = document.createElement('th');
+  th.textContent = '';
+  headerRow.appendChild(th);
+}
+document.querySelectorAll('.col-linea-check').forEach(cb => {
+  cb.addEventListener('change', renderLineaHeader);
+});
+document.addEventListener('DOMContentLoaded', renderLineaHeader);
+</script>
+        <label style="margin-top:32px;margin-bottom:10px;display:block;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;">Valores Agregados Únicos de TSC</label>
+<div class="table-responsive mb-2" style="margin-bottom:38px;background:#f7fafc;border-radius:10px;box-shadow:0 2px 10px 0 rgba(30,60,90,0.07);padding:18px 18px 10px 18px;border:1.5px solid #e3e8ee;">
+          <table class="table table-bordered table-sm mb-0" style="background:#f8f9fa;color:#222;">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Icono</th>
+                <th>Items (uno por línea)</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="servicios-container"></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-servicio" class="btn btn-sm btn-success mb-2">Agregar valores unicos</button><br/>
+        <label style="margin-top:32px;margin-bottom:10px;display:block;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;">Proveedor Integral de Seguridad :</label>
+        <div id="prov-integral-section" class="table-responsive mb-2" style="margin-bottom:38px;background:#f7fafc;border-radius:10px;box-shadow:0 2px 10px 0 rgba(30,60,90,0.07);padding:18px 18px 10px 18px;border:1.5px solid #e3e8ee;">
+          <table class="table table-bordered table-sm mb-0" style="background:#f8f9fa;color:#222;">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Icono</th>
+                <th>Descripción</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="prov-integral-container"></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-prov-integral" class="btn btn-sm btn-success mb-2">Agregar Proveedor Integral</button><br/>
+        <label style="margin-top:32px;margin-bottom:10px;display:block;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;">Galería:</label>
+<div class="table-responsive mb-2" style="margin-bottom:38px;background:#f7fafc;border-radius:10px;box-shadow:0 2px 10px 0 rgba(30,60,90,0.07);padding:18px 18px 10px 18px;border:1.5px solid #e3e8ee;">
+          <table class="table table-bordered table-sm mb-0" style="background:#f8f9fa;color:#222;">
+            <thead>
+              <tr>
+                <th>Alt</th>
+                <th>Src</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="galeria-container"></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-galeria" class="btn btn-sm btn-success mb-2">Agregar imagen</button><br/>
+        <label style="margin-top:32px;margin-bottom:10px;display:block;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;">Valor Diferencial TSC:</label>
+<div class="table-responsive mb-2" style="margin-bottom:38px;background:#f7fafc;border-radius:10px;box-shadow:0 2px 10px 0 rgba(30,60,90,0.07);padding:18px 18px 10px 18px;border:1.5px solid #e3e8ee;">
+          <table class="table table-bordered table-sm mb-0" style="background:#f8f9fa;color:#222;">
+            <thead>
+              <tr>
+                <th>Título</th>
+                <th>Icono</th>
+                <th>Descripción</th>
+                <th>Items (uno por línea)</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="value-section-container"></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-value-section" class="btn btn-sm btn-success mb-2">Agregar valor diferencial</button><br/>
+        <label style="margin-top:32px;margin-bottom:10px;display:block;font-weight:600;font-size:1.1rem;letter-spacing:0.5px;">Infraestructura Tecnológica:</label>
+<div class="table-responsive mb-2" style="margin-bottom:38px;background:#f7fafc;border-radius:10px;box-shadow:0 2px 10px 0 rgba(30,60,90,0.07);padding:18px 18px 10px 18px;border:1.5px solid #e3e8ee;">
+          <table class="table table-bordered table-sm mb-0" style="background:#f8f9fa;color:#222;">
+            <thead>
+              <tr>
+                <th>Número</th>
+                <th>Icono</th>
+                <th>Título</th>
+                <th>Descripción</th>
+                <th>Items (uno por línea)</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="inf-tec-container"></tbody>
+          </table>
+        </div>
+        <button type="button" id="add-inf-tec" class="btn btn-sm btn-success mb-2">Agregar infraestructura</button><br/>
+        <!--<label style="margin-top:32px;margin-bottom:10px;font-weight:600;font-size:1.08rem;letter-spacing:0.5px;">Condiciones Comerciales (JSON):</label>
+        <!--<textarea id="condiciones_comerciales" class="form-control" rows="3" style="margin-bottom:24px;"></textarea>-->
+        <!--<label style="margin-top:18px;margin-bottom:10px;font-weight:600;font-size:1.08rem;letter-spacing:0.5px;">Condiciones Operativas (JSON):</label>
+        <!--<textarea id="condiciones_operativas" class="form-control" rows="3" style="margin-bottom:24px;"></textarea>-->
+        <button type="submit" class="btn btn-primary">Guardar</button>
+        <button type="button" id="cancel-quote" class="btn btn-secondary">Cancelar</button>
+      </form>
+    </div>
+    <script>
+    // Ahora usa la API REST para leer y guardar cotizaciones
+    let cotizaciones = [];
+    // Simular que el usuario escribió el valor por defecto en el input de video
+    window.addEventListener('DOMContentLoaded', function() {
+      var videoInput = document.getElementById('video');
+      if(videoInput && videoInput.value === 'https://www.youtube.com/embed/a5WDscPBFjE') {
+        videoInput.dispatchEvent(new Event('input', { bubbles: true }));
+      }
+    });
+    function renderQuotes() {
+      const tbody = document.getElementById('cotizaciones-tbody');
+      tbody.innerHTML = '';
+      cotizaciones.forEach(q => {
+        const galeriaArr = Array.isArray(q.galeria) ? q.galeria : (typeof q.galeria === 'string' ? JSON.parse(q.galeria || '[]') : []);
+        const galeriaImgs = galeriaArr.map(img=>`<img src='${img.src}' alt='${img.alt||''}' style='width:40px;height:40px;object-fit:cover;margin:2px;'/>`).join('');
+        const tr = document.createElement('tr');
+        tr.innerHTML = `<td>${q.id}</td><td>${q.cliente}</td><td>${q.fecha}</td><td>${q.contacto}</td><td>$${(q.total !== undefined && q.total !== null ? Number(q.total).toLocaleString() : '0')}</td><td><a href='${q.pdf}' target='_blank'>${'Ver PDF'}</a></td><td><a href='${q.video}' target='_blank'>Video</a></td><td>${galeriaImgs}</td><td><button class='btn btn-sm btn-info' onclick='viewQuote("${q.id}")'>Ver</button> <button class='btn btn-sm btn-warning' onclick='editQuote("${q.id}")'>Editar</button> <button class='btn btn-sm btn-danger' onclick='deleteQuote("${q.id}")'>Eliminar</button></td>`;
+        tbody.appendChild(tr);
+      });
+    }
+    function viewQuote(id) {
+      // Detectar entorno (localhost o producción)
+      let baseUrl;
+      if (window.location.hostname === "localhost") {
+        baseUrl = "http://localhost:3000/cotizacion.html?id=";
+      } else {
+        baseUrl = "https://guardias.tscseguridadprivada.com.mx/cotizacion.html?id=";
+      }
+      window.open(baseUrl + id, "_blank");
+    }
+    function fillForm(data) {
+      document.getElementById('quote-id').value = data.id || '';
+      document.getElementById('cliente').value = data.cliente || '';
+      document.getElementById('fecha').value = data.fecha || '';
+      document.getElementById('contacto').value = data.contacto || '';
+      // document.getElementById('pdf').value = data.pdf || '';
+      document.getElementById('pdf_nombre').value = data.pdf_nombre || '';
+      document.getElementById('video').value = data.video || '';
+      // document.getElementById('pdf_url').value = data.pdf_url || '';
+      // document.getElementById('total').value = data.total || '';
+      document.getElementById('empresa').value = data.empresa || '';
+      document.getElementById('representante').value = data.representante || '';
+      document.getElementById('puesto').value = data.puesto || '';
+      document.getElementById('email').value = data.email || '';
+      document.getElementById('telefono').value = data.telefono || '';
+      setLineas(data.lineas||[]);
+      setServicios(data.servicios||[]);
+      setGaleria(data.galeria||[]);
+      // document.getElementById('condiciones_comerciales').value = JSON.stringify(data.condiciones_comerciales||[],null,2);
+      // document.getElementById('condiciones_operativas').value = JSON.stringify(data.condiciones_operativas||[],null,2);
+    }
+    function getFormData() {
+      return {
+        cliente: document.getElementById('cliente').value,
+        fecha: document.getElementById('fecha').value,
+        contacto: document.getElementById('contacto').value,
+        // pdf: document.getElementById('pdf').value,
+        pdf_nombre: document.getElementById('pdf_nombre').value,
+        video: document.getElementById('video').value,
+        // pdf_url: document.getElementById('pdf_url').value,
+        // total: Number(document.getElementById('total').value),
+        empresa: document.getElementById('empresa').value,
+        representante: document.getElementById('representante').value,
+        puesto: document.getElementById('puesto').value,
+        email: document.getElementById('email').value,
+        telefono: document.getElementById('telefono').value,
+        lineas: getLineas(),
+        servicios: getServicios(),
+        galeria: getGaleria(),
+        // condiciones_comerciales: JSON.parse(document.getElementById('condiciones_comerciales').value),
+        // condiciones_operativas: JSON.parse(document.getElementById('condiciones_operativas').value)
+      };
+    }
+    function editQuote(id) {
+      let q = cotizaciones.find(q=>q.id===id);
+      if(q) {
+        editingId = id;
+        fillForm(q);
+        modal.style.display = 'flex';
+      }
+    }
+    async function deleteQuote(id) {
+      if(confirm('¿Eliminar cotización?')) {
+        // Aquí deberías implementar DELETE en la API, pero como ejemplo solo lo quitamos localmente
+        cotizaciones = cotizaciones.filter(q=>q.id!==id);
+        renderQuotes();
+        // TODO: Implementar DELETE en la API si lo deseas
+      }
+    }
+    const addBtn = document.getElementById('add-quote-btn');
+    const modal = document.getElementById('quote-modal');
+    const form = document.getElementById('quote-form');
+    const cancelBtn = document.getElementById('cancel-quote');
+    let editingId = null;
+    // --- LÍNEAS DINÁMICAS ---
+    function crearLineaRow(linea = {}) {
+  const tr = document.createElement('tr');
+  tr.className = 'linea-row';
+  const selectedCols = getSelectedLineaColumns();
+  let html = '';
+  selectedCols.forEach(col => {
+    switch(col.key) {
+      case 'dias':
+        html += `<td><input type=\"text\" class=\"form-control form-control-sm\" placeholder=\"Días\" value=\"${linea.dias||''}\"></td>`;
+        break;
+      case 'total':
+        html += `<td><input type=\"number\" class=\"form-control form-control-sm\" placeholder=\"Total\" value=\"${linea.total||''}\"></td>`;
+        break;
+      case 'turno':
+        html += `<td><input type=\"text\" class=\"form-control form-control-sm\" placeholder=\"Turno\" value=\"${linea.turno||''}\"></td>`;
+        break;
+      case 'unitario':
+        html += `<td><input type=\"number\" class=\"form-control form-control-sm\" placeholder=\"Unitario\" value=\"${linea.unitario||''}\"></td>`;
+        break;
+      case 'elementos':
+        html += `<td><input type=\"number\" class=\"form-control form-control-sm\" placeholder=\"Elementos\" value=\"${linea.elementos||''}\"></td>`;
+        break;
+      case 'ubicacion':
+        html += `<td><input type=\"text\" class=\"form-control form-control-sm\" placeholder=\"Ubicación\" value=\"${linea.ubicacion||''}\"></td>`;
+        break;
+      case 'descripcion':
+        html += `<td><input type=\"text\" class=\"form-control form-control-sm\" placeholder=\"Descripción\" value=\"${linea.descripcion||''}\"></td>`;
+        break;
+    }
+  });
+  html += '<td><button type="button" class="btn btn-danger btn-sm remove-linea">X</button></td>';
+  tr.innerHTML = html;
+  tr.querySelector('.remove-linea').onclick = () => tr.remove();
+  return tr;
+}
+    function setLineas(lineasArr) {
+  const container = document.getElementById('lineas-container');
+  container.innerHTML = '';
+  (lineasArr||[]).forEach(l => container.appendChild(crearLineaRow(l)));
+}
+    function getLineas() {
+  const selectedCols = getSelectedLineaColumns();
+  const rows = document.querySelectorAll('#lineas-container .linea-row');
+  return Array.from(rows).map(row => {
+    const inputs = row.querySelectorAll('input');
+    let obj = {};
+    let i = 0;
+    selectedCols.forEach(col => {
+      let val = (inputs[i]) ? inputs[i].value : '';
+      switch(col.key) {
+        case 'dias':
+          obj.dias = val;
+          i++;
+          break;
+        case 'total':
+          obj.total = val ? Number(val) : '';
+          i++;
+          break;
+        case 'turno':
+          obj.turno = val;
+          i++;
+          break;
+        case 'unitario':
+          obj.unitario = val ? Number(val) : '';
+          i++;
+          break;
+        case 'elementos':
+          obj.elementos = val ? Number(val) : '';
+          i++;
+          break;
+        case 'ubicacion':
+          obj.ubicacion = val;
+          i++;
+          break;
+        case 'descripcion':
+          obj.descripcion = val;
+          i++;
+          break;
+      }
+    });
+    return obj;
+  });
+}
+    document.getElementById('add-linea').onclick = () => {
+      document.getElementById('lineas-container').appendChild(crearLineaRow());
+    };
+    // Sobrescribir fillForm y getFormData para líneas
+    const oldFillForm = fillForm;
+    fillForm = function(data) {
+      oldFillForm(data);
+      setLineas(data.lineas||[]);
+    };
+    const oldGetFormData = getFormData;
+    getFormData = function() {
+      const data = oldGetFormData();
+      data.lineas = getLineas();
+      return data;
+    };
+    // Inicializar vacío al abrir modal
+    addBtn.onclick = () => {
+      editingId = null;
+      // Limpiar todos los campos del formulario
+      document.getElementById('quote-id').value = '';
+      document.getElementById('cliente').value = '';
+      document.getElementById('fecha').value = '';
+      document.getElementById('contacto').value = '';
+      document.getElementById('video').value = '';
+      // Si está vacío, poner el valor por defecto
+      if(document.getElementById('video').value === ''){
+        document.getElementById('video').value = 'https://www.youtube.com/embed/a5WDscPBFjE';
+      }
+      document.getElementById('empresa').value = '';
+      document.getElementById('representante').value = '';
+      document.getElementById('puesto').value = '';
+      document.getElementById('email').value = '';
+      document.getElementById('telefono').value = '';
+      setLineas([]);
+      setServicios([]);
+      setGaleria([
+        { alt: 'img1', src: 'img/cotizaciones/img1.png' },
+        { alt: 'img2', src: 'img/cotizaciones/img2.png' },
+        { alt: 'img3', src: 'img/cotizaciones/img3.png' },
+        { alt: 'patrullas y guardias', src: 'img/cotizaciones/patrullas y guardias.JPG' },
+        { alt: 'patrulla', src: 'img/cotizaciones/patrulla.jpg' }
+      ]);
+      setProvIntegral([]); // Limpiar Proveedor Integral
+      setValueSection([]); // Limpiar Valor Diferencial TSC
+      setInfTec([]); // Limpiar Infraestructura Tecnológica
+      modal.style.display = 'flex';
+    };
+    cancelBtn.onclick = () => { modal.style.display = 'none'; };
+    window.onclick = (e) => { if(e.target === modal) modal.style.display = 'none'; };
+    document.addEventListener('DOMContentLoaded',()=>{
+      cargarCotizaciones();
+    });
+    form.onsubmit = async function(e) {
+      e.preventDefault();
+      let data = getFormData();
+      if(editingId) {
+        alert('La edición de cotizaciones aún no está implementada.');
+        return;
+      } else {
+        await guardarCotizacion(data);
+      }
+      modal.style.display = 'none';
+    };
+    function getApiUrl() {
+      if (window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1") {
+        return "http://localhost:3000/api/cotizaciones";
+      } else {
+        return "/api/cotizaciones";
+      }
+    }
+    
+    async function cargarCotizaciones() {
+      try {
+        const response = await fetch(getApiUrl());
+        console.log(response);
+        if (!response.ok) throw new Error("No se pudo cargar la información");
+        const data = await response.json();
+        cotizaciones = Array.isArray(data.cotizaciones) ? data.cotizaciones : data;
+        renderQuotes();
+      } catch (error) {
+        console.error(error);
+        alert("Error al cargar cotizaciones: " + error.message);  
+      } 
+    }
+    
+    async function guardarCotizacion(nuevaCotizacion) {
+      const apiUrl = getApiUrl();
+      try {
+        const response = await fetch(apiUrl, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(nuevaCotizacion)
+        });
+        if (response.ok) {
+            alert('¡Cotización guardada exitosamente en la base de datos!');
+            await cargarCotizaciones();
+        } else {
+            const errorData = await response.json();
+            alert("Error al guardar cotización: " + (errorData.error || response.statusText));
+        }
+      } catch (error) {
+        alert("Error al guardar cotización: " + error.message);
+      }
+    }
+    
+    async function deleteQuote(id) {
+      if(confirm('¿Eliminar cotización?')) {
+        try {
+          const response = await fetch(getApiUrl() + '/' + id, { method: 'DELETE' });
+          if (response.ok) {
+            alert('Cotización eliminada exitosamente.');
+            await cargarCotizaciones();
+          } else {
+            alert('Error al eliminar cotización.');
+          }
+        } catch (error) {
+          alert('Error al eliminar cotización: ' + error.message);
+        }
+      }
+    }
+    
+    async function editQuote(id) {
+      let q = cotizaciones.find(q=>q.id==id);
+      if(q) {
+        editingId = id;
+        fillForm(q);
+        modal.style.display = 'flex';
+      }
+    }
+    
+    form.onsubmit = async function(e) {
+      e.preventDefault();
+      let data = getFormData();
+      if(editingId) {
+        try {
+          const response = await fetch(getApiUrl() + '/' + Number(editingId), {
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+          });
+          if (response.ok) {
+            alert('Cotización actualizada exitosamente.');
+            await cargarCotizaciones();
+          } else {
+            alert('Error al actualizar cotización.');
+          }
+        } catch (error) {
+          alert('Error al actualizar cotización: ' + error.message);
+        }
+        editingId = null;
+      } else {
+        await guardarCotizacion(data);
+      }
+      modal.style.display = 'none';
+    };
+    // --- SERVICIOS DINÁMICOS ---
+    function crearServicioRow(servicio = {}) {
+  const tr = document.createElement('tr');
+  tr.className = 'servicio-row';
+  tr.innerHTML = `
+    <td><input type="text" class="form-control form-control-sm" placeholder="Título" value="${servicio.titulo||''}"></td>
+    <td style="position:relative;">
+      <div style="display:flex;align-items:center;gap:4px;">
+        <input type="text" class="form-control form-control-sm icono-input" placeholder="Icono (clase FontAwesome)" value="${servicio.icono||''}" style="width:80%">
+        <button type="button" class="btn btn-secondary btn-sm show-icon-table" title="Ver ejemplos"><i class="fa fa-th"></i></button>
+      </div>
+      <div class="icon-table-popup" style="display:none;position:absolute;z-index:10;background:#fff;border:1px solid #ccc;padding:8px;top:35px;left:0;min-width:220px;width:auto;max-width:420px;max-height:320px;overflow:auto;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:8px;justify-items:center;align-items:center;">
+          <span class="icon-example" data-icon="fa-solid fa-user"><i class="fa-solid fa-user"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-lock"><i class="fa-solid fa-lock"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-shield-alt"><i class="fa-solid fa-shield-alt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bolt"><i class="fa-solid fa-bolt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-camera"><i class="fa-solid fa-camera"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bell"><i class="fa-solid fa-bell"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-building"><i class="fa-solid fa-building"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-car"><i class="fa-solid fa-car"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-cogs"><i class="fa-solid fa-cogs"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-users"><i class="fa-solid fa-users"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-home"><i class="fa-solid fa-home"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-heart"><i class="fa-solid fa-heart"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-star"><i class="fa-solid fa-star"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-globe"><i class="fa-solid fa-globe"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-phone"><i class="fa-solid fa-phone"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-envelope"><i class="fa-solid fa-envelope"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-check"><i class="fa-solid fa-check"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-times"><i class="fa-solid fa-times"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-search"><i class="fa-solid fa-search"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-wrench"><i class="fa-solid fa-wrench"></i></span>
+          <span class="icon-example" data-icon="fas fa-video"><i class="fas fa-video"></i></span>
+          <span class="icon-example" data-icon="fas fa-radio"><i class="fas fa-radio"></i></span>
+          <span class="icon-example" data-icon="fas fa-qrcode"><i class="fas fa-qrcode"></i></span>
+          <span class="icon-example" data-icon="fas fa-mobile-alt"><i class="fas fa-mobile-alt"></i></span>
+          <span class="icon-example" data-icon="fas fa-users-cog"><i class="fas fa-users-cog"></i></span>
+          <span class="icon-example" data-icon="fas fa-truck"><i class="fas fa-truck"></i></span>
+          <span class="icon-example" data-icon="fas fa-shield-virus"><i class="fas fa-shield-virus"></i></span>
+          <span class="icon-example" data-icon="fas fa-brain"><i class="fas fa-brain"></i></span>
+          <span class="icon-example" data-icon="fas fa-certificate"><i class="fas fa-certificate"></i></span>
+          <span class="icon-example" data-icon="fas fa-eye"><i class="fas fa-eye"></i></span>
+          <span class="icon-example" data-icon="fas fa-graduation-cap"><i class="fas fa-graduation-cap"></i></span>
+          <span class="icon-example" data-icon="value-card-icon"><i class="value-card-icon"></i></span>
+          <span class="icon-example" data-icon="class=\"value-card-icon\""><i class="value-card-icon"></i></span>
+        </div>
+      </div>
+    </td>
+    <td><textarea class="form-control form-control-sm" placeholder="Items, uno por línea" rows="3">${(servicio.items||[]).join('\n')}</textarea></td>
+    <td><button type="button" class="btn btn-danger btn-sm remove-servicio">X</button></td>
+  `;
+  tr.querySelector('.remove-servicio').onclick = () => tr.remove();
+  // Icon table logic
+  const iconInput = tr.querySelector('.icono-input');
+  const showBtn = tr.querySelector('.show-icon-table');
+  const popup = tr.querySelector('.icon-table-popup');
+  showBtn.onclick = (e) => {
+    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    e.stopPropagation();
+  };
+  popup.querySelectorAll('.icon-example').forEach(span => {
+    span.onclick = () => {
+      iconInput.value = span.getAttribute('data-icon');
+      popup.style.display = 'none';
+    };
+  });
+  // Hide popup if click outside
+  document.addEventListener('click', function hidePopup(e) {
+    if (!tr.contains(e.target)) {
+      popup.style.display = 'none';
+      document.removeEventListener('click', hidePopup);
+    }
+  });
+  return tr;
+}
+function setServicios(serviciosArr) {
+  const container = document.getElementById('servicios-container');
+  container.innerHTML = '';
+  (serviciosArr||[]).forEach(s => container.appendChild(crearServicioRow(s)));
+}
+function getServicios() {
+  const rows = document.querySelectorAll('#servicios-container .servicio-row');
+  return Array.from(rows).map(row => {
+    const inputs = row.querySelectorAll('input, textarea');
+    return {
+      titulo: inputs[0].value,
+      icono: inputs[1].value,
+      items: inputs[2].value.split('\n').map(i=>i.trim()).filter(i=>i)
+    };
+  });
+}
+document.getElementById('add-servicio').onclick = () => {
+  document.getElementById('servicios-container').appendChild(crearServicioRow());
+};
+// Sobrescribir fillForm y getFormDahazlo tu deta para servicios
+const oldFillFormServicios = fillForm;
+fillForm = function(data) {
+  oldFillFormServicios(data);
+  setLineas(data.lineas||[]);
+  setServicios(data.servicios||[]);
+};
+const oldGetFormDataServicios = getFormData;
+getFormData = function() {
+  const data = oldGetFormDataServicios();
+  data.lineas = getLineas();
+  data.servicios = getServicios();
+  return data;
+};
+// --- GALERÍA DINÁMICA ---
+function crearGaleriaRow(img = {}) {
+  const tr = document.createElement('tr');
+  tr.className = 'galeria-row';
+  tr.innerHTML = `
+    <td><input type="text" class="form-control form-control-sm" placeholder="Alt" value="${img.alt||''}"></td>
+    <td>
+      <input type="file" accept="image/*" class="form-control form-control-sm galeria-file-input" style="display:inline-block;width:70%">
+      <img src="${img.src||''}" alt="preview" style="max-width:40px;max-height:40px;vertical-align:middle;${img.src?'':'display:none;'}" class="galeria-preview">
+      <input type="hidden" class="galeria-src" value="${img.src||''}">
+    </td>
+    <td><button type="button" class="btn btn-danger btn-sm remove-galeria">X</button></td>
+  `;
+  tr.querySelector('.remove-galeria').onclick = () => tr.remove();
+  const fileInput = tr.querySelector('.galeria-file-input');
+  const preview = tr.querySelector('.galeria-preview');
+  const srcInput = tr.querySelector('.galeria-src');
+  fileInput.onchange = async function() {
+    const file = this.files[0];
+    if (!file) return;
+    const formData = new FormData();
+    formData.append('file', file);
+    formData.append('upload_preset', 'imageC'); // <-- Cambia esto por tu upload_preset
+    try {
+      const res = await fetch('https://api.cloudinary.com/v1_1/dkrpb5flb/image/upload', { // <-- Cambia esto por tu cloud_name
+        method: 'POST',
+        body: formData
+      });
+      const data = await res.json();
+      if (data.secure_url) {
+        preview.src = data.secure_url;
+        preview.style.display = '';
+        srcInput.value = data.secure_url;
+      } else {
+        alert('Error al subir la imagen a Cloudinary');
+      }
+    } catch (e) {
+      alert('Error al subir la imagen a Cloudinary');
+    }
+  };
+  return tr;
+}
+function setGaleria(galeriaArr) {
+  const container = document.getElementById('galeria-container');
+  container.innerHTML = '';
+  (galeriaArr||[]).forEach(img => container.appendChild(crearGaleriaRow(img)));
+}
+function getGaleria() {
+  const rows = document.querySelectorAll('#galeria-container .galeria-row');
+  return Array.from(rows).map(row => {
+    const inputs = row.querySelectorAll('input');
+    return {
+      alt: inputs[0].value,
+      src: row.querySelector('.galeria-src').value
+    };
+  });
+}
+document.getElementById('add-galeria').onclick = () => {
+  document.getElementById('galeria-container').appendChild(crearGaleriaRow());
+};
+// Sobrescribir fillForm y getFormData para galeria
+const oldFillFormGaleria = fillForm;
+fillForm = function(data) {
+  oldFillFormGaleria(data);
+  setLineas(data.lineas||[]);
+  setServicios(data.servicios||[]);
+  setGaleria(data.galeria||[]);
+};
+const oldGetFormDataGaleria = getFormData;
+getFormData = function() {
+  const data = oldGetFormDataGaleria();
+  data.lineas = getLineas();
+  data.servicios = getServicios();
+  data.galeria = getGaleria();
+  return data;
+};
+// --- VALUE SECTION DINÁMICO ---
+function crearValueSectionRow(grupo = {}) {
+  const tr = document.createElement('tr');
+  tr.className = 'value-section-row';
+  tr.innerHTML = `
+    <td><input type="text" class="form-control form-control-sm" placeholder="Título" value="${grupo.titulo||''}"></td>
+    <td style="position:relative;">
+      <div style="display:flex;align-items:center;gap:4px;">
+        <input type="text" class="form-control form-control-sm icono-input" placeholder="Icono (clase FontAwesome)" value="${grupo.icono||''}" style="width:80%">
+        <button type="button" class="btn btn-secondary btn-sm show-icon-table" title="Ver ejemplos"><i class="fa fa-th"></i></button>
+      </div>
+      <div class="icon-table-popup" style="display:none;position:absolute;z-index:10;background:#fff;border:1px solid #ccc;padding:8px;top:35px;left:0;min-width:220px;width:auto;max-width:420px;max-height:320px;overflow:auto;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:8px;justify-items:center;align-items:center;">
+          <span class="icon-example" data-icon="fa-solid fa-user"><i class="fa-solid fa-user"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-lock"><i class="fa-solid fa-lock"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-shield-alt"><i class="fa-solid fa-shield-alt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bolt"><i class="fa-solid fa-bolt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-camera"><i class="fa-solid fa-camera"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bell"><i class="fa-solid fa-bell"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-building"><i class="fa-solid fa-building"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-car"><i class="fa-solid fa-car"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-cogs"><i class="fa-solid fa-cogs"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-users"><i class="fa-solid fa-users"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-home"><i class="fa-solid fa-home"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-heart"><i class="fa-solid fa-heart"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-star"><i class="fa-solid fa-star"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-globe"><i class="fa-solid fa-globe"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-phone"><i class="fa-solid fa-phone"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-envelope"><i class="fa-solid fa-envelope"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-check"><i class="fa-solid fa-check"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-times"><i class="fa-solid fa-times"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-search"><i class="fa-solid fa-search"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-wrench"><i class="fa-solid fa-wrench"></i></span>
+          <span class="icon-example" data-icon="fas fa-video"><i class="fas fa-video"></i></span>
+          <span class="icon-example" data-icon="fas fa-radio"><i class="fas fa-radio"></i></span>
+          <span class="icon-example" data-icon="fas fa-qrcode"><i class="fas fa-qrcode"></i></span>
+          <span class="icon-example" data-icon="fas fa-mobile-alt"><i class="fas fa-mobile-alt"></i></span>
+          <span class="icon-example" data-icon="fas fa-users-cog"><i class="fas fa-users-cog"></i></span>
+          <span class="icon-example" data-icon="fas fa-truck"><i class="fas fa-truck"></i></span>
+          <span class="icon-example" data-icon="fas fa-shield-virus"><i class="fas fa-shield-virus"></i></span>
+          <span class="icon-example" data-icon="fas fa-brain"><i class="fas fa-brain"></i></span>
+          <span class="icon-example" data-icon="fas fa-certificate"><i class="fas fa-certificate"></i></span>
+          <span class="icon-example" data-icon="fas fa-eye"><i class="fas fa-eye"></i></span>
+          <span class="icon-example" data-icon="fas fa-graduation-cap"><i class="fas fa-graduation-cap"></i></span>
+          <span class="icon-example" data-icon="value-card-icon"><i class="value-card-icon"></i></span>
+          <span class="icon-example" data-icon="class=\"value-card-icon\""><i class="value-card-icon"></i></span>
+        </div>
+      </div>
+    </td>
+    <td><input type="text" class="form-control form-control-sm" placeholder="Descripción" value="${grupo.descripcion||''}"></td>
+    <td><textarea class="form-control form-control-sm" placeholder="Items, uno por línea" rows="3">${(grupo.items||[]).join('\n')}</textarea></td>
+    <td><button type="button" class="btn btn-danger btn-sm remove-value-section">X</button></td>
+  `;
+  tr.querySelector('.remove-value-section').onclick = () => tr.remove();
+  // Icon table logic
+  const iconInput = tr.querySelector('.icono-input');
+  const showBtn = tr.querySelector('.show-icon-table');
+  const popup = tr.querySelector('.icon-table-popup');
+  showBtn.onclick = (e) => {
+    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    e.stopPropagation();
+  };
+  popup.querySelectorAll('.icon-example').forEach(span => {
+    span.onclick = () => {
+      iconInput.value = span.getAttribute('data-icon');
+      popup.style.display = 'none';
+    };
+  });
+  // Hide popup if click outside
+  document.addEventListener('click', function hidePopup(e) {
+    if (!tr.contains(e.target)) {
+      popup.style.display = 'none';
+      document.removeEventListener('click', hidePopup);
+    }
+  });
+  return tr;
+}
+function setValueSection(arr) {
+  const container = document.getElementById('value-section-container');
+  container.innerHTML = '';
+  (arr||[]).forEach(g => container.appendChild(crearValueSectionRow(g)));
+}
+function getValueSection() {
+  const rows = document.querySelectorAll('#value-section-container .value-section-row');
+  return Array.from(rows).map(row => {
+    const inputs = row.querySelectorAll('input, textarea');
+    return {
+      titulo: inputs[0].value,
+      icono: inputs[1].value,
+      descripcion: inputs[2].value,
+      items: inputs[3].value.split('\n').map(i=>i.trim()).filter(i=>i)
+    };
+  });
+}
+document.getElementById('add-value-section').onclick = () => {
+  document.getElementById('value-section-container').appendChild(crearValueSectionRow());
+};
+// --- PROVEEDOR INTEGRAL DINÁMICO ---
+function crearProvIntegralRow(prov = {}) {
+  const tr = document.createElement('tr');
+  tr.className = 'prov-integral-row';
+  tr.innerHTML = `
+    <td><input type="text" class="form-control form-control-sm" placeholder="Título" value="${prov.titulo||''}"></td>
+    <td style="position:relative;">
+      <div style="display:flex;align-items:center;gap:4px;">
+        <input type="text" class="form-control form-control-sm icono-input" placeholder="Icono (clase FontAwesome)" value="${prov.icono||''}" style="width:80%">
+        <button type="button" class="btn btn-secondary btn-sm show-icon-table" title="Ver ejemplos"><i class="fa fa-th"></i></button>
+      </div>
+      <div class="icon-table-popup" style="display:none;position:absolute;z-index:10;background:#fff;border:1px solid #ccc;padding:8px;top:35px;left:0;min-width:220px;width:auto;max-width:420px;max-height:320px;overflow:auto;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:8px;justify-items:center;align-items:center;">
+          <span class="icon-example" data-icon="fa-solid fa-user"><i class="fa-solid fa-user"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-lock"><i class="fa-solid fa-lock"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-shield-alt"><i class="fa-solid fa-shield-alt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bolt"><i class="fa-solid fa-bolt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-camera"><i class="fa-solid fa-camera"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bell"><i class="fa-solid fa-bell"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-building"><i class="fa-solid fa-building"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-car"><i class="fa-solid fa-car"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-cogs"><i class="fa-solid fa-cogs"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-users"><i class="fa-solid fa-users"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-home"><i class="fa-solid fa-home"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-heart"><i class="fa-solid fa-heart"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-star"><i class="fa-solid fa-star"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-globe"><i class="fa-solid fa-globe"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-phone"><i class="fa-solid fa-phone"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-envelope"><i class="fa-solid fa-envelope"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-check"><i class="fa-solid fa-check"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-times"><i class="fa-solid fa-times"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-search"><i class="fa-solid fa-search"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-wrench"><i class="fa-solid fa-wrench"></i></span>
+          <span class="icon-example" data-icon="fas fa-video"><i class="fas fa-video"></i></span>
+          <span class="icon-example" data-icon="fas fa-radio"><i class="fas fa-radio"></i></span>
+          <span class="icon-example" data-icon="fas fa-qrcode"><i class="fas fa-qrcode"></i></span>
+          <span class="icon-example" data-icon="fas fa-mobile-alt"><i class="fas fa-mobile-alt"></i></span>
+          <span class="icon-example" data-icon="fas fa-users-cog"><i class="fas fa-users-cog"></i></span>
+          <span class="icon-example" data-icon="fas fa-truck"><i class="fas fa-truck"></i></span>
+          <span class="icon-example" data-icon="fas fa-shield-virus"><i class="fas fa-shield-virus"></i></span>
+          <span class="icon-example" data-icon="fas fa-brain"><i class="fas fa-brain"></i></span>
+          <span class="icon-example" data-icon="fas fa-certificate"><i class="fas fa-certificate"></i></span>
+          <span class="icon-example" data-icon="fas fa-eye"><i class="fas fa-eye"></i></span>
+          <span class="icon-example" data-icon="fas fa-graduation-cap"><i class="fas fa-graduation-cap"></i></span>
+          <span class="icon-example" data-icon="value-card-icon"><i class="value-card-icon"></i></span>
+          <span class="icon-example" data-icon="class=\"value-card-icon\""><i class="value-card-icon"></i></span>
+        </div>
+      </div>
+    </td>
+    <td><input type="text" class="form-control form-control-sm" placeholder="Descripción" value="${prov.descripcion||''}"></td>
+    <td><button type="button" class="btn btn-danger btn-sm remove-prov-integral">X</button></td>
+  `;
+  tr.querySelector('.remove-prov-integral').onclick = () => tr.remove();
+  // Icon table logic
+  const iconInput = tr.querySelector('.icono-input');
+  const showBtn = tr.querySelector('.show-icon-table');
+  const popup = tr.querySelector('.icon-table-popup');
+  showBtn.onclick = (e) => {
+    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    e.stopPropagation();
+  };
+  popup.querySelectorAll('.icon-example').forEach(span => {
+    span.onclick = () => {
+      iconInput.value = span.getAttribute('data-icon');
+      popup.style.display = 'none';
+    };
+  });
+  document.addEventListener('click', function hidePopup(e) {
+    if (!tr.contains(e.target)) {
+      popup.style.display = 'none';
+      document.removeEventListener('click', hidePopup);
+    }
+  });
+  return tr;
+}
+function setProvIntegral(arr) {
+  const container = document.getElementById('prov-integral-container');
+  container.innerHTML = '';
+  (arr||[]).forEach(p => container.appendChild(crearProvIntegralRow(p)));
+}
+function getProvIntegral() {
+  const rows = document.querySelectorAll('#prov-integral-container .prov-integral-row');
+  return Array.from(rows).map(row => {
+    const inputs = row.querySelectorAll('input');
+    return {
+      titulo: inputs[0].value,
+      icono: inputs[1].value,
+      descripcion: inputs[2].value
+    };
+  });
+}
+document.getElementById('add-prov-integral').onclick = () => {
+  document.getElementById('prov-integral-container').appendChild(crearProvIntegralRow());
+};
+// --- INFRAESTRUCTURA TECNOLÓGICA DINÁMICA ---
+function crearInfTecRow(item = {}) {
+  const tr = document.createElement('tr');
+  tr.className = 'inf-tec-row';
+  tr.innerHTML = `
+    <td><input type="text" class="form-control form-control-sm" placeholder="Número" value="${item.numero||''}"></td>
+ <td style="position:relative;">
+      <div style="display:flex;align-items:center;gap:4px;">
+        <input type="text" class="form-control form-control-sm icono-input" placeholder="Icono (clase FontAwesome)" value="${item.icono||''}" style="width:80%">
+        <button type="button" class="btn btn-secondary btn-sm show-icon-table" title="Ver ejemplos"><i class="fa fa-th"></i></button>
+      </div>
+      <div class="icon-table-popup" style="display:none;position:absolute;z-index:10;background:#fff;border:1px solid #ccc;padding:8px;top:35px;left:0;min-width:220px;width:auto;max-width:420px;max-height:320px;overflow:auto;box-shadow:0 2px 12px rgba(0,0,0,0.10);">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(40px,1fr));gap:8px;justify-items:center;align-items:center;">
+          <span class="icon-example" data-icon="fa-solid fa-user"><i class="fa-solid fa-user"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-lock"><i class="fa-solid fa-lock"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-shield-alt"><i class="fa-solid fa-shield-alt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bolt"><i class="fa-solid fa-bolt"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-camera"><i class="fa-solid fa-camera"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-bell"><i class="fa-solid fa-bell"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-building"><i class="fa-solid fa-building"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-car"><i class="fa-solid fa-car"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-cogs"><i class="fa-solid fa-cogs"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-users"><i class="fa-solid fa-users"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-home"><i class="fa-solid fa-home"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-heart"><i class="fa-solid fa-heart"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-star"><i class="fa-solid fa-star"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-globe"><i class="fa-solid fa-globe"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-phone"><i class="fa-solid fa-phone"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-envelope"><i class="fa-solid fa-envelope"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-check"><i class="fa-solid fa-check"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-times"><i class="fa-solid fa-times"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-search"><i class="fa-solid fa-search"></i></span>
+          <span class="icon-example" data-icon="fa-solid fa-wrench"><i class="fa-solid fa-wrench"></i></span>
+          <span class="icon-example" data-icon="fas fa-video"><i class="fas fa-video"></i></span>
+          <span class="icon-example" data-icon="fas fa-radio"><i class="fas fa-radio"></i></span>
+          <span class="icon-example" data-icon="fas fa-qrcode"><i class="fas fa-qrcode"></i></span>
+          <span class="icon-example" data-icon="fas fa-mobile-alt"><i class="fas fa-mobile-alt"></i></span>
+          <span class="icon-example" data-icon="fas fa-users-cog"><i class="fas fa-users-cog"></i></span>
+          <span class="icon-example" data-icon="fas fa-truck"><i class="fas fa-truck"></i></span>
+          <span class="icon-example" data-icon="fas fa-shield-virus"><i class="fas fa-shield-virus"></i></span>
+          <span class="icon-example" data-icon="fas fa-brain"><i class="fas fa-brain"></i></span>
+          <span class="icon-example" data-icon="fas fa-certificate"><i class="fas fa-certificate"></i></span>
+          <span class="icon-example" data-icon="fas fa-eye"><i class="fas fa-eye"></i></span>
+          <span class="icon-example" data-icon="fas fa-graduation-cap"><i class="fas fa-graduation-cap"></i></span>
+          <span class="icon-example" data-icon="value-card-icon"><i class="value-card-icon"></i></span>
+          <span class="icon-example" data-icon="class=\"value-card-icon\""><i class="value-card-icon"></i></span>
+        </div>
+      </div>
+    </td>
+    <td><input type="text" class="form-control form-control-sm" placeholder="Título" value="${item.titulo||''}"></td>
+    <td><input type="text" class="form-control form-control-sm" placeholder="Descripción" value="${item.descripcion||''}"></td>
+    <td><textarea class="form-control form-control-sm" placeholder="Items, uno por línea" rows="3">${(item.items||[]).join('\n')}</textarea></td>
+    <td><button type="button" class="btn btn-danger btn-sm remove-inf-tec">X</button></td>
+  `;
+  tr.querySelector('.remove-inf-tec').onclick = () => tr.remove();
+  // Icon table logic
+  const iconInput = tr.querySelector('.icono-input');
+  const showBtn = tr.querySelector('.show-icon-table');
+  const popup = tr.querySelector('.icon-table-popup');
+  showBtn.onclick = (e) => {
+    popup.style.display = popup.style.display === 'none' ? 'block' : 'none';
+    e.stopPropagation();
+  };
+  popup.querySelectorAll('.icon-example').forEach(span => {
+    span.onclick = () => {
+      iconInput.value = span.getAttribute('data-icon');
+      popup.style.display = 'none';
+    };
+  });
+  // Hide popup if click outside
+  document.addEventListener('click', function hidePopup(e) {
+    if (!tr.contains(e.target)) {
+      popup.style.display = 'none';
+      document.removeEventListener('click', hidePopup);
+    }
+  });
+  return tr;
+}
+function setInfTec(arr) {
+  const container = document.getElementById('inf-tec-container');
+  container.innerHTML = '';
+  (arr||[]).forEach(i => container.appendChild(crearInfTecRow(i)));
+} 
+function getInfTec() {
+  const rows = document.querySelectorAll('#inf-tec-container .inf-tec-row');
+  return Array.from(rows).map(row => {
+    const inputs = row.querySelectorAll('input, textarea');
+    return {
+      numero: inputs[0].value,
+      icono: inputs[1].value,
+      titulo: inputs[2].value,
+      descripcion: inputs[3].value,
+      items: inputs[4].value.split('\n').map(i=>i.trim()).filter(i=>i)
+    };
+  });
+}
+document.getElementById('add-inf-tec').onclick = () => {
+  document.getElementById('inf-tec-container').appendChild(crearInfTecRow());
+};
+// --- INTEGRACIÓN EN fillForm y getFormData ---
+const oldFillFormInfTec = fillForm;
+fillForm = function(data) {
+  oldFillFormInfTec(data);
+  setLineas(data.lineas||[]);
+  setServicios(data.servicios||[]);
+  setGaleria(data.galeria||[]);
+  setValueSection(data.valueSection||[]);
+  setInfTec(data.InfTec||[]);
+  setProvIntegral(data.provIntegral||[]);
+};
+const oldGetFormDataInfTec = getFormData;
+getFormData = function() {
+  const data = oldGetFormDataInfTec();
+  data.lineas = getLineas();
+  data.servicios = getServicios();
+  data.galeria = getGaleria();
+  data.valueSection = getValueSection();
+  data.InfTec = getInfTec();
+  data.provIntegral = getProvIntegral();
+  return data;
+};
+// --- LÍNEAS DINÁMICAS PERSISTENTES ---
+let lineasData = [];
+function crearLineaRow(linea = {}, idx = null) {
+  const tr = document.createElement('tr');
+  tr.className = 'linea-row';
+  const selectedCols = getSelectedLineaColumns();
+  let html = '';
+  selectedCols.forEach(col => {
+    switch(col.key) {
+      case 'dias':
+        html += `<td><input type="text" class="form-control form-control-sm" placeholder="Días" value="${linea.dias||''}" data-col="dias"></td>`;
+        break;
+      case 'total':
+        html += `<td><input type="number" class="form-control form-control-sm" placeholder="Total" value="${linea.total||''}" data-col="total"></td>`;
+        break;
+      case 'turno':
+        html += `<td><input type="text" class="form-control form-control-sm" placeholder="Turno" value="${linea.turno||''}" data-col="turno"></td>`;
+        break;
+      case 'unitario':
+        html += `<td><input type="number" class="form-control form-control-sm" placeholder="Unitario" value="${linea.unitario||''}" data-col="unitario"></td>`;
+        break;
+      case 'elementos':
+        html += `<td><input type="number" class="form-control form-control-sm" placeholder="Elementos" value="${linea.elementos||''}" data-col="elementos"></td>`;
+        break;
+      case 'ubicacion':
+        html += `<td><input type="text" class="form-control form-control-sm" placeholder="Ubicación" value="${linea.ubicacion||''}" data-col="ubicacion"></td>`;
+        break;
+      case 'descripcion':
+        html += `<td><input type="text" class="form-control form-control-sm" placeholder="Descripción" value="${linea.descripcion||''}" data-col="descripcion"></td>`;
+        break;
+    }
+  });
+  html += '<td><button type="button" class="btn btn-danger btn-sm remove-linea">X</button></td>';
+  tr.innerHTML = html;
+  tr.querySelector('.remove-linea').onclick = () => {
+    if(idx !== null) {
+      lineasData.splice(idx, 1);
+      renderLineasRows();
+    } else {
+      tr.remove();
+    }
+  };
+  tr.querySelectorAll('input').forEach(input => {
+    input.addEventListener('input', () => {
+      if(idx !== null) {
+        const col = input.getAttribute('data-col');
+        lineasData[idx][col] = input.value;
+      }
+    });
+  });
+  return tr;
+}
+function setLineas(lineasArr) {
+  lineasData = JSON.parse(JSON.stringify(lineasArr||[]));
+  renderLineasRows();
+}
+function renderLineasRows() {
+  const container = document.getElementById('lineas-container');
+  container.innerHTML = '';
+  lineasData.forEach((l, idx) => container.appendChild(crearLineaRow(l, idx)));
+}
+function actualizarLineasData() {
+  const rows = document.querySelectorAll('#lineas-container .linea-row');
+  rows.forEach((row, idx) => {
+    row.querySelectorAll('input').forEach(input => {
+      const col = input.getAttribute('data-col');
+      if(col) lineasData[idx][col] = input.value;
+    });
+  });
+}
+function getLineas() {
+  actualizarLineasData();
+  return JSON.parse(JSON.stringify(lineasData));
+}
+document.getElementById('add-linea').onclick = () => {
+  lineasData.push({});
+  renderLineasRows();
+};
+    </script>
+<style>
+.icon-table-popup > div {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(36px, 1fr));
+  gap: 8px;
+  max-width: 220px;
+  max-height: 120px;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: 6px;
+}
+.icon-table-popup .icon-example {
+  min-width: 12px;
+  min-height: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.icon-table-popup .icon-example {
+  min-width: 40px;
+  min-height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+}
+</style>
+</body>
+</html>

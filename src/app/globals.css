@@ -24,3 +24,90 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-x {
+  animation: scroll-x 40s linear infinite;
+}
+
+/* Fix para autoplay en slick carousel */
+.slick-slider {
+  touch-action: pan-y;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex !important;
+}
+
+/* Estilos específicos para el carousel de clientes */
+.clients-carousel .slick-slide {
+  height: auto;
+}
+
+.clients-carousel .single-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Solo en móvil - hacer los logos más grandes */
+@media (max-width: 640px) {
+  .clients-carousel img {
+    max-width: 200px !important;
+    height: auto !important;
+  }
+}
+
+/* Estilos para el slider de testimonios */
+.testimonials-slider .slick-slide {
+  display: inline-block !important;
+  height: auto !important;
+}
+
+.testimonials-slider .slick-track {
+  display: flex !important;
+  align-items: stretch;
+}
+
+.testimonials-slider .slick-slide > div {
+  height: 100%;
+  display: flex !important;
+}
+
+.testimonials-slider .slick-slide > div > div {
+  width: 100%;
+}
+
+.testimonials-slider .slick-list {
+  overflow: hidden;
+}
+
+/* Forzar 2 columnas en desktop */
+@media (min-width: 1024px) {
+  .testimonials-slider .slick-slide {
+    width: 50% !important;
+    flex: 0 0 50% !important;
+  }
+}
+
+/* Forzar 1 columna en móvil */
+@media (max-width: 1023px) {
+  .testimonials-slider .slick-slide {
+    width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+}

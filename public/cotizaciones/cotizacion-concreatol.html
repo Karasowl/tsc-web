@@ -1,0 +1,1267 @@
+<!doctype html>
+<html class="no-js" lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cotización CONCREATOL - TSC SEGURIDAD PRIVADA</title>
+        <meta name="description" content="Propuesta especializada de servicios de seguridad privada para fines de semana y días feriados - CONCREATOL - TSC Private Security Consulting">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="image/x-icon" href="img/cropped-fav-1.ico">
+        
+        <!-- CSS here -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/animate.min.css">
+        <link rel="stylesheet" href="css/magnific-popup.css">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+        <link rel="stylesheet" href="css/dripicons.css">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/default.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/botones.css">
+        <link rel="stylesheet" href="css/custom-hamburger-menu.css">
+        <link rel="stylesheet" href="css/header-mobile-adjustments.css">
+        <link rel="stylesheet" href="css/language-selector.css">
+        
+        <style>
+            /* Estilos específicos para CONCREATOL  - Más estratégico y visual */
+            :root {
+                --primary-red: #df2919;
+                --dark-bg: #1a1a1d;
+                --darker-bg: #222327;
+                --accent-gold: #ffd700;
+            }
+            
+            .cotizacion-hero {
+                background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+                padding: 150px 0 80px;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .cotizacion-hero::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('img/bg/quote_bg.png') no-repeat center center;
+                opacity: 0.1;
+                z-index: 1;
+            }
+            
+            .cotizacion-hero-content {
+                position: relative;
+                z-index: 2;
+            }
+            
+            .strategic-header {
+                text-align: center;
+                margin-bottom: 60px;
+            }
+            
+            .strategic-header .subtitle {
+                color: var(--accent-gold);
+                font-size: 1.2rem;
+                font-weight: 600;
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            
+            .strategic-header h1 {
+                font-size: clamp(2.5rem, 6vw, 4rem);
+                color: #fff;
+                margin-bottom: 20px;
+                font-weight: 700;
+                background: linear-gradient(135deg, #fff 0%, var(--primary-red) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+            }
+            
+            .strategic-header .tagline {
+                font-size: 1.3rem;
+                color: #ccc;
+                margin-bottom: 30px;
+                font-weight: 500;
+            }
+            
+            .client-badge {
+                display: inline-block;
+                background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+                color: white;
+                padding: 15px 40px;
+                border-radius: 50px;
+                font-size: 1.1rem;
+                font-weight: 700;
+                box-shadow: 0 10px 30px rgba(223, 41, 25, 0.3);
+            }
+            
+            .tsc-strategic-logo {
+                max-width: 300px;
+                filter: brightness(0) invert(1);
+                transition: transform 0.3s ease;
+            }
+            
+            .tsc-strategic-logo:hover {
+                transform: scale(1.05);
+            }
+            
+            .download-section-hero {
+                background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+                padding: 60px 40px;
+                border-radius: 20px;
+                text-align: center;
+                box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+                margin-top: 40px;
+            }
+            
+            .download-section-hero h3 {
+                font-size: 2rem;
+                font-weight: 700;
+            }
+            
+            .download-section-hero p {
+                font-size: 1.1rem;
+                opacity: 0.9;
+            }
+            
+            /* Secciones de valor diferencial */
+            .value-section {
+                padding: 100px 0;
+                background: var(--dark-bg);
+            }
+            
+            .value-section.alt {
+                background: var(--darker-bg);
+            }
+            
+            .section-header {
+                text-align: center;
+                margin-bottom: 80px;
+            }
+            
+            .section-header .section-tag {
+                display: inline-block;
+                background: var(--primary-red);
+                color: white;
+                padding: 8px 25px;
+                border-radius: 25px;
+                font-size: 0.9rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin-bottom: 20px;
+            }
+            
+            .section-header h2 {
+                font-size: clamp(2rem, 5vw, 3.5rem);
+                color: #fff;
+                margin-bottom: 20px;
+                font-weight: 700;
+            }
+            
+            .section-header p {
+                font-size: 1.2rem;
+                color: #ccc;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 1.6;
+            }
+            
+            /* Tarjetas de valor */
+            .value-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+                gap: 40px;
+                margin-top: 60px;
+            }
+            
+            .value-card {
+                background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+                border: 1px solid rgba(223, 41, 25, 0.2);
+                border-radius: 20px;
+                padding: 40px;
+                transition: all 0.3s ease;
+                position: relative;
+                overflow: hidden;
+            }
+            
+            .value-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+                transform: scaleX(0);
+                transition: transform 0.3s ease;
+            }
+            
+            .value-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
+                border-color: var(--primary-red);
+            }
+            
+            .value-card:hover::before {
+                transform: scaleX(1);
+            }
+            
+            .value-card-icon {
+                width: 80px;
+                height: 80px;
+                background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 25px;
+                font-size: 2rem;
+                color: white;
+            }
+            
+            .value-card h3 {
+                color: #fff;
+                font-size: 1.5rem;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+            
+            .value-card p {
+                color: #ccc;
+                line-height: 1.6;
+                margin-bottom: 20px;
+            }
+            
+            .value-list {
+                list-style: none;
+                padding: 0;
+            }
+            
+            .value-list li {
+                display: flex;
+                align-items: center;
+                margin-bottom: 12px;
+                color: #ccc;
+                font-size: 0.95rem;
+            }
+            
+            .value-list li::before {
+                content: '\f058';
+                font-family: 'Font Awesome 5 Free';
+                font-weight: 900;
+                color: var(--accent-gold);
+                margin-right: 12px;
+                font-size: 1rem;
+            }
+            
+            /* Sección tecnológica especial */
+            .tech-showcase {
+                background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+                padding: 120px 0;
+                position: relative;
+            }
+            
+            .tech-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 50px;
+                margin-top: 80px;
+            }
+            
+            .tech-feature {
+                text-align: center;
+                position: relative;
+            }
+            
+            .tech-feature-visual {
+                width: 120px;
+                height: 120px;
+                background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 30px;
+                font-size: 3rem;
+                color: white;
+                box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+                animation: pulse 2s infinite;
+            }
+            
+            .tech-feature h4 {
+                color: #fff;
+                font-size: 1.4rem;
+                margin-bottom: 15px;
+                font-weight: 700;
+            }
+            
+            .tech-feature .number {
+                display: inline-block;
+                background: var(--accent-gold);
+                color: var(--darker-bg);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: 700;
+                font-size: 1.2rem;
+                margin: 0 auto 15px;
+            }
+            
+            /* Tabla de precios mejorada */
+            .pricing-section {
+                padding: 100px 0;
+                background: var(--dark-bg);
+            }
+            
+            .price-table {
+                background: var(--darker-bg);
+                border-radius: 20px;
+                overflow: hidden;
+                box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+                margin: 60px 0;
+                border: 1px solid rgba(223, 41, 25, 0.2);
+            }
+            
+            .price-table table {
+                width: 100%;
+                margin: 0;
+                border-collapse: collapse;
+            }
+            
+            .price-table th {
+                background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+                color: #fff;
+                padding: 25px 20px;
+                text-align: left;
+                font-weight: 700;
+                border: none;
+                font-size: 1rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .price-table td {
+                padding: 20px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                color: #fff;
+                vertical-align: middle;
+            }
+            
+            .price-table tr:last-child td {
+                border-bottom: none;
+            }
+            
+            .price-table tr:hover {
+                background: rgba(223, 41, 25, 0.1);
+            }
+            
+            .location-cell {
+                font-weight: 700;
+                color: var(--accent-gold);
+                font-size: 1.1rem;
+            }
+            
+            .total-row {
+                background: rgba(223, 41, 25, 0.2);
+                font-weight: 700;
+                font-size: 1.3em;
+            }
+            
+            .total-row td {
+                padding: 30px 20px;
+                text-align: center;
+                color: var(--accent-gold);
+                font-size: 1.5rem;
+            }
+            
+            /* Botones de descarga mejorados */
+            .download-section {
+                background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+                padding: 80px 0;
+                text-align: center;
+            }
+            
+            .download-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 30px;
+                flex-wrap: wrap;
+                margin-top: 40px;
+            }
+            
+            .download-btn {
+                display: inline-flex;
+                align-items: center;
+                gap: 15px;
+                background: #fff;
+                color: var(--primary-red);
+                padding: 20px 40px;
+                border-radius: 50px;
+                text-decoration: none;
+                font-weight: 700;
+                font-size: 1.1rem;
+                transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                min-width: 280px;
+            }
+            
+            .download-btn.secondary {
+                background: transparent;
+                color: #fff;
+                border: 2px solid #fff;
+            }
+            
+            .download-btn:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+                color: var(--primary-red);
+                text-decoration: none;
+            }
+            
+            .download-btn.secondary:hover {
+                background: #fff;
+                color: var(--primary-red);
+            }
+            
+            .download-btn i {
+                font-size: 1.5rem;
+            }
+            
+            /* Animaciones */
+            @keyframes pulse {
+                0%, 100% {
+                    transform: scale(1);
+                    box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+                }
+                50% {
+                    transform: scale(1.05);
+                    box-shadow: 0 20px 45px rgba(223, 41, 25, 0.4);
+                }
+            }
+            
+            @keyframes slideInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(50px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+            
+            .wow {
+                animation: slideInUp 0.8s ease-out both;
+            }
+            
+            /* Galería de imágenes */
+            .image-gallery {
+                padding: 100px 0;
+                background: var(--dark-bg);
+            }
+            
+            .gallery-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 60px;
+            }
+            
+            .gallery-item {
+                position: relative;
+                overflow: hidden;
+                border-radius: 15px;
+                height: 250px;
+                cursor: pointer;
+                transition: all 0.3s ease;
+                border: 1px solid rgba(223, 41, 25, 0.2);
+            }
+            
+            .gallery-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center top;
+                transition: transform 0.3s ease;
+            }
+            
+            .gallery-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+                border-color: var(--primary-red);
+            }
+            
+            .gallery-item:hover img {
+                transform: scale(1.1);
+            }
+            
+            .gallery-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.7) 100%);
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            }
+            
+            .gallery-item:hover .gallery-overlay {
+                opacity: 1;
+            }
+            
+            /* Company Info */
+            .company-info {
+                background: var(--darker-bg);
+                padding: 80px 0;
+                text-align: center;
+                border-top: 1px solid rgba(255,255,255,0.1);
+            }
+            
+            .contact-info {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                flex-wrap: wrap;
+                margin-top: 30px;
+            }
+            
+            .contact-item {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                color: #ccc;
+            }
+            
+            .contact-item i {
+                color: var(--primary-red);
+                font-size: 20px;
+            }
+            
+            /* Responsive */
+            @media (max-width: 768px) {
+                .value-grid {
+                    grid-template-columns: 1fr;
+                    gap: 30px;
+                }
+                
+                .tech-grid {
+                    grid-template-columns: 1fr;
+                    gap: 40px;
+                }
+                
+                .gallery-grid {
+                    grid-template-columns: 1fr;
+                    gap: 20px;
+                }
+                
+                .gallery-item {
+                    height: 200px;
+                }
+                
+                .gallery-item img {
+                    object-fit: contain;
+                    object-position: center center;
+                    background-color: #0a0a0a;
+                }
+                
+                .download-section-hero {
+                    padding: 40px 20px;
+                    margin-top: 30px;
+                }
+                
+                .download-section-hero h3 {
+                    font-size: 1.5rem;
+                }
+                
+                .download-section-hero p {
+                    font-size: 1rem;
+                }
+                
+                .legal-icon-mobile {
+                    order: -1 !important;
+                    margin-bottom: 30px;
+                }
+                
+                .tsc-strategic-logo {
+                    max-width: 200px;
+                }
+                
+                .download-buttons {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                
+                .price-table thead {
+                    display: none;
+                }
+                
+                .price-table tbody tr {
+                    display: block;
+                    margin-bottom: 2rem;
+                    border: 1px solid rgba(223, 41, 25, 0.2);
+                    border-radius: 10px;
+                }
+                
+                .price-table td {
+                    display: block;
+                    padding: 15px;
+                    border: none;
+                    position: relative;
+                }
+                
+                .price-table td::before {
+                    content: attr(data-label);
+                    font-weight: 700;
+                    color: var(--accent-gold);
+                    display: block;
+                    margin-bottom: 8px;
+                    font-size: 0.9rem;
+                    text-transform: uppercase;
+                }
+                
+                .pricing-explanation {
+                    background: rgba(223, 41, 25, 0.1);
+                    border: 1px solid rgba(223, 41, 25, 0.3);
+                    border-radius: 15px;
+                    padding: 30px;
+                    margin: 40px 0;
+                    text-align: center;
+                }
+                
+                .pricing-explanation h4 {
+                    color: var(--accent-gold);
+                    margin-bottom: 20px;
+                    font-size: 1.3rem;
+                }
+                
+                .pricing-explanation p {
+                    color: #fff;
+                    margin-bottom: 15px;
+                    line-height: 1.6;
+                }
+                
+                .pricing-explanation ul {
+                    list-style: none;
+                    padding: 0;
+                    margin-top: 20px;
+                }
+                
+                .pricing-explanation ul li {
+                    color: #ccc;
+                    margin-bottom: 10px;
+                    padding-left: 25px;
+                    position: relative;
+                }
+                
+                .pricing-explanation ul li::before {
+                    content: '•';
+                    color: var(--accent-gold);
+                    position: absolute;
+                    left: 0;
+                    font-size: 1.5rem;
+                    line-height: 1;
+                }
+            }
+            
+            .pricing-explanation {
+                background: rgba(223, 41, 25, 0.1);
+                border: 1px solid rgba(223, 41, 25, 0.3);
+                border-radius: 15px;
+                padding: 30px;
+                margin: 40px 0;
+                text-align: center;
+            }
+            
+            .pricing-explanation h4 {
+                color: var(--accent-gold);
+                margin-bottom: 20px;
+                font-size: 1.3rem;
+            }
+            
+            .pricing-explanation p {
+                color: #fff;
+                margin-bottom: 15px;
+                line-height: 1.6;
+            }
+            
+            .pricing-explanation ul {
+                list-style: none;
+                padding: 0;
+                margin-top: 20px;
+            }
+            
+            .pricing-explanation ul li {
+                color: #ccc;
+                margin-bottom: 10px;
+                padding-left: 25px;
+                position: relative;
+            }
+            
+            .pricing-explanation ul li::before {
+                content: '•';
+                color: var(--accent-gold);
+                position: absolute;
+                left: 0;
+                font-size: 1.5rem;
+                line-height: 1;
+            }
+        </style>
+    </head> 
+    <body class="dark">
+        <!-- header -->
+        <header class="header-area header">  
+            <div id="header-sticky" class="menu-area">
+                <div class="container-fluid">
+                    <div class="second-menu">
+                        <div class="row align-items-center">
+                            <div class="col-xl-2 col-lg-2">
+                                <div class="logo">
+                                    <a href="/"><img src="img/logo peque-02.png" alt="TSC Logo" style="max-height: 55px;"></a>
+                                </div>
+                            </div>
+                            <div class="col-xl-4 col-lg-4 col-md-6">
+                                <div class="main-menu">
+                                    <nav id="mobile-menu">
+                                        <ul>
+                                            <li><a href="/">Inicio</a></li>
+                                            <li><a href="/#work">Nosotros</a></li>   
+                                            <li><a href="/#services">Servicios</a></li>
+                                            <li><a href="/#formulario-contacto" class="boton-principal-moderno">
+                                                Contáctanos
+                                            </a></li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>   
+                            <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
+                                <div class="header-cta">
+                                    <ul>
+                                        <li>
+                                            <div class="call-box">                                            
+                                                <div class="text">
+                                                    Tel: 729 106 8887<br>TSC Seguridad Privada         
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>                              
+                            </div>
+                        </div>                   
+                    </div>                   
+                </div>
+            </div>
+        </header>
+        <!-- header-end -->
+        
+        <!-- TSC Custom Hamburger Menu -->
+        <button class="tsc-hamburger-btn" aria-label="Abrir menú de navegación">
+            <span class="tsc-hamburger-line"></span>
+            <span class="tsc-hamburger-line"></span>
+            <span class="tsc-hamburger-line"></span>
+        </button>
+        
+        <div class="tsc-menu-overlay"></div>
+        
+        <nav class="tsc-menu-panel">
+            <div class="tsc-menu-header">
+                <img src="img/logo/tsc logo-06.png" alt="TSC Seguridad Privada" class="tsc-menu-logo">
+                <p class="tsc-menu-title">Seguridad Privada Profesional</p>
+            </div>
+            
+            <div class="tsc-menu-nav">
+                <a href="/#formulario-contacto" class="tsc-cta-button">
+                    Cotizar
+                </a>
+                <ul>
+                    <li>
+                        <a href="/">
+                            <i class="fas fa-home tsc-menu-icon"></i>
+                            <span>Inicio</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#work">
+                            <i class="fas fa-users tsc-menu-icon"></i>
+                            <span>Nosotros</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/#services">
+                            <i class="fas fa-shield-alt tsc-menu-icon"></i>
+                            <span>Servicios</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- End TSC Custom Hamburger Menu -->
+        
+        <main>
+            <!-- Hero Section Estratégico -->
+            <section class="cotizacion-hero">
+                <div class="container">
+                    <div class="cotizacion-hero-content">
+                        <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                            <div class="subtitle">Propuesta Especializada de Seguridad para Fines de Semana y Feriados</div>
+                            <h1>CONCREATOL</h1>
+                            <p class="tagline">Solución Específica de Seguridad Privada para Julio Velásquez Castañeda</p>
+                            <div class="client-badge">
+                                <i class="fas fa-shield-alt"></i>
+                                SOCIO ESTRATÉGICO TSC
+                            </div>
+                            <div class="tsc-logo-section mt-4">
+                                <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
+                            </div>
+                            
+                            <!-- Botones de Descarga Inmediatos -->
+                            <div class="download-section-hero mt-5">
+                                <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                                    <h3 class="text-white mb-4">¿Necesita Seguridad para Fines de Semana?</h3>
+                                    <p class="text-white mb-5">Descargue nuestra propuesta especializada para horarios específicos</p>
+                                    <div class="download-buttons">
+                                        <a href="img/cotizaciones/concreatol/CONCREATOL.pdf" class="download-btn" download="CONCREATOL.pdf">
+                                            <i class="fas fa-file-pdf"></i>
+                                            Descargar Cotización Especializada
+                                        </a>
+                                        <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                            <i class="fas fa-presentation"></i>
+                                            Descargar Presentación Ejecutiva
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            
+            <!-- Valor Diferencial TSC -->
+            <section class="value-section">
+                <div class="container">
+                    <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="section-tag">¿Por qué TSC para CONCREATOL?</div>
+                        <h2>Seguridad Especializada para Horarios Específicos</h2>
+                        <p>Entendemos que cada empresa tiene necesidades únicas. Para CONCREATOL ofrecemos una solución especializada de seguridad para fines de semana y días feriados, con personal capacitado y equipamiento profesional adaptado a sus horarios específicos.</p>
+                    </div>
+                    
+                    <div class="value-grid">
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <h3>Horarios Flexibles</h3>
+                            <p>Adaptamos nuestros servicios a sus necesidades específicas de tiempo</p>
+                            <ul class="value-list">
+                                <li>Cobertura de fines de semana (sábado mediodía a lunes 8 AM)</li>
+                                <li>Atención completa en días feriados</li>
+                                <li>Personal especializado en turnos extendidos</li>
+                                <li>Disponibilidad garantizada en fechas especiales</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Aditamentos Disuasivos Incluidos</h3>
+                            <p><strong>🎯 INCLUIDOS en la cotización:</strong></p>
+                            <ul class="value-list">
+                                <li>Chaleco táctico profesional</li>
+                                <li>Bastón retráctil</li>
+                                <li>Lámpara Taser</li>
+                                <li>Gas pimienta</li>
+                                <li>Uniforme táctico azul marino</li>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Infraestructura Tecnológica -->
+            <section class="tech-showcase">
+                <div class="container">
+                    <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="section-tag">Infraestructura Específica</div>
+                        <h2>Tecnología Adaptada a CONCREATOL</h2>
+                        <p>Para el proyecto de CONCREATOL, proporcionamos la infraestructura de comunicación esencial sin costo adicional, optimizada para operaciones de fin de semana y días feriados.</p>
+                    </div>
+                    
+                    <div class="tech-grid">
+                        <div class="tech-feature wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="tech-feature-visual">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h4>Teléfonos de Comunicación</h4>
+                            <p>Línea directa 24/7 con nuestro centro de monitoreo y supervisores para respuesta inmediata ante cualquier eventualidad durante fines de semana y días feriados.</p>
+                        </div>
+                        
+                        <div class="tech-feature wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="tech-feature-visual">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h4>Soporte Remoto 24/7</h4>
+                            <p>Nuestro centro de monitoreo proporciona respaldo constante y coordinación con autoridades locales durante los horarios de servicio.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Tabla de Inversión -->
+            <section class="pricing-section">
+                <div class="container">
+                    <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="section-tag">Inversión por Evento</div>
+                        <h2>Estructura de Precios Especializada</h2>
+                        <p>Modelo de inversión por evento específico, perfecto para necesidades de seguridad en horarios determinados.</p>
+                    </div>
+                    
+                    <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>TIPO DE SERVICIO</th>
+                                    <th>PERÍODO DE COBERTURA</th>
+                                    <th>COSTO POR EVENTO</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="TIPO DE SERVICIO"><span class="location-cell">Técnico en Seguridad - Fin de Semana</span></td>
+                                    <td data-label="PERÍODO DE COBERTURA"><span>Sábado 12:00 PM a Lunes 8:00 AM</span></td>
+                                    <td data-label="COSTO POR EVENTO"><span class="location-cell">$3,200.00</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="TIPO DE SERVICIO"><span class="location-cell">Técnico en Seguridad - Día Feriado</span></td>
+                                    <td data-label="PERÍODO DE COBERTURA"><span>Cobertura completa de 24 horas</span></td>
+                                    <td data-label="COSTO POR EVENTO"><span class="location-cell">$2,300.00</span></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr style="background: rgba(223, 41, 25, 0.1);">
+                                    <td colspan="3" style="text-align: center; padding: 25px; color: #fff; font-style: italic;">
+                                        <strong>* Precios más IVA</strong><br>
+                                        ** Equipamiento táctico completo incluido en ambas modalidades<br>
+                                    </td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Valores Agregados Incluidos -->
+            <section class="value-section alt">
+                <div class="container">
+                    <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="section-tag">Servicios Incluidos Sin Costo</div>
+                        <h2>Valores Agregados para CONCREATOL</h2>
+                        <p>Servicios adicionales que incluimos sin costo para maximizar el valor de su inversión en seguridad especializada.</p>
+                    </div>
+                    
+                    <div class="value-grid">
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-users-cog"></i>
+                            </div>
+                            <h3>Plantilla de Comodines</h3>
+                            <p>Personal de respaldo especializado para fines de semana</p>
+                            <ul class="value-list">
+                                <li>Comodines especializados en turnos extendidos</li>
+                                <li>Disponibilidad inmediata ante ausencias</li>
+                                <li>Personal igualmente capacitado</li>
+                                <li>Continuidad del servicio garantizada</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-clipboard-list"></i>
+                            </div>
+                            <h3>Análisis de Riesgos Personalizado</h3>
+                            <p>Evaluación específica para horarios de fin de semana</p>
+                            <ul class="value-list">
+                                <li>Análisis detallado de riesgos para horarios específicos</li>
+                                <li>Recomendaciones para fines de semana y feriados</li>
+                                <li>Basado en visita previa a sus instalaciones</li>
+                                <li>Plan de mitigación personalizado</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-shield-virus"></i>
+                            </div>
+                            <h3>Manual de Emergencias</h3>
+                            <p>Protocolos especializados para toda situación</p>
+                            <ul class="value-list">
+                                <li>Protocolos de extorsión telefónica</li>
+                                <li>Procedimientos de evacuación</li>
+                                <li>Manejo de paquetes sospechosos</li>
+                                <li>Respuesta a amenazas de bomba</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Servicios Adicionales Disponibles -->
+            <section class="value-section">
+                <div class="container">
+                    <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="section-tag">Servicios Adicionales</div>
+                        <h2>Proveedor Integral de Seguridad</h2>
+                        <p>Como su socio estratégico, también podemos cotizar servicios adicionales para mantener un solo proveedor confiable.</p>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-lg-4 wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card">
+                                <div class="value-card-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>Estudios de Poligrafía</h3>
+                                <p>Evaluaciones psicológicas y de confianza para personal crítico</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="value-card">
+                                <div class="value-card-icon">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                                <h3>Custodias en Tránsito</h3>
+                                <p>Protección de mercancías y traslados de valores con personal especializado</p>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4 wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                            <div class="value-card">
+                                <div class="value-card-icon">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                                <h3>Sistemas Electrónicos</h3>
+                                <p>Instalación y soporte de sistemas de seguridad electrónica avanzada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Galería de Imágenes -->
+            <section class="image-gallery">
+                <div class="container">
+                    <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="section-tag">Nuestro Equipo</div>
+                        <h2>Técnicos en Seguridad TSC</h2>
+                        <p>Personal altamente capacitado y comprometido con la excelencia en seguridad privada para horarios especiales.</p>
+                    </div>
+                    
+                    <div class="gallery-grid">
+                        <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <img src="img/cotizaciones/img1.png" alt="Monitoreo TSC" loading="lazy">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                        <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <img src="img/cotizaciones/img2.png" alt="Centro de Control TSC" loading="lazy">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                        <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                            <img src="img/cotizaciones/patrullas y guardias.JPG" alt="Patrullas y Guardias TSC" loading="lazy">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                        <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                            <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                        <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
+                            <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy">
+                            <div class="gallery-overlay"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Permisos y Legalidad -->
+            <section class="value-section alt">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-lg-4 order-lg-2 wow fadeInUp legal-icon-mobile" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="tech-feature-visual mx-auto mb-4">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                        </div>
+                        <div class="col-lg-8 order-lg-1 wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="section-tag">Respaldo Legal</div>
+                            <h2>Permisos Federales, Estatal y REPSE Vigentes</h2>
+                            <p class="mb-4">Contamos con todos los permisos federales vigentes que nos permiten operar inmediatamente en su ubicación. Al establecer la relación comercial, tramitaremos automáticamente el permiso estatal correspondiente, mientras tanto operamos bajo el amparo del permiso federal.</p>
+                            <ul class="value-list">
+                                <li>Registro REPSE vigente</li>
+                                <li>Permisos federales actualizados</li>
+                                <li>Tramitación automática de permisos estatales</li>
+                                <li>Cobertura legal completa desde el primer servicio</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Botones de Descarga -->
+            <section class="download-section">
+                <div class="container">
+                    <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <h3 class="text-white mb-4">¿Listo para Seguridad en Fines de Semana?</h3>
+                        <p class="text-white mb-5">Descargue nuestra propuesta especializada y presentación ejecutiva</p>
+                        <div class="download-buttons">
+                            <a href="img/cotizaciones/concreatol/CONCREATOL.pdf" class="download-btn" download="CONCREATOL.pdf">
+                                <i class="fas fa-file-pdf"></i>
+                                Descargar Cotización Especializada
+                            </a>
+                            <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                <i class="fas fa-presentation"></i>
+                                Descargar Presentación Ejecutiva
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Company Info -->
+            <section class="company-info">
+                <div class="container">
+                    <h3 class="text-white mb-2">TSC PRIVATE SECURITY CONSULTING</h3>
+                    <p class="text-danger mb-4"><strong>FUERZA, TECNOLOGÍA Y EXPERIENCIA</strong></p>
+                    <h4 class="text-white">ISMAEL LÓPEZ-SILVERO GUIMARAIS</h4>
+                    <p class="text-muted">Chief Digital Officer</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>Ismael.sg@tscseguridadprivada.com.mx</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>2202834673</span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="text-muted text-center">
+                            <strong>CONCREATOL - Julio Velásquez Castañeda:</strong> Solución Especializada TSC
+                        </p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- footer -->
+        <footer class="footer-bg footer-p">
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-12">
+                                <div class="footer-copy-right text-center">
+                                    <p>&copy; 2025 TSC Private Security Consulting. Todos los derechos reservados.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- footer-end -->
+        
+        <!-- JS here -->
+        <script src="js/vendor/jquery-3.6.0.min.js"></script>
+        <script src="js/popper.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/one-page-nav-min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/ajax-form.js"></script>
+        <script src="js/paroller.js"></script>
+        <script src="js/wow.min.js"></script>
+        <script src="js/parallax.min.js"></script>
+        <script src="js/jquery.waypoints.min.js"></script>
+        <script src="js/jquery.counterup.min.js"></script>
+        <script src="js/jquery.scrollUp.min.js"></script>
+        <script src="js/jquery.magnific-popup.min.js"></script>
+        <script src="js/element-in-view.js"></script>
+        <script src="js/jquery.meanmenu.min.js"></script>
+        <script src="js/imagesloaded.min.js"></script>
+        <script src="js/js_isotope.pkgd.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/custom-hamburger-menu.js"></script>
+        
+        <script>
+            // Initialize animations
+            new WOW().init();
+            
+            // Smooth scroll for anchor links
+            $('a[href^="#"]').on('click', function(e) {
+                e.preventDefault();
+                var target = $(this.getAttribute('href'));
+                if(target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 100
+                    }, 1000);
+                }
+            });
+            
+            // Gallery lightbox (optional)
+            $('.gallery-item').on('click', function() {
+                var imgSrc = $(this).find('img').attr('src');
+                // Implementar lightbox si se desea
+            });
+            
+            // Enhanced download handling
+            document.addEventListener('DOMContentLoaded', function() {
+                const downloadButtons = document.querySelectorAll('.download-btn');
+                downloadButtons.forEach(button => {
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        
+                        // Obtener la URL del PDF
+                        const pdfUrl = this.getAttribute('href');
+                        const fileName = this.getAttribute('download') || 'TSC_CONCREATOL.pdf';
+                        
+                        // Crear un elemento <a> temporal
+                        const link = document.createElement('a');
+                        link.href = pdfUrl;
+                        link.download = fileName;
+                        link.target = '_blank';
+                        
+                        // Simular clic
+                        document.body.appendChild(link);
+                        link.click();
+                        document.body.removeChild(link);
+                        
+                        // Feedback visual
+                        const originalText = this.innerHTML;
+                        this.innerHTML = '<i class="fas fa-check"></i> Descargando...';
+                        
+                        setTimeout(() => {
+                            this.innerHTML = originalText;
+                        }, 2000);
+                        
+                        // Si falla la descarga, abrir en nueva pestaña
+                        setTimeout(() => {
+                            window.open(pdfUrl, '_blank');
+                        }, 100);
+                    });
+                });
+            });
+            
+            // Parallax effect for hero section
+            $(window).scroll(function() {
+                var scrolled = $(this).scrollTop();
+                $('.cotizacion-hero::before').css('transform', 'translateY(' + (scrolled * 0.5) + 'px)');
+            });
+        </script>
+    </body>
+</html>

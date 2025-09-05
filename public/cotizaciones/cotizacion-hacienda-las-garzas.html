@@ -1,0 +1,1375 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cotización HACIENDA LAS GARZAS - TSC SEGURIDAD PRIVADA</title>
+    <meta name="description"
+        content="Propuesta integral de servicios de seguridad privada para HACIENDA LAS GARZAS - TSC Private Security Consulting">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/cropped-fav-1.ico">
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/custom-hamburger-menu.css">
+    <link rel="stylesheet" href="css/header-mobile-adjustments.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+
+    <style>
+        /* Estilos específicos para HACIENDA LAS GARZAS - Más estratégico y visual */
+        :root {
+            --primary-red: #df2919;
+            --dark-bg: #1a1a1d;
+            --darker-bg: #222327;
+            --accent-gold: #ffd700;
+            --app-blue: #2563eb;
+            --app-green: #10b981;
+        }
+
+        .cotizacion-hero {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cotizacion-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/bg/quote_bg.png') no-repeat center center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cotizacion-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .strategic-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .strategic-header .subtitle {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .strategic-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .strategic-header .tagline {
+            font-size: 1.3rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .client-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(223, 41, 25, 0.3);
+        }
+
+        .tsc-strategic-logo {
+            max-width: 300px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .tsc-strategic-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .download-section-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+            margin-top: 40px;
+        }
+
+        .download-section-hero h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .download-section-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Sección de aplicación destacada */
+        .app-showcase {
+            background: linear-gradient(135deg, var(--app-blue) 0%, var(--app-green) 100%);
+            padding: 80px 0;
+            margin: 60px 0;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-showcase::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .app-showcase-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .app-icon {
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            font-size: 3rem;
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .app-showcase h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .app-showcase p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.6;
+        }
+
+        .app-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .app-feature {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .app-feature i {
+            font-size: 2.5rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .app-feature h4 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .app-feature p {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .app-cost-highlight {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .app-cost-highlight h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .app-cost-highlight .cost-amount {
+            font-size: 3rem;
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .app-cost-highlight .cost-note {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .app-benefit-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--darker-bg);
+            padding: 10px 30px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* Secciones de valor diferencial */
+        .value-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .value-section.alt {
+            background: var(--darker-bg);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header .section-tag {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        /* Tarjetas de valor */
+        .value-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
+            border-color: var(--primary-red);
+        }
+
+        .value-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .value-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .value-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .value-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+
+        /* Tabla de precios mejorada */
+        .pricing-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .price-table {
+            background: var(--darker-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin: 60px 0;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .price-table table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: #fff;
+            padding: 25px 20px;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-table td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            vertical-align: middle;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: rgba(223, 41, 25, 0.1);
+        }
+
+        .location-cell {
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+
+        .total-row {
+            background: rgba(223, 41, 25, 0.2);
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+
+        .total-row td {
+            padding: 30px 20px;
+            text-align: center;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+        }
+
+        /* Tipos de guardias destacados */
+        .guard-types-section {
+            background: linear-gradient(135deg, rgba(223, 41, 25, 0.1) 0%, rgba(223, 41, 25, 0.05) 100%);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+        }
+
+        .guard-type-badge {
+            display: inline-block;
+            background: var(--accent-gold);
+            color: var(--darker-bg);
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .guard-type-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-gold);
+        }
+
+        .guard-type-item h4 {
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .guard-type-item p {
+            color: #fff;
+            margin-bottom: 0;
+            line-height: 1.6;
+        }
+
+        /* Sección de poligrafía destacada */
+        .polygraph-highlight {
+            background: linear-gradient(135deg, #2a5d31 0%, #1e4125 100%);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(42, 93, 49, 0.3);
+        }
+
+        .polygraph-highlight .polygraph-icon {
+            width: 80px;
+            height: 80px;
+            background: #4ade80;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 2rem;
+            color: #1e4125;
+        }
+
+        .polygraph-highlight h4 {
+            color: #4ade80;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .polygraph-highlight p {
+            color: #fff;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .polygraph-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .polygraph-benefit {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .polygraph-benefit i {
+            color: #4ade80;
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+
+        .polygraph-benefit h5 {
+            color: #fff;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+        }
+
+        .polygraph-benefit p {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* Botones de descarga mejorados */
+        .download-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            color: var(--primary-red);
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: 280px;
+        }
+
+        .download-btn.secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .download-btn.secondary:hover {
+            background: #fff;
+            color: var(--primary-red);
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        /* Galería de imágenes */
+        .image-gallery {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+            border-color: var(--primary-red);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Company Info */
+        .company-info {
+            background: var(--darker-bg);
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ccc;
+        }
+
+        .contact-item i {
+            color: var(--primary-red);
+            font-size: 20px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .value-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .app-features {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+            .gallery-item img {
+                object-fit: contain;
+                object-position: center center;
+                background-color: #0a0a0a;
+            }
+
+            .download-section-hero {
+                padding: 40px 20px;
+                margin-top: 30px;
+            }
+
+            .download-section-hero h3 {
+                font-size: 1.5rem;
+            }
+
+            .download-section-hero p {
+                font-size: 1rem;
+            }
+
+            .legal-icon-mobile {
+                order: -1 !important;
+                margin-bottom: 30px;
+            }
+
+            .tsc-strategic-logo {
+                max-width: 200px;
+            }
+
+            .download-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .price-table thead {
+                display: none;
+            }
+
+            .price-table tbody tr {
+                display: block;
+                margin-bottom: 2rem;
+                border: 1px solid rgba(223, 41, 25, 0.2);
+                border-radius: 10px;
+            }
+
+            .price-table td {
+                display: block;
+                padding: 15px;
+                border: none;
+                position: relative;
+            }
+
+            .price-table td::before {
+                content: attr(data-label);
+                font-weight: 700;
+                color: var(--accent-gold);
+                display: block;
+                margin-bottom: 8px;
+                font-size: 0.9rem;
+                text-transform: uppercase;
+            }
+
+            .price-table tfoot .total-row td {
+                text-align: center;
+                font-size: 1.5rem;
+                color: var(--accent-gold);
+                padding: 25px;
+            }
+
+            .iva-note-row td {
+                text-align: center;
+                font-size: 0.9rem;
+                font-style: italic;
+                padding: 15px;
+            }
+
+            .iva-note-row td::before {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <!-- header -->
+    <header class="header-area header">
+        <div id="header-sticky" class="menu-area">
+            <div class="container-fluid">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/"><img src="img/logo peque-02.png" alt="TSC Logo"
+                                        style="max-height: 55px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="/">Inicio</a></li>
+                                        <li><a href="/#work">Nosotros</a></li>
+                                        <li><a href="/#services">Servicios</a></li>
+                                        <li><a href="/#formulario-contacto" class="boton-principal-moderno">
+                                                Contáctanos
+                                            </a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
+                            <div class="header-cta">
+                                <ul>
+                                    <li>
+                                        <div class="call-box">
+                                            <div class="text">
+                                                Tel: 729 106 8887<br>TSC Seguridad Privada
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    <!-- TSC Custom Hamburger Menu -->
+    <button class="tsc-hamburger-btn" aria-label="Abrir menú de navegación">
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+    </button>
+
+    <div class="tsc-menu-overlay"></div>
+
+    <nav class="tsc-menu-panel">
+        <div class="tsc-menu-header">
+            <img src="img/logo/tsc logo-06.png" alt="TSC Seguridad Privada" class="tsc-menu-logo">
+            <p class="tsc-menu-title">Seguridad Privada Profesional</p>
+        </div>
+
+        <div class="tsc-menu-nav">
+            <a href="/#formulario-contacto" class="tsc-cta-button">
+                Cotizar
+            </a>
+            <ul>
+                <li>
+                    <a href="/">
+                        <i class="fas fa-home tsc-menu-icon"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#work">
+                        <i class="fas fa-users tsc-menu-icon"></i>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#services">
+                        <i class="fas fa-shield-alt tsc-menu-icon"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End TSC Custom Hamburger Menu -->
+
+    <main>
+        <!-- Hero Section Estratégico -->
+        <section class="cotizacion-hero">
+            <div class="container">
+                <div class="cotizacion-hero-content">
+                    <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="subtitle">Propuesta Estratégica de Seguridad Integral</div>
+                        <h1>HACIENDA LAS GARZAS</h1>
+                        <p class="tagline">Solución Completa de Seguridad Privada con Tecnología Avanzada</p>
+                        <div class="client-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            GLORIA SÁNCHEZ BUENDÍA
+                        </div>
+                        <div class="tsc-logo-section mt-4">
+                            <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
+                        </div>
+
+                        <!-- Botones de Descarga Inmediatos -->
+                        <div class="download-section-hero mt-5">
+                            <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                                <h3 class="text-white mb-4">¿Listo para una Seguridad Integral?</h3>
+                                <p class="text-white mb-5">Descargue nuestra propuesta completa y presentación ejecutiva
+                                </p>
+                                <div class="download-buttons">
+                                    <a href="img/cotizaciones/hacienda-las-garzas/hacienda-las-garzas.pdf" class="download-btn"
+                                        download="HACIENDA_LAS_GARZAS_TSC.pdf">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Descargar Cotización Completa
+                                    </a>
+                                    <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf"
+                                        class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                        <i class="fas fa-presentation"></i>
+                                        Descargar Presentación Ejecutiva
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Aplicación Personalizada Destacada -->
+        <section class="value-section">
+            <div class="container">
+                <div class="app-showcase wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="app-showcase-content">
+                        <div class="app-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h2>Aplicación Personalizada de Accesos</h2>
+                        <p>
+                            <strong>Beneficio Exclusivo por Contrato de 3 Años:</strong> Desarrollo de aplicación móvil personalizada 
+                            para control de accesos con códigos QR y gestión de morosos. Una solución tecnológica que revolucionará 
+                            la administración de su fraccionamiento.
+                        </p>
+                        
+                        <div class="app-features">
+                            <div class="app-feature">
+                                <i class="fas fa-qrcode"></i>
+                                <h4>Códigos QR para Visitas</h4>
+                                <p>Los residentes pueden generar códigos QR temporales para autorizar visitas con horarios específicos</p>
+                            </div>
+                            <div class="app-feature">
+                                <i class="fas fa-user-times"></i>
+                                <h4>Control de Morosos</h4>
+                                <p>Bloqueo automático de acceso a la aplicación para residentes con pagos pendientes</p>
+                            </div>
+                            <div class="app-feature">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Reportes Detallados</h4>
+                                <p>Historial completo de visitas, tiempos de permanencia y estadísticas de uso</p>
+                            </div>
+                        </div>
+
+                        <div class="app-cost-highlight">
+                            <h3>Valor de la Aplicación</h3>
+                            <div class="cost-amount">$45,000</div>
+                            <div class="cost-note">Desarrollo + Mantenimiento por 3 años</div>
+                            <div class="app-benefit-badge">
+                                🎁 INCLUIDA SIN COSTO con contrato de 3 años
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Inversión -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Inversión Mensual</div>
+                    <h2>Detalle de Inversión</h2>
+                    <p>Configuración estratégica con guardias tipo C especializados para cobertura completa 24/7.</p>
+                </div>
+
+                <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>DESCRIPCIÓN</th>
+                                <th>ELEMENTOS</th>
+                                <th>MONTO UNITARIO</th>
+                                <th>TOTAL MENSUAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN"><span>Guardias Tipo C - 24x24 con Equipamiento Táctico (Sin Armas)</span></td>
+                                <td data-label="ELEMENTOS"><span>6 elementos (3 por turno)</span></td>
+                                <td data-label="MONTO UNITARIO"><span>$19,000.00</span></td>
+                                <td data-label="TOTAL MENSUAL"><span>$114,000.00</span></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>INVERSIÓN MENSUAL TOTAL:</strong></td>
+                                <td><strong>$114,000.00</strong></td>
+                            </tr>
+                            <tr class="iva-note-row">
+                                <td colspan="4"><span>* Precios más IVA<br>** Equipamiento táctico incluido<br>*** Cobertura Lunes a Domingo 24/7<br>**** Aplicación personalizada incluida con contrato de 3 años</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Clasificación de Personal TSC -->
+        <section class="value-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Personal Especializado TSC</div>
+                    <h2>Clasificación de Guardias</h2>
+                    <p>Para Hacienda Las Garzas trabajamos exclusivamente con Guardias Tipo C, personal capacitado para turnos extendidos de 24 horas con equipamiento táctico profesional.</p>
+                </div>
+
+                <div class="guard-types-section wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <div class="guard-type-badge">PERSONAL TSC PARA HACIENDA LAS GARZAS</div>
+
+                    <div class="guard-type-item">
+                        <h4><i class="fas fa-user-shield"></i> GUARDIA TIPO C - Cobertura 24x24</h4>
+                        <p><strong>Perfil:</strong> Secundaria terminada + mínimo 6 meses de experiencia en seguridad privada<br>
+                            <strong>Responsabilidad:</strong> Turnos extendidos de 24 horas con equipamiento táctico completo (sin armas)<br>
+                            <strong>Cobertura:</strong> Lunes a domingo, 24 horas continuas<br>
+                            <strong>Equipamiento:</strong> Chaleco táctico, bastón retráctil, lámpara TASER, gas pimienta, uniforme táctico azul marino<br>
+                            <strong>Inversión:</strong> $19,000.00 mensuales por elemento
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valor Diferencial TSC -->
+        <section class="value-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">¿Por qué TSC?</div>
+                    <h2>No Solo Guardias, Seguridad Integral</h2>
+                    <p>Somos más que una empresa de seguridad tradicional. Ofrecemos una solución completa que combina
+                        personal altamente capacitado, equipamiento táctico profesional y tecnología de vanguardia.
+                        <strong>Todos estos valores agregados están incluidos sin costo adicional.</strong>
+                    </p>
+                </div>
+
+                <div class="value-grid">
+                    <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <div class="value-card-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Centro de Monitoreo 24/7</h3>
+                        <p>Tecnología de vigilancia remota que complementa el trabajo de nuestros guardias</p>
+                        <ul class="value-list">
+                            <li>2 Cámaras IP conectadas sin costo</li>
+                            <li>Monitoreo conectado a WiFi del fraccionamiento</li>
+                            <li>Alertas inmediatas a guardias en sitio</li>
+                            <li>Supervisión continua del desempeño</li>
+                        </ul>
+                    </div>
+
+                    <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <div class="value-card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Equipamiento Táctico Tipo C</h3>
+                        <p><strong>🎯 Guardias Tipo C incluyen:</strong></p>
+                        <ul class="value-list">
+                            <li>Chaleco táctico profesional</li>
+                            <li>Bastón retráctil</li>
+                            <li>Lámpara TASER</li>
+                            <li>Gas pimienta</li>
+                            <li>Uniforme táctico azul marino</li>
+                        </ul>
+                        <p><strong>✅ Sin armas de fuego</strong> - Perfecto para comunidades residenciales</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valores Agregados Adicionales -->
+        <section class="value-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Servicios Incluidos Sin Costo</div>
+                    <h2>Valores Agregados Únicos de TSC</h2>
+                    <p>Servicios adicionales que incluimos sin costo para maximizar el valor de su inversión en
+                        seguridad.</p>
+                </div>
+
+                <div class="value-grid">
+                    <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <div class="value-card-icon">
+                            <i class="fas fa-users-cog"></i>
+                        </div>
+                        <h3>Plantilla de Comodines</h3>
+                        <p>Personal de respaldo para cualquier eventualidad</p>
+                        <ul class="value-list">
+                            <li>Comodines disponibles sin costo</li>
+                            <li>Disponibilidad inmediata ante ausencias</li>
+                            <li>Personal igualmente capacitado</li>
+                            <li>Continuidad del servicio garantizada</li>
+                        </ul>
+                    </div>
+
+                    <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <div class="value-card-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>Supervisión Semanal</h3>
+                        <p>Supervisión presencial constante</p>
+                        <ul class="value-list">
+                            <li>Supervisor dedicado</li>
+                            <li>Visitas periódicas programadas</li>
+                            <li>Patrulla rotulada TSC</li>
+                            <li>Atención personalizada</li>
+                        </ul>
+                    </div>
+
+                    <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                        <div class="value-card-icon">
+                            <i class="fas fa-clipboard-list"></i>
+                        </div>
+                        <h3>Análisis de Riesgos Personalizado</h3>
+                        <p>Evaluación profesional basada en visita previa a sus instalaciones</p>
+                        <ul class="value-list">
+                            <li>Análisis detallado de riesgos entregado a los 15 días del servicio</li>
+                            <li>Recomendaciones específicas y accionables</li>
+                            <li>Basado en detección de necesidades</li>
+                            <li>Plan de mitigación personalizado</li>
+                        </ul>
+                    </div>
+
+                    <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                        <div class="value-card-icon">
+                            <i class="fas fa-shield-virus"></i>
+                        </div>
+                        <h3>Manual de Emergencias</h3>
+                        <p>Protocolos especializados para toda situación</p>
+                        <ul class="value-list">
+                            <li>Protocolos de extorsión telefónica</li>
+                            <li>Procedimientos de evacuación</li>
+                            <li>Manejo de paquetes sospechosos</li>
+                            <li>Respuesta a amenazas de bomba</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería de Imágenes -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Nuestro Equipo</div>
+                    <h2>Guardias TSC en Acción</h2>
+                    <p>Personal altamente capacitado y comprometido con la excelencia en seguridad privada.</p>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <img src="img/cotizaciones/img1.png" alt="Monitoreo TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <img src="img/cotizaciones/img2.png" alt="Centro de Control TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                        <img src="img/cotizaciones/patrullas y guardias.JPG" alt="Patrullas y Guardias TSC"
+                            loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                        <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
+                        <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Permisos y Legalidad -->
+        <section class="value-section alt">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 order-lg-2 wow fadeInUp legal-icon-mobile" data-animation="fadeInUp"
+                        data-delay=".4s">
+                        <div class="tech-feature-visual mx-auto mb-4">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 order-lg-1 wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <div class="section-tag">Respaldo Legal</div>
+                        <h2>Permisos Federales, Estatal y REPSE Vigentes</h2>
+                        <p class="mb-4">Contamos con todos los permisos federales vigentes que nos permiten operar
+                            inmediatamente en su ubicación. Al establecer la relación comercial, tramitaremos
+                            automáticamente el permiso estatal correspondiente, mientras tanto operamos bajo el amparo
+                            del permiso federal.</p>
+                        <ul class="value-list">
+                            <li>Registro REPSE vigente</li>
+                            <li>Permisos federales actualizados</li>
+                            <li>Tramitación automática de permisos estatales</li>
+                            <li>Cobertura legal completa desde el día uno</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botones de Descarga -->
+        <section class="download-section">
+            <div class="container">
+                <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <h3 class="text-white mb-4">¿Listo para una Seguridad Integral?</h3>
+                    <p class="text-white mb-5">Descargue nuestra propuesta completa y presentación ejecutiva</p>
+                    <div class="download-buttons">
+                        <a href="img/cotizaciones/hacienda-las-garzas/hacienda-las-garzas.pdf" class="download-btn"
+                            download="HACIENDA_LAS_GARZAS_TSC.pdf">
+                            <i class="fas fa-file-pdf"></i>
+                            Descargar Cotización Completa
+                        </a>
+                        <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf"
+                            class="download-btn secondary" download="Presentacion_TSC.pdf">
+                            <i class="fas fa-presentation"></i>
+                            Descargar Presentación Ejecutiva
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info -->
+        <section class="company-info">
+            <div class="container">
+                <h3 class="text-white mb-2">TSC PRIVATE SECURITY CONSULTING</h3>
+                <p class="text-danger mb-4"><strong>FUERZA, TECNOLOGÍA Y EXPERIENCIA</strong></p>
+                <h4 class="text-white">ISMAEL LÓPEZ-SILVERO GUIMARAIS</h4>
+                <p class="text-muted">Chief Digital Officer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Ismael.sg@tscseguridadprivada.com.mx</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>2202834673</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-muted text-center">
+                        <strong>Gloria Sánchez Buendía - HACIENDA LAS GARZAS:</strong> Socio Estratégico TSC
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-bg footer-p">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p>&copy; 2025 TSC Private Security Consulting. Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom-hamburger-menu.js"></script>
+
+    <script>
+        // Initialize animations
+        new WOW().init();
+
+        // Smooth scroll for anchor links
+        $('a[href^="#"]').on('click', function (e) {
+            e.preventDefault();
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 100
+                }, 1000);
+            }
+        });
+
+        // Enhanced download handling
+        document.addEventListener('DOMContentLoaded', function () {
+            const downloadButtons = document.querySelectorAll('.download-btn');
+            downloadButtons.forEach(button => {
+                button.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    // Obtener la URL del PDF
+                    const pdfUrl = this.getAttribute('href');
+                    const fileName = this.getAttribute('download') || 'TSC_HACIENDA_LAS_GARZAS.pdf';
+
+                    // Crear un elemento <a> temporal
+                    const link = document.createElement('a');
+                    link.href = pdfUrl;
+                    link.download = fileName;
+                    link.target = '_blank';
+
+                    // Simular clic
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    // Feedback visual
+                    const originalText = this.innerHTML;
+                    this.innerHTML = '<i class="fas fa-check"></i> Descargando...';
+
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                    }, 2000);
+
+                    // Si falla la descarga, abrir en nueva pestaña
+                    setTimeout(() => {
+                        window.open(pdfUrl, '_blank');
+                    }, 100);
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

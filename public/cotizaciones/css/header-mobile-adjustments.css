@@ -1,0 +1,51 @@
+/* Ajustes para el header y logo en versión móvil */
+
+@media (max-width: 991px) {
+    /* Reducir altura del header */
+    .header-area {
+        padding: 10px 0 !important;
+    }
+    
+    #header-sticky {
+        padding: 5px 0 !important;
+    }
+    
+    .menu-area {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+    
+    /* Reducir tamaño del logo */
+    .logo img {
+        max-width: 80px !important;
+        height: auto !important;
+    }
+    
+    /* Ajustar posición del botón hamburguesa */
+    .tsc-hamburger-btn {
+        top: 15px !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Reducir aún más para pantallas más pequeñas */
+    .header-area {
+        padding: 5px 0 !important;
+    }
+    
+    #header-sticky {
+        padding: 3px 0 !important;
+    }
+    
+    /* Logo más pequeño */
+    .logo img {
+        max-width: 60px !important;
+    }
+    
+    /* Ajustar posición del botón hamburguesa */
+    .tsc-hamburger-btn {
+        top: 10px !important;
+        width: 45px !important;
+        height: 45px !important;
+    }
+}
