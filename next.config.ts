@@ -6,13 +6,13 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
-      // Rewrites para las cotizaciones HTML
+      // Rewrites para las cotizaciones HTML (con y sin extensión)
       {
-        source: '/cotizacion-:path(.*)',
+        source: '/cotizacion-:path([^.]+)(.html)?',
         destination: '/cotizaciones/cotizacion-:path.html',
       },
       {
-        source: '/cotizacion',
+        source: '/cotizacion(.html)?',
         destination: '/cotizaciones/cotizacion.html',
       },
       // Rewrites para recursos CSS
