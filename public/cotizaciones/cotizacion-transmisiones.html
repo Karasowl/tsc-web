@@ -508,6 +508,169 @@
             .price-table .total-row td:first-child {
                 font-weight: bold;
             }
+            
+            /* Estilos responsive específicos para la sección de monitoreo mensual */
+            .pricing-section .price-table img {
+                width: 80px !important;
+                height: 60px !important;
+            }
+            
+            .pricing-section .price-table td[data-label="IMAGEN"] {
+                text-align: center;
+            }
+            
+            .pricing-section .price-table td[data-label="COSTO MENSUAL"]:before {
+                content: "COSTO MENSUAL";
+            }
+            
+            .pricing-section .price-table .iva-note-row td {
+                text-align: center;
+                font-style: italic;
+                color: #999;
+            }
+            
+            .pricing-section .price-table .iva-note-row td:before {
+                display: none;
+            }
+            
+            /* Estilos específicos para la propuesta tecnológica con 7 columnas */
+            .price-table td:first-child {
+                background: rgba(223, 41, 25, 0.1);
+                color: var(--accent-gold);
+                font-weight: bold;
+                text-align: center;
+                border-radius: 5px 5px 0 0;
+                padding: 10px 15px !important;
+                margin-bottom: 5px;
+            }
+            
+            .price-table td:first-child:before {
+                content: "#";
+                color: var(--accent-gold);
+                position: static !important;
+                width: auto !important;
+                text-align: center !important;
+                left: auto !important;
+                padding: 0 !important;
+            }
+            
+            .price-table td[data-label="DESCRIPCIÓN"] {
+                background: rgba(255, 255, 255, 0.05);
+                min-height: 60px;
+                padding: 15px 15px 15px 45% !important;
+                word-wrap: break-word;
+                line-height: 1.4;
+                clear: both;
+            }
+            
+            .price-table td[data-label="DESCRIPCIÓN"]:before {
+                width: 40% !important;
+                position: absolute;
+                left: 15px;
+                top: 15px;
+            }
+            
+            .price-table td[data-label="TIPO"] {
+                background: rgba(223, 41, 25, 0.05);
+                padding: 12px 15px 12px 45% !important;
+            }
+            
+            .price-table td[data-label="TIPO"]:before {
+                width: 40% !important;
+            }
+            
+            .price-table td[data-label="IMAGEN"] {
+                text-align: center;
+                padding: 15px !important;
+                background: rgba(255, 255, 255, 0.02);
+            }
+            
+            .price-table td[data-label="IMAGEN"]:before {
+                display: none !important;
+            }
+            
+            .price-table td[data-label="IMAGEN"] img {
+                width: 100px !important;
+                height: 70px !important;
+                object-fit: cover;
+                border-radius: 8px;
+                border: 2px solid rgba(223, 41, 25, 0.3);
+                display: block;
+                margin: 0 auto;
+            }
+            
+            .price-table td[data-label="CANTIDAD"] {
+                background: rgba(223, 41, 25, 0.1);
+                text-align: center;
+                font-size: 1.1rem;
+                font-weight: bold;
+                padding: 12px 15px !important;
+            }
+            
+            .price-table td[data-label="CANTIDAD"]:before {
+                width: 40% !important;
+            }
+            
+            .price-table td[data-label="PRECIO UNITARIO"] {
+                background: rgba(255, 215, 0, 0.1);
+                color: var(--accent-gold);
+                font-weight: bold;
+                font-size: 1rem;
+                padding: 12px 15px 12px 45% !important;
+            }
+            
+            .price-table td[data-label="PRECIO UNITARIO"]:before {
+                width: 40% !important;
+            }
+            
+            .price-table td[data-label="TOTAL"] {
+                background: rgba(223, 41, 25, 0.2);
+                color: var(--accent-gold);
+                font-weight: bold;
+                font-size: 1.1rem;
+                border-radius: 0 0 5px 5px;
+                padding: 12px 15px 12px 45% !important;
+            }
+            
+            .price-table td[data-label="TOTAL"]:before {
+                width: 40% !important;
+            }
+            
+            /* Mejorar espaciado entre tarjetas */
+            .price-table tbody tr {
+                margin-bottom: 3rem;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                overflow: hidden;
+            }
+            
+            /* Estilos para el total de inversión */
+            .price-table .total-row td {
+                background: rgba(223, 41, 25, 0.3) !important;
+                color: var(--accent-gold) !important;
+                font-size: 1.2rem !important;
+                font-weight: bold !important;
+                text-align: center !important;
+                border-radius: 10px !important;
+                margin-top: 1rem;
+                padding: 15px !important;
+            }
+            
+            .price-table .total-row td:before {
+                display: none !important;
+            }
+            
+            /* Estilos para la nota de IVA */
+            .price-table .iva-note-row td {
+                text-align: center !important;
+                font-style: italic;
+                color: #999 !important;
+                background: transparent !important;
+                padding: 10px !important;
+            }
+            
+            .price-table .iva-note-row td:before {
+                display: none !important;
+            }
         }
     </style>
 </head>
@@ -760,15 +923,15 @@
                                         <th>DESCRIPCIÓN</th>
                                         <th>TIPO</th>
                                         <th>IMAGEN</th>
-                                        <th>COSTO TOTAL</th>
+                                        <th>COSTO MENSUAL</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td data-label="DESCRIPCIÓN"><span class="location-cell" style="color: white;">Cobertura de monitoreo para alarmas instaladas</span></td>
+                                        <td data-label="DESCRIPCIÓN"><span class="location-cell" style="color: white;">Cobertura de monitoreo 24/7</span></td>
                                         <td data-label="TIPO">Servicio Mensual</td>
                                         <td data-label="IMAGEN"><img src="img/monitoreo.jpg" alt="Monitoreo" style="width: 150px; height: 120px; object-fit: cover;"></td>
-                                        <td data-label="COSTO MENSUAL"><strong>$3,500</strong></td>
+                                        <td data-label="COSTO MENSUAL"><strong>$291.67</strong></td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
