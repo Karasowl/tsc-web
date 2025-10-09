@@ -643,6 +643,38 @@
                 overflow: hidden;
             }
             
+            /* Estilos para el subtotal */
+            .price-table .subtotal-row td {
+                background: rgba(255, 255, 255, 0.1) !important;
+                color: var(--accent-gold) !important;
+                font-size: 1.1rem !important;
+                font-weight: bold !important;
+                text-align: center !important;
+                border-radius: 5px !important;
+                margin-top: 0.5rem;
+                padding: 12px !important;
+            }
+            
+            .price-table .subtotal-row td:before {
+                display: none !important;
+            }
+            
+            /* Estilos para el descuento */
+            .price-table .discount-row td {
+                background: rgba(40, 167, 69, 0.2) !important;
+                color: #28a745 !important;
+                font-size: 1.1rem !important;
+                font-weight: bold !important;
+                text-align: center !important;
+                border-radius: 5px !important;
+                margin-top: 0.5rem;
+                padding: 12px !important;
+            }
+            
+            .price-table .discount-row td:before {
+                display: none !important;
+            }
+            
             /* Estilos para el total de inversión */
             .price-table .total-row td {
                 background: rgba(223, 41, 25, 0.3) !important;
@@ -785,7 +817,7 @@
                                 <h3 class="text-white mb-4">Propuesta Económica Detallada</h3>
                                 <p class="text-white mb-5">Descargue el documento completo para su revisión.</p>
                                  <div class="download-buttons">
-                                    <a href="img/cotizaciones/transmisiones/transmisiones1.pdf" class="download-btn"
+                                    <a href="img/cotizaciones/transmisiones/transmiciones07.pdf" class="download-btn"
                                         download="Propuesta_Emmanuel_Medina_TSC.pdf">
                                         <i class="fas fa-file-pdf"></i>
                                         Descargar Cotización Detallada
@@ -897,9 +929,17 @@
                             </tr>
                         </tbody>
                         <tfoot>
+                            <tr class="subtotal-row">
+                                <td colspan="6"><strong>SUBTOTAL:</strong></td>
+                                <td data-label="Precio con aumento"><strong>$17,563.48</strong></td>
+                            </tr>
+                            <tr class="discount-row">
+                                <td colspan="6"><strong>MONTO A DESCONTAR 30% VALIDO SOLO POR 15 DIAS:</strong></td>
+                                <td data-label="Monto a descontar" style="color: #28a745;"><strong>-$5,269</strong></td>
+                            </tr>
                             <tr class="total-row">
-                                <td colspan="6"><strong>INVERSIÓN TOTAL:</strong></td>
-                                <td data-label="Inversión Total"><strong>$17,563.48</strong></td>
+                                <td colspan="6"><strong>TOTAL:</strong></td>
+                                <td data-label="Precio original"><strong>$12,294.48</strong></td>
                             </tr>
                             <tr class="iva-note-row">
                                 <td colspan="7"><span>* Precios más IVA y ISR</span></td>
@@ -931,7 +971,7 @@
                                         <td data-label="DESCRIPCIÓN"><span class="location-cell" style="color: white;">Cobertura de monitoreo 24/7</span></td>
                                         <td data-label="TIPO">Servicio Mensual</td>
                                         <td data-label="IMAGEN"><img src="img/monitoreo.jpg" alt="Monitoreo" style="width: 150px; height: 120px; object-fit: cover;"></td>
-                                        <td data-label="COSTO MENSUAL"><strong>$3,500</strong></td>
+                                        <td data-label="COSTO MENSUAL"><strong>$999</strong></td>
                                     </tr>
                                 </tbody>
                                 <tfoot>
@@ -1024,7 +1064,7 @@
                     <h3 class="text-white mb-4">¿Listo para reforzar su seguridad?</h3>
                     <p class="text-white mb-5">Descargue nuevamente la propuesta detallada para su análisis.</p>
                      <div class="download-buttons">
-                        <a href="img/cotizaciones/transmisiones/transmisiones1.pdf" class="download-btn"
+                        <a href="img/cotizaciones/transmisiones/transmiciones07.pdf" class="download-btn"
                             download="Propuesta_Emmanuel_Medina_TSC.pdf">
                             <i class="fas fa-file-pdf"></i>
                             Descargar Cotización Detallada
