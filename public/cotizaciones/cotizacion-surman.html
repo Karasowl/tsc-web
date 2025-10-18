@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cotización de Seguridad Privada - Transmisiones veinte 07</title>
-    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para Transmisiones veinte 07">
+    <title>Cotización de Seguridad Privada - SURMAN</title>
+    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para SURMAN">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- CSS here -->
@@ -166,6 +166,7 @@
             border-radius: 20px;
             padding: 40px;
             transition: all 0.3s ease;
+            margin-bottom: 30px;
         }
         
         .value-card:hover {
@@ -203,6 +204,9 @@
         .value-list {
             list-style: none;
             padding: 0;
+            columns: 2;
+             -webkit-columns: 2;
+            -moz-columns: 2;
         }
 
         .value-list li {
@@ -431,7 +435,6 @@
             border-radius: 15px;
             padding: 30px;
             margin: 40px auto;
-            max-width: 900px;
         }
 
         .notes-section h4 {
@@ -440,10 +443,14 @@
             margin-bottom: 15px;
         }
 
-        .notes-section p {
+        .notes-section p, .notes-section ul {
             color: #ccc;
             font-size: 1.1rem;
             line-height: 1.7;
+        }
+        .notes-section ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
         
         @media (max-width: 768px) {
@@ -507,218 +514,6 @@
             
             .price-table .total-row td:first-child {
                 font-weight: bold;
-            }
-            
-            /* Estilos responsive específicos para la sección de monitoreo mensual */
-            .pricing-section .price-table img {
-                width: 80px !important;
-                height: 60px !important;
-            }
-            
-            .pricing-section .price-table td[data-label="IMAGEN"] {
-                text-align: center;
-            }
-            
-            .pricing-section .price-table td[data-label="COSTO MENSUAL"]:before {
-                content: "COSTO MENSUAL";
-            }
-            
-            .pricing-section .price-table .iva-note-row td {
-                text-align: center;
-                font-style: italic;
-                color: #999;
-            }
-            
-            .pricing-section .price-table .iva-note-row td:before {
-                display: none;
-            }
-            
-            /* Estilos específicos para la propuesta tecnológica con 7 columnas */
-            .price-table td:first-child {
-                background: rgba(223, 41, 25, 0.1);
-                color: var(--accent-gold);
-                font-weight: bold;
-                text-align: center;
-                border-radius: 5px 5px 0 0;
-                padding: 10px 15px !important;
-                margin-bottom: 5px;
-            }
-            
-            .price-table td:first-child:before {
-                content: "#";
-                color: var(--accent-gold);
-                position: static !important;
-                width: auto !important;
-                text-align: center !important;
-                left: auto !important;
-                padding: 0 !important;
-            }
-            
-            .price-table td[data-label="DESCRIPCIÓN"] {
-                background: rgba(255, 255, 255, 0.05);
-                min-height: 60px;
-                padding: 15px 15px 15px 45% !important;
-                word-wrap: break-word;
-                line-height: 1.4;
-                clear: both;
-            }
-            
-            .price-table td[data-label="DESCRIPCIÓN"]:before {
-                width: 40% !important;
-                position: absolute;
-                left: 15px;
-                top: 15px;
-            }
-            
-            .price-table td[data-label="TIPO"] {
-                background: rgba(223, 41, 25, 0.05);
-                padding: 12px 15px 12px 45% !important;
-            }
-            
-            .price-table td[data-label="TIPO"]:before {
-                width: 40% !important;
-            }
-            
-            .price-table td[data-label="IMAGEN"] {
-                text-align: center;
-                padding: 15px !important;
-                background: rgba(255, 255, 255, 0.02);
-            }
-            
-            .price-table td[data-label="IMAGEN"]:before {
-                display: none !important;
-            }
-            
-            .price-table td[data-label="IMAGEN"] img {
-                width: 100px !important;
-                height: 70px !important;
-                object-fit: cover;
-                border-radius: 8px;
-                border: 2px solid rgba(223, 41, 25, 0.3);
-                display: block;
-                margin: 0 auto;
-            }
-            
-            .price-table td[data-label="CANTIDAD"] {
-                background: rgba(223, 41, 25, 0.1);
-                text-align: center;
-                font-size: 1.1rem;
-                font-weight: bold;
-                padding: 12px 15px !important;
-            }
-            
-            .price-table td[data-label="CANTIDAD"]:before {
-                width: 40% !important;
-            }
-            
-            .price-table td[data-label="PRECIO UNITARIO"] {
-                background: rgba(255, 215, 0, 0.1);
-                color: var(--accent-gold);
-                font-weight: bold;
-                font-size: 1rem;
-                padding: 12px 15px 12px 45% !important;
-            }
-            
-            .price-table td[data-label="PRECIO UNITARIO"]:before {
-                width: 40% !important;
-            }
-            
-            .price-table td[data-label="TOTAL"] {
-                background: rgba(223, 41, 25, 0.2);
-                color: var(--accent-gold);
-                font-weight: bold;
-                font-size: 1.1rem;
-                border-radius: 0 0 5px 5px;
-                padding: 12px 15px 12px 45% !important;
-            }
-            
-            .price-table td[data-label="TOTAL"]:before {
-                width: 40% !important;
-            }
-            
-            /* Mejorar espaciado entre tarjetas */
-            .price-table tbody tr {
-                margin-bottom: 3rem;
-                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-                overflow: hidden;
-            }
-            
-            /* Estilos para el subtotal */
-            .price-table .subtotal-row td {
-                background: rgba(255, 255, 255, 0.1) !important;
-                color: var(--accent-gold) !important;
-                font-size: 1.3rem !important;
-                font-weight: bold !important;
-                text-align: center !important;
-                border-radius: 5px !important;
-                margin-top: 0.5rem;
-                padding: 12px !important;
-            }
-            
-            .price-table .subtotal-row td:before {
-                display: none !important;
-            }
-            
-            /* Estilos para el descuento */
-            .price-table .discount-row td {
-                background: rgba(40, 167, 69, 0.2) !important;
-                color: #28a745 !important;
-                font-size: 1.3rem !important;
-                font-weight: bold !important;
-                text-align: center !important;
-                border-radius: 5px !important;
-                margin-top: 0.5rem;
-                padding: 12px !important;
-            }
-            
-            .price-table .discount-row td:before {
-                display: none !important;
-            }
-            
-            /* Estilos para el total de inversión */
-            .price-table .total-row td {
-                background: rgba(223, 41, 25, 0.3) !important;
-                color: var(--accent-gold) !important;
-                font-size: 1.5rem !important;
-                font-weight: bold !important;
-                text-align: center !important;
-                border-radius: 10px !important;
-                margin-top: 1rem;
-                padding: 15px !important;
-            }
-
-            /* Aumentar tamaño de montos en totales */
-            .price-table .subtotal-row td strong,
-            .price-table .discount-row td strong,
-            .price-table .total-row td strong {
-                font-size: 1.8rem !important;
-                line-height: 1.2 !important;
-            }
-
-            /* Nota de vigencia junto al descuento */
-            .price-table .validity-note {
-                display: inline-block;
-                margin-left: 0.5rem;
-                font-size: 1rem;
-                color: var(--accent-gold);
-                opacity: 0.95;
-            }
-            
-            .price-table .total-row td:before {
-                display: none !important;
-            }
-            
-            /* Estilos para la nota de IVA */
-            .price-table .iva-note-row td {
-                text-align: center !important;
-                font-style: italic;
-                color: #999 !important;
-                background: transparent !important;
-                padding: 10px !important;
-            }
-            
-            .price-table .iva-note-row td:before {
-                display: none !important;
             }
         }
     </style>
@@ -818,11 +613,11 @@
                 <div class="cotizacion-hero-content">
                     <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
                         <div class="subtitle">Propuesta Económica</div>
-                        <h1>Transmisiones veinte 07</h1>
+                        <h1>SURMAN</h1>
                         <p class="tagline">Propuesta de servicio de "Seguridad Privada en los Bienes".</p>
                         <div class="client-badge">
                             <i class="fas fa-user-shield"></i>
-                            ATN. EMMANUEL MEDINA
+                            ATN. SR. GERARDO GARCÍA
                         </div>
                         <div class="tsc-logo-section mt-4">
                             <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
@@ -834,10 +629,15 @@
                                 <h3 class="text-white mb-4">Propuesta Económica Detallada</h3>
                                 <p class="text-white mb-5">Descargue el documento completo para su revisión.</p>
                                  <div class="download-buttons">
-                                    <a href="img/cotizaciones/transmisiones/TRANSMISIONES0720.pdf" class="download-btn"
-                                        download="Propuesta_Emmanuel_Medina_TSC.pdf">
+                                    <a href="img/cotizaciones/surman/surman-propuesta1.pdf" class="download-btn"
+                                        download="cotizacion_SURMAN_Propuesta1_TSC.pdf">
                                         <i class="fas fa-file-pdf"></i>
-                                        Descargar Cotización Detallada
+                                        Descargar Propuesta 1
+                                    </a>
+                                    <a href="img/cotizaciones/surman/surman-propuesta2.pdf" class="download-btn"
+                                        download="cotizacion_SURMAN_Propuesta2_TSC.pdf">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Descargar Propuesta 2
                                     </a>
                                     <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
                                             <i class="fas fa-presentation"></i>
@@ -852,15 +652,13 @@
             </div>
         </section>
 
-     
-
-        <!-- Tabla de Inversión -->
+        <!-- Tabla de Inversión - Propuesta 1 -->
         <section class="pricing-section">
             <div class="container">
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
-                    <div class="section-tag">Seguridad Privada en los Bienes</div>
-                    <h2>Inversión del Servicio</h2>
-                    <p>Detalle de los elementos de seguridad y servicios incluidos en esta propuesta.</p>
+                    <div class="section-tag">SURMAN - Propuesta 1</div>
+                    <h2>Inversión Mensual del Servicio</h2>
+                    <p>Detalle de los elementos de seguridad tipo B para la cobertura del servicio.</p>
                 </div>
 
                 <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
@@ -868,6 +666,7 @@
                         <thead>
                             <tr>
                                 <th>DESCRIPCIÓN</th>
+                                <th>UBICACIÓN</th>
                                 <th>DÍAS</th>
                                 <th>TURNO</th>
                                 <th>MODALIDAD</th>
@@ -878,165 +677,222 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="DESCRIPCIÓN"><span class="location-cell">Técnicos de Seguridad</span></td>
+                                <td data-label="DESCRIPCIÓN">COORDINADOR DE SERVICIO</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 1</span></td>
                                 <td data-label="DÍAS">Lunes a Sábado</td>
-                                <td data-label="TURNO">12x12</td>
+                                <td data-label="TURNO">12X12</td>
                                 <td data-label="MODALIDAD">Guardias Tipo B</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO MENSUAL">$23,000.00</td>
-                                <td data-label="TOTAL MENSUAL">$23,000.00</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$36,950.00</td>
+                                <td data-label="TOTAL MENSUAL">$36,950.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 1</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">24X24</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">8</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$24,879.00</td>
+                                <td data-label="TOTAL MENSUAL">$199,032.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 2</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">24X24</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">2</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$24,879.00</td>
+                                <td data-label="TOTAL MENSUAL">$49,758.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 3</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">24X24</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">2</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$24,879.00</td>
+                                <td data-label="TOTAL MENSUAL">$49,758.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 4</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">24X24</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">4</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$24,879.00</td>
+                                <td data-label="TOTAL MENSUAL">$99,516.00</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr class="total-row">
-                                <td colspan="6"><strong>INVERSIÓN TOTAL MENSUAL:</strong></td>
-                                <td data-label="Inversión Total Mensual"><strong>$23,000.00</strong></td>
+                                <td colspan="7"><strong>INVERSIÓN TOTAL MENSUAL:</strong></td>
+                                <td data-label="Inversión Total Mensual"><strong>$435,014.00</strong></td>
                             </tr>
                             <tr class="iva-note-row">
-                                <td colspan="4"><span>* Precios más IVA</span></td>
+                                <td colspan="8"><span>* Precios más IVA</span></td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
+
+               
             </div>
         </section>
 
-           <!-- Tabla de Propuesta Tecnológica -->
-        <section class="pricing-section">
+        
+
+        <!-- Tabla de Inversión - Propuesta 2 -->
+        <section class="pricing-section alt">
             <div class="container">
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
-                    <div class="section-tag">Propuesta Tecnológica</div>
-                    <h2>Propuesta Tecnológica</h2>
+                    <div class="section-tag">SURMAN - Propuesta 2</div>
+                    <h2>Inversión Mensual del Servicio</h2>
+                    <p>Detalle de los elementos de seguridad tipo B para la cobertura del servicio.</p>
                 </div>
 
                 <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
                     <table>
                         <thead>
                             <tr>
-                                <th>#</th>
                                 <th>DESCRIPCIÓN</th>
-                                <!-- <th>COBERTURA</th> -->
-                                <th>TIPO</th>
-                                <th>IMAGEN</th>
+                                <th>UBICACIÓN</th>
+                                <th>DÍAS</th>
+                                <th>TURNO</th>
+                                <th>MODALIDAD</th>
                                 <th>CANTIDAD</th>
-                                <th>PRECIO UNITARIO</th>
-                                <th>TOTAL</th>
+                                <th>MONTO UNITARIO MENSUAL</th>
+                                <th>TOTAL MENSUAL</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td><span style="color: #FFFF00;">1</span></td>
-                                <td data-label="DESCRIPCIÓN"><span class="location-cell" style="color: white;">KIT de Alarma VISTA48/6160RF con Comunicación 4GLTEM / 5G</span></td>
-                                <!-- <td data-label="COBERTURA">1 año</td> -->
-                                <td data-label="TIPO">Sistema de alarma</td>
-                                <td data-label="IMAGEN"><img src="img/kit.png" alt="Kit de alarma" style="width: 180px; height: 120px; object-fit: cover;"></td>
+                                <td data-label="DESCRIPCIÓN">COORDINADOR DE SERVICIO</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 1</span></td>
+                                <td data-label="DÍAS">Lunes a Sábado</td>
+                                <td data-label="TURNO">12X12</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="PRECIO UNITARIO">$11,648.48</td>
-                                <td data-label="TOTAL">$11,648.48</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$36,950.00</td>
+                                <td data-label="TOTAL MENSUAL">$36,950.00</td>
                             </tr>
                             <tr>
-                                <td><span style="color: #FFFF00;">2</span></td>
-                                <td data-label="DESCRIPCIÓN"><span class="location-cell" style="color: white;">Mano de obra, instalación, configuración y puesta apunto de equipo. Incluye, sugeciones, arnés, conectores y cableado 100% cobre 18 AWG</span></td>
-                                <!-- <td data-label="COBERTURA">Única vez</td> -->
-                                <td data-label="TIPO">Servicio técnico</td>
-                                <td data-label="IMAGEN"><img src="img/mano.png" alt="Servicio técnico" style="width: 150px; height: 120px; object-fit: cover;"></td>
-                                <td data-label="CANTIDAD">1</td>
-                                <td data-label="PRECIO UNITARIO">$5,915.00</td>
-                                <td data-label="TOTAL">$5,915.00</td>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 1</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">12X12</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">16</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$26,479.00</td>
+                                <td data-label="TOTAL MENSUAL">$423,664.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 2</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">12X12</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">2</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$26,479.00</td>
+                                <td data-label="TOTAL MENSUAL">$52,958.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 3</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">12X12</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">2</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$26,479.00</td>
+                                <td data-label="TOTAL MENSUAL">$52,958.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">TÉCNICO EN SEGURIDAD</td>
+                                <td data-label="UBICACIÓN"><span class="location-cell">Bodega 4</span></td>
+                                <td data-label="DÍAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">12X12</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANTIDAD">4</td>
+                                <td data-label="MONTO UNITARIO MENSUAL">$26,479.00</td>
+                                <td data-label="TOTAL MENSUAL">$105,916.00</td>
                             </tr>
                         </tbody>
                         <tfoot>
-                            <tr class="subtotal-row">
-                                <td colspan="6"><strong>SUBTOTAL:</strong></td>
-                                <td data-label="Precio con aumento"><strong>$17,563.48</strong></td>
-                            </tr>
-                            <tr class="discount-row">
-                                <td colspan="6"><strong>MONTO A DESCONTAR:</strong></td>
-                                <td data-label="Monto a descontar" style="color: #28a745;"><strong>-$4,053.11</strong> <span class="validity-note">(válido por 15 días)</span></td>
-                            </tr>
                             <tr class="total-row">
-                                <td colspan="6"><strong>PRECIO ORIGINAL:</strong></td>
-                                <td data-label="Precio original"><strong>$13,510.37</strong></td>
+                                <td colspan="7"><strong>INVERSIÓN TOTAL MENSUAL:</strong></td>
+                                <td data-label="Inversión Total Mensual"><strong>$672,446.00</strong></td>
                             </tr>
                             <tr class="iva-note-row">
-                                <td colspan="7"><span>* Precios más IVA y ISR</span></td>
+                                <td colspan="8"><span>* Precios más IVA</span></td>
                             </tr>
                         </tfoot>
                     </table>
                 </div>
-                
-                <!-- Sección separada para monitoreo mensual -->
-                <section class="pricing-section">
-                    <div class="container">
-                        <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
-                            <div class="section-tag">Costo Mensual</div>
-                            <h2>Costo Mensual de Monitoreo</h2>
-                        </div>
-
-                        <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>DESCRIPCIÓN</th>
-                                        <th>TIPO</th>
-                                        <th>IMAGEN</th>
-                                        <th>COSTO MENSUAL</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td data-label="DESCRIPCIÓN"><span class="location-cell" style="color: white;">Cobertura de monitoreo 24/7</span></td>
-                                        <td data-label="TIPO">Servicio Mensual</td>
-                                        <td data-label="IMAGEN"><img src="img/monitoreo.jpg" alt="Monitoreo" style="width: 150px; height: 120px; object-fit: cover;"></td>
-                                        <td data-label="COSTO MENSUAL"><strong>$999</strong></td>
-                                    </tr>
-                                </tbody>
-                                <tfoot>
-                                    <tr class="iva-note-row">
-                                        <td colspan="4"><span>* Precio mensual más IVA</span></td>
-                                    </tr>
-                                </tfoot>
-                            </table>
-                        </div>
-                    </div>
-                </section>
-                
-                <div class="text-center mt-5 wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
-                    <a href="#" class="btn btn-primary">Ver Cotización Tecnológica Completa</a>
-                </div>
             </div>
         </section>
 
-        <!-- Equipamiento y Condiciones -->
-        <section class="pricing-section alt">
+        <!-- Inclusiones y Condiciones -->
+        <section class="pricing-section">
             <div class="container">
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
-                    <div class="section-tag">Servicios Incluidos</div>
-                    <h2>Equipamiento y Cobertura</h2>
-                    <p>Detalles sobre el equipamiento, supervisión y condiciones comerciales del servicio.</p>
+                    <div class="section-tag">Nuestra Propuesta de Valor</div>
+                    <h2>Servicios Incluidos</h2>
+                    <p>Garantizamos una cobertura completa para la tranquilidad de sus operaciones.</p>
                 </div>
                 
                 <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
                     <div class="value-card-icon">
-                        <i class="fas fa-user-shield"></i>
+                        <i class="fas fa-tasks"></i>
                     </div>
-                    <h3>Equipamiento y Cobertura General</h3>
-                    <p>Cada elemento y servicio está respaldado por el siguiente equipamiento y beneficios.</p>
+                    <h3>Servicios Incluidos</h3>
+                    <p>Nuestra propuesta está diseñada para ofrecer una seguridad integral y de alta calidad.</p>
                     <ul class="value-list">
-                        <li>Supervisión física y virtual intermitente (Centro de Monitoreo Remoto CAS).</li>
+                        <li>Supervisión física a través de nuestros supervisores y gerente de zona.</li>
                         <li>2 Uniformes completos por elemento.</li>
                         <li>Equipo de lluvia (manga impermeable, botas de hule).</li>
-                        <li>1 Equipo Celular de red para reportes y Radio Troncal por elemento.</li>
-                        <li>1 Chaleco táctico, lámpara taser, gas pimienta y bastón policial retráctil por guardia.</li>
-                        <li>Análisis de riesgos inicial y cobertura de carga social (IMSS, Infonavit).</li>
-                        <li>Pruebas antidopaje, control de confianza y carta de antecedentes no penales.</li>
-                         <li>Centro de monitoreo 24/7 y supervisión con patrulla rotulada 2 veces por semana.</li>
+                        <li>1 Análisis de riesgos entregado a los 30 días de haber iniciado el servicio.</li>
+                        <li>Carga social completa de los elementos (IMSS, Infonavit, fondo para el retiro, caja de ahorro).</li>
+                        <li>Pruebas antidopaje y control de confianza (1 por año).</li>
+                        <li>Expediente electrónico de cada elemento.</li>
+                        <li>Carta de antecedentes no penales de cada elemento.</li>
+                        <li>Alta del elemento ante la SSP.</li>
+                        <li>1 Equipo Celular de red para reportes entre el servicio y nuestra base TSC.</li>
+                        <li>1 Chaleco táctico por guardia.</li>
+                        <li>1 Gas pimienta (1 por guardia).</li>
+                        <li>1 Bastón policial retráctil (1 por guardia).</li>
                     </ul>
                 </div>
 
                 <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
-                    <h4>Condiciones Comerciales</h4>
-                    <p>El contrato inicial es por <strong>24 meses.</strong> El pago puede ser quincenal o a mes vencido. En caso de morosidad se genera un recargo único del 5% sobre el saldo vencido. Los días festivos y el día 31 de cada mes se cobran conforme a la ley.</p>
+                    <h4>Condiciones Comerciales y Operativas</h4>
+                    <ul>
+                        <li>Contrato inicial a 24 meses.</li>
+                        <li><strong>Se definirá una de dos variantes para los pagos:</strong>
+                            <ol>
+                                <li>De manera quincenal dentro del mes corriente del servicio. La facturación se enviará los días 1º y 16 de cada mes, correspondientes a la 1ra. y 2da. quincena respectivamente.</li>
+                                <li>A mes vencido. Emitimos la factura del 1 al 3 de cada mes y el pago debe realizarse del 4 al 7.</li>
+                            </ol>
+                        </li>
+                        <li>En caso de morosidad se genera recargo único del 5% sobre saldo vencido. Solemos condonarlo cuando hay comunicación con anticipación de parte del cliente y se establece un plan de pago que no afecte demasiado la operación, pero si no hay información o respuesta, se aplicará sin excepción.</li>
+                        <li>En meses con menos de 30 días, se realizará el ajuste correspondiente a favor del cliente.</li>
+                        <li>En caso de que no se cubra una posición en un tiempo máximo de 2 horas, después de haber sido reportada la incidencia asumimos la penalización correspondiente a ese turno.</li>
+                        <li>Ajustes por descuentos, cargos por servicios adicionales, notas de crédito, notas de cargo, ajustes por plantilla, se realizarán dentro de la facturación del mes siguiente.</li>
+                        <li>Precios más IVA.</li>
+                        <li>Se requieren 30 días para instalar el servicio tras la firma del contrato o carta de intención.</li>
+                        <li>Se requiere conocer las consignas específicas para la capacitación inicial del personal.</li>
+                        <li>Durante los primeros 30 a 45 días se entregarán los expedientes digitales del personal.</li>
+                        <li>Supervisor continuo durante los primeros 15 días para capacitación en campo.</li>
+                        <li>Compromiso de cubrir eventualidades en un tiempo máximo de 2 horas.</li>
+                        <li>Atención a urgencias o emergencias en un periodo de 30 a 60 minutos.</li>
+                        <li>Visita física de supervisor cada 15 días, gerente de operaciones 1 vez al mes y directivos 1 vez por trimestre.</li>
+                        <li>Contamos con permisos y fianzas vigentes para operar a nivel nacional.</li>
+                        <li>Oficinas centrales en Toluca, a un costado del Aeropuerto.</li>
+                        <li>Centro de monitoreo 24/7.</li>
+                        <li>Asignación de persona administrativa para revisión de procesos y formas de pago.</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -1045,29 +901,22 @@
         <section class="image-gallery">
             <div class="container">
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
-                    <div class="section-tag">Nuestro Equipo</div>
+                    <div class="section-tag">Nuestro Equipo y Unidades</div>
                      <h2>Capacidad Operativa</h2>
                 </div>
 
                 <div class="gallery-grid">
                     <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
-                        <img src="img/monitoreo.jpg" alt="Monitoreo TSC" loading="lazy">
+                        <img src="img/cotizaciones/patrullas y guardias.JPG" alt="Nuestro Personal de Seguridad" loading="lazy">
                         <div class="gallery-overlay"></div>
                     </div>
                     <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
-                        <img src="img/kit.png" alt="Kit TSC" loading="lazy">
+                        <img src="img/cotizaciones/patrulla.jpg" alt="Unidad de Supervisión TSC" loading="lazy">
                         <div class="gallery-overlay"></div>
                     </div>
                     <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
-                        <img src="img/mano.png" alt="Mano de Obra TSC" loading="lazy">
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
-                        <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy">
-                        <div class="gallery-overlay"></div>
-                    </div>
-                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
-                        <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy">
+                        <img src="img/cotizaciones/img1.png" alt="Supervisión y Monitoreo"
+                            loading="lazy">
                         <div class="gallery-overlay"></div>
                     </div>
                 </div>
@@ -1079,12 +928,17 @@
             <div class="container">
                 <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
                     <h3 class="text-white mb-4">¿Listo para reforzar su seguridad?</h3>
-                    <p class="text-white mb-5">Descargue nuevamente la propuesta detallada para su análisis.</p>
+                    <p class="text-white mb-5">Descargue nuevamente las propuestas detalladas para su análisis.</p>
                      <div class="download-buttons">
-                        <a href="img/cotizaciones/transmisiones/TRANSMISIONES0720.pdf" class="download-btn"
-                            download="Propuesta_Emmanuel_Medina_TSC.pdf">
+                        <a href="img/cotizaciones/surman/surman-propuesta1.pdf" class="download-btn"
+                            download="cotizacion_SURMAN_Propuesta1_TSC.pdf">
                             <i class="fas fa-file-pdf"></i>
-                            Descargar Cotización Detallada
+                            Descargar Propuesta 1
+                        </a>
+                        <a href="img/cotizaciones/surman/surman-propuesta2.pdf" class="download-btn"
+                            download="cotizacion_SURMAN_Propuesta2_TSC.pdf">
+                            <i class="fas fa-file-pdf"></i>
+                            Descargar Propuesta 2
                         </a>
                         <a href="img/cotizaciones/presentación/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
                                 <i class="fas fa-presentation"></i>
@@ -1114,7 +968,7 @@
                 </div>
                 <div class="mt-4">
                     <p class="text-muted text-center">
-                        <strong>Propuesta de Servicio para Transmisiones veinte 07</strong>
+                        <strong>SURMAN - SR. GERARDO GARCÍA:</strong> Propuesta de Servicio de Seguridad
                     </p>
                 </div>
             </div>
