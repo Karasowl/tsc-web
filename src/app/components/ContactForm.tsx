@@ -30,8 +30,8 @@ const ContactForm = () => {
       if (response.ok) {
         setStatus('success');
         form.reset();
-        // Opcional: Redirigir a una página de agradecimiento
-        // window.location.href = '/thankyou'; 
+        // Redirigir a página de agradecimiento para activar conversión GTM
+        window.location.href = '/cotizaciones/thankyou.html';
       } else {
         const errorData = await response.json();
         throw new Error(errorData.error || "Algo salió mal.");
