@@ -31,7 +31,7 @@ const ContactForm = () => {
         setStatus('success');
         form.reset();
         // Redirigir a página de agradecimiento para activar conversión GTM
-        window.location.href = '/cotizaciones/thankyou.html';
+        window.location.href = '/thankyou';
       } else {
         const errorData = await response.json();
         throw new Error(errorData.error || "Algo salió mal.");
