@@ -6,6 +6,11 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
+      // Rewrite para página de gracias (GTM espera /thankyou.html)
+      {
+        source: '/thankyou.html',
+        destination: '/thankyou',
+      },
       // Rewrites para las cotizaciones HTML (con y sin extensión)
       {
         source: '/cotizacion-:path([^.]+)(.html)?',
