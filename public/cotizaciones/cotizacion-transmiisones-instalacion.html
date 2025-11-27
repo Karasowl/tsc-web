@@ -484,16 +484,17 @@
                 padding: 15px;
                 border: none;
                 position: relative;
-                text-align: right;
+                text-align: left;
+                word-break: break-word;
+                overflow-wrap: anywhere;
             }
             
             .price-table td:before {
                 content: attr(data-label);
-                position: absolute;
-                left: 15px;
-                width: 50%;
-                padding-right: 10px;
-                white-space: nowrap;
+                display: block;
+                position: static;
+                margin-bottom: 8px;
+                white-space: normal;
                 text-align: left;
                 font-weight: 700;
                 color: var(--accent-gold);
@@ -622,7 +623,7 @@
                                 <h3 class="text-white mb-4">Propuesta Económica Detallada</h3>
                                 <p class="text-white mb-5">Descargue el documento completo para su revisión.</p>
                                  <div class="download-buttons">
-                                    <a href="img/cotizaciones/transmisiones-instalacion/transmisiones-camaras.pdf" class="download-btn"
+                                    <a href="img/cotizaciones/transmisiones-instalacion/transmisiones-camaras2.pdf" class="download-btn"
                                         download="cotizacion_medina_TSC.pdf">
                                         <i class="fas fa-file-pdf"></i>
                                         Descargar Cotización Detallada
@@ -661,34 +662,34 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="DESCRIPCIÓN">NVR 12 Megapixel (4K) / 32 canales IP / AcuSense</td>
+                                <td data-label="DESCRIPCIÓN">NVR 12 Megapixel (4K) / 32 canales IP / AcuSense (Evita Falsas Alarmas) / Reconocimiento Facial / 2 Bahías de Disco Duro / HDMI en 4K / Sin Puertos PoE+</td>
                                 <td data-label="CANTIDAD">1</td>
                                 <td data-label="MONTO UNITARIO">$12,750.00</td>
                                 <td data-label="TOTAL">$12,750.00</td>
                             </tr>
                             <tr>
-                                <td data-label="DESCRIPCIÓN">Switch Smart PoE con 24 puertos Gigabit PoE 802.3af/at</td>
-                                <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO">$12,030.00</td>
-                                <td data-label="TOTAL">$12,030.00</td>
-                            </tr>
-                            <tr>
-                                <td data-label="DESCRIPCIÓN">Bala IP 2 Megapixel (1080p) / Lente 2.8 mm / ACUSENSE Lite</td>
-                                <td data-label="CANTIDAD">12</td>
-                                <td data-label="MONTO UNITARIO">$1,710.00</td>
-                                <td data-label="TOTAL">$20,520.00</td>
-                            </tr>
-                            <tr>
-                                <td data-label="DESCRIPCIÓN">Turret IP de 2 Megapixel / Lente 2.8 mm / ACUSENSE Lite</td>
-                                <td data-label="CANTIDAD">9</td>
-                                <td data-label="MONTO UNITARIO">$1,815.00</td>
-                                <td data-label="TOTAL">$16,335.00</td>
-                            </tr>
-                            <tr>
-                                <td data-label="DESCRIPCIÓN">[TandemVu] PTZ IP 4 Megapixel con Cámara Panoramica 6 Megapixel</td>
+                                <td data-label="DESCRIPCIÓN">Switch Smart PoE con 24 puertos Gigabit PoE 802.3af/at + 2 SFP para fibra 1Gb, gestión gratuita desde la nube, 370w</td>
                                 <td data-label="CANTIDAD">2</td>
-                                <td data-label="MONTO UNITARIO">$19,500.00</td>
-                                <td data-label="TOTAL">$39,000.00</td>
+                                <td data-label="MONTO UNITARIO">$12,030.00</td>
+                                <td data-label="TOTAL">$24,060.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">Bala IP 2 Megapixel (1080p) / Lente 2.8 mm / Ángulo de visión 101° / 20 mts IR + 15 mts Luz Blanca / Micrófono Integrado / ACUSENSE Lite / Exterior IP67 / PoE / dWDR / H.265+ / ONVIF</td>
+                                <td data-label="CANTIDAD">12</td>
+                                <td data-label="MONTO UNITARIO">$1,708.00</td>
+                                <td data-label="TOTAL">$20,496.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">Turret IP de 2 Megapixel / Lente 2.8 mm / Ángulo de visión 101° / 20 mts IR + 15 mts Luz Blanca / Micrófono Integrado / ACUSENSE Lite / Exterior IP67 / PoE / dWDR / H.265+ / ONVIF</td>
+                                <td data-label="CANTIDAD">12</td>
+                                <td data-label="MONTO UNITARIO">$1,814.00</td>
+                                <td data-label="TOTAL">$21,768.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">[TandemVu] PTZ IP 4 Megapixel con Cámara Panoramica 6 Megapixel / 25X Zoom / 100 mts IR / IP66 / WDR / PoE+ / Entrada-Salida de Audio y Alarma / Ultra Baja Iluminación / Micro SD</td>
+                                <td data-label="CANTIDAD">2</td>
+                                <td data-label="MONTO UNITARIO">$19,486.00</td>
+                                <td data-label="TOTAL">$38,972.00</td>
                             </tr>
                             <tr>
                                 <td data-label="DESCRIPCIÓN">Disco Duro PURPLE de 4TB / 3 AÑOS DE GARANTÍA</td>
@@ -697,22 +698,28 @@
                                 <td data-label="TOTAL">$5,900.00</td>
                             </tr>
                             <tr>
-                                <td data-label="DESCRIPCIÓN">Rack de 2 Postes, Estándar 19", 24 Unidades</td>
+                                <td data-label="DESCRIPCIÓN">Rack de 2 Postes, Estándar 19", 45 Unidades, fabricado en acero, base "L" para anclar a piso; incluye charolas para recepción de NVR y organizadores horizontal y vertical</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO">$3,990.00</td>
-                                <td data-label="TOTAL">$3,990.00</td>
+                                <td data-label="MONTO UNITARIO">$19,260.00</td>
+                                <td data-label="TOTAL">$19,260.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCIÓN">PDU para Distribución de Energía, montaje en rack, 11 salidas, instalación horizontal, de 19in, 1U, 15 Amp, 120 Vca</td>
+                                <td data-label="CANTIDAD">1</td>
+                                <td data-label="MONTO UNITARIO">$2,950.00</td>
+                                <td data-label="TOTAL">$2,950.00</td>
                             </tr>
                              <tr>
-                                <td data-label="DESCRIPCIÓN">UPS de 2000VA/1800W / Topología On-Line Doble Conversión</td>
+                                <td data-label="DESCRIPCIÓN">UPS de 3000VA/2700W / Online Doble Conversión / Entrada 120Vca NEMA LS 30P / Onda Senoidal Pura / Tipo Torre o Rack / 8 Tomas NEMA 5-20R / Certificado UL</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO">$13,690.00</td>
-                                <td data-label="TOTAL">$13,690.00</td>
+                                <td data-label="MONTO UNITARIO">$24,730.00</td>
+                                <td data-label="TOTAL">$24,730.00</td>
                             </tr>
                              <tr>
-                                <td data-label="DESCRIPCIÓN">Bobina de cable de UTP de 4 pares Cat5e de 305 m</td>
+                                <td data-label="DESCRIPCIÓN">Bobina de cable de UTP de 4 pares Cat5e de 305 m (1000 ft), 100% cobre, PVC ROHS, color gris, 24 AWG, uso en interior, para aplicaciones de voz, datos y video</td>
                                 <td data-label="CANTIDAD">4</td>
-                                <td data-label="MONTO UNITARIO">$2,550.00</td>
-                                <td data-label="TOTAL">$10,200.00</td>
+                                <td data-label="MONTO UNITARIO">$2,547.00</td>
+                                <td data-label="TOTAL">$10,188.00</td>
                             </tr>
                             <tr>
                                 <td data-label="DESCRIPCIÓN">KIT de Alarma VISTA48/6160RF con Comunicación 4GLTEM / 5G</td>
@@ -721,25 +728,25 @@
                                 <td data-label="TOTAL">$22,180.00</td>
                             </tr>
                             <tr>
-                                <td data-label="DESCRIPCIÓN">Canalización en conduit pared delgada</td>
+                                <td data-label="DESCRIPCIÓN">Canalización en conduit pared delgada con diámetros afines a las necesidades del cableado. Incluye material, fijaciones y todo lo necesario para su correcta instalación</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO">$34,490.00</td>
-                                <td data-label="TOTAL">$34,490.00</td>
+                                <td data-label="MONTO UNITARIO">$46,620.00</td>
+                                <td data-label="TOTAL">$46,620.00</td>
                             </tr>
                             <tr>
-                                <td data-label="DESCRIPCIÓN">Instalación, configuración y fijaciones</td>
+                                <td data-label="DESCRIPCIÓN">Instalación configuración, conectores, cajas genericas de conexión, estetica, herrajes</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO">$28,760.00</td>
-                                <td data-label="TOTAL">$28,760.00</td>
+                                <td data-label="MONTO UNITARIO">$34,563.00</td>
+                                <td data-label="TOTAL">$34,563.00</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr class="total-row">
                                 <td colspan="3"><strong>INVERSIÓN TOTAL:</strong></td>
-                                <td data-label="Inversión Total"><strong>$219,845.00</strong></td>
+                                <td data-label="Inversión Total"><strong>$284,437.00</strong></td>
                             </tr>
                             <tr class="iva-note-row">
-                                <td colspan="4"><span>* Precio no incluye IVA y RET ISR 1.25%</span></td>
+                                <td colspan="4"><span>*Precio no incluye IVA y RET ISR 1.25%</span></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -814,7 +821,7 @@
                     <h3 class="text-white mb-4">¿Listo para reforzar su seguridad?</h3>
                     <p class="text-white mb-5">Descargue nuevamente la propuesta detallada para su análisis.</p>
                      <div class="download-buttons">
-                        <a href="img/cotizaciones/transmisiones-instalacion/transmisiones-camaras.pdf" class="download-btn"
+                        <a href="img/cotizaciones/transmisiones-instalacion/2.pdf" class="download-btn"
                             download="cotizacion_medina_TSC.pdf">
                             <i class="fas fa-file-pdf"></i>
                             Descargar Cotización Detallada
