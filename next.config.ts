@@ -6,7 +6,6 @@ const nextConfig: NextConfig = {
   },
   async rewrites() {
     return [
-      // Rewrite para página de gracias (GTM espera /thankyou.html)
       {
         source: '/thankyou.html',
         destination: '/thankyou',

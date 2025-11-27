@@ -30,8 +30,6 @@ const ContactForm = () => {
       if (response.ok) {
         setStatus('success');
         form.reset();
-        // Redirigir a /thankyou.html para activar conversión GTM
-        // Next.js rewrite sirve la página /thankyou con estilo moderno
         window.location.href = '/thankyou.html';
       } else {
         const errorData = await response.json();
