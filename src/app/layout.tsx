@@ -35,8 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <head>
-        <Script id="google-tag-manager" strategy="afterInteractive">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
+        <Script id="google-tag-manager" strategy="beforeInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -45,10 +47,6 @@ export default function RootLayout({
             })(window,document,'script','dataLayer','GTM-P9JTR8ZV');
           `}
         </Script>
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-P9JTR8ZV"
