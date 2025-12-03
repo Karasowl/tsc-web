@@ -506,6 +506,139 @@
             font-size: 0.9rem;
         }
 
+        /* Executive Team Photo Section */
+        .executive-team-section {
+            padding: 100px 0;
+            background: var(--darker-bg);
+        }
+
+        .team-showcase {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            margin-top: 60px;
+        }
+
+        .team-photo-container {
+            flex: 0 0 55%;
+            position: relative;
+        }
+
+        .team-photo-container img {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            object-position: center top;
+            border-radius: 20px;
+            box-shadow: 0 25px 80px rgba(223, 41, 25, 0.3);
+            border: 3px solid var(--primary-red);
+        }
+
+        .team-photo-container::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            right: -15px;
+            bottom: -15px;
+            border: 2px solid var(--accent-gold);
+            border-radius: 28px;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .team-badge {
+            position: absolute;
+            bottom: 25px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            white-space: nowrap;
+        }
+
+        .team-info {
+            flex: 1;
+        }
+
+        .team-info h3 {
+            color: #fff;
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .team-info p {
+            color: #ccc;
+            font-size: 1.15rem;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .team-features {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .team-features li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: #fff;
+            font-size: 1.05rem;
+            padding: 15px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-gold);
+            transition: all 0.3s ease;
+        }
+
+        .team-features li:hover {
+            background: rgba(223, 41, 25, 0.1);
+            transform: translateX(5px);
+        }
+
+        .team-features li i {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 992px) {
+            .team-showcase {
+                flex-direction: column;
+                gap: 40px;
+            }
+
+            .team-photo-container {
+                flex: none;
+                width: 100%;
+            }
+
+            .team-photo-container img {
+                height: 350px;
+            }
+
+            .team-info h3 {
+                font-size: 1.8rem;
+                text-align: center;
+            }
+
+            .team-info p {
+                text-align: center;
+            }
+        }
+
         @media (max-width: 768px) {
             .tsc-strategic-logo {
                 max-width: 200px;
@@ -734,7 +867,7 @@
                                         <i class="fas fa-file-pdf"></i>
                                         Descargar Cotizacion Detallada
                                     </a>
-                                    <a href="img/cotizaciones/presentacion/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                    <a href="img/cotizaciones/presentación/Presentacion_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
                                             <i class="fas fa-presentation"></i>
                                             Descargar Presentacion Ejecutiva
                                         </a>
@@ -942,6 +1075,36 @@
             </div>
         </section>
 
+        <!-- Equipo Ejecutivo -->
+        <section class="executive-team-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Personal Ejecutivo</div>
+                    <h2>Imagen Profesional</h2>
+                    <p>Elementos con presentacion ejecutiva para ambientes corporativos y de alto perfil.</p>
+                </div>
+
+                <div class="team-showcase wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <div class="team-photo-container">
+                        <img src="img/cotizaciones/macropay-merida/equipo-ejecutivo.jpg" alt="Equipo de seguridad ejecutiva TSC" loading="lazy">
+                        <div class="team-badge">
+                            <i class="fas fa-user-tie"></i> Equipo TSC
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Seguridad con Presencia Ejecutiva</h3>
+                        <p>Nuestro personal de seguridad ejecutiva combina profesionalismo y discrecion, con una imagen impecable ideal para tiendas Macropay y ambientes corporativos.</p>
+                        <ul class="team-features">
+                            <li><i class="fas fa-check-circle"></i> Uniforme ejecutivo formal (traje y corbata)</li>
+                            <li><i class="fas fa-check-circle"></i> Capacitacion en protocolo y atencion al cliente</li>
+                            <li><i class="fas fa-check-circle"></i> Presencia disuasiva discreta</li>
+                            <li><i class="fas fa-check-circle"></i> Comunicacion profesional y cordial</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Galeria de Imagenes -->
         <section class="image-gallery">
             <div class="container">
@@ -979,7 +1142,7 @@
                             <i class="fas fa-file-pdf"></i>
                             Descargar Cotizacion Detallada
                         </a>
-                        <a href="img/cotizaciones/presentacion/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                        <a href="img/cotizaciones/presentación/Presentacion_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
                                 <i class="fas fa-presentation"></i>
                                 Descargar Presentacion Ejecutiva
                             </a>
