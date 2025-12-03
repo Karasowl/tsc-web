@@ -1,0 +1,1100 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cotizacion de Seguridad Privada - Gomar Services</title>
+    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para Gomar Services">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/custom-hamburger-menu.css">
+    <link rel="stylesheet" href="css/header-mobile-adjustments.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+
+    <style>
+        :root {
+            --primary-red: #df2919;
+            --dark-bg: #1a1a1d;
+            --darker-bg: #222327;
+            --accent-gold: #ffd700;
+        }
+
+        .cotizacion-hero {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cotizacion-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/bg/quote_bg.png') no-repeat center center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cotizacion-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .strategic-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .strategic-header .subtitle {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .strategic-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .strategic-header .tagline {
+            font-size: 1.3rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .client-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(223, 41, 25, 0.3);
+        }
+
+        .tsc-strategic-logo {
+            max-width: 300px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .tsc-strategic-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .download-section-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+            margin-top: 40px;
+        }
+
+        .download-section-hero h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .download-section-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header .section-tag {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
+            border-color: var(--primary-red);
+        }
+
+        .value-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .value-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .value-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin-right: 12px;
+            font-size: 1rem;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .pricing-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .pricing-section.alt {
+            background: var(--darker-bg);
+        }
+
+        .price-table {
+            background: var(--darker-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin: 60px 0;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .price-table table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: #fff;
+            padding: 20px 15px;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-table td {
+            padding: 18px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            vertical-align: middle;
+            font-size: 0.95rem;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tr:hover {
+            background: rgba(223, 41, 25, 0.1);
+        }
+
+        .location-cell {
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-size: 1rem;
+        }
+
+        .total-row {
+            background: rgba(223, 41, 25, 0.2);
+            font-weight: 700;
+        }
+
+        .total-row td {
+            padding: 25px 15px;
+            text-align: right;
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+        }
+
+        .total-row td:first-child {
+            text-align: left;
+        }
+
+        .iva-note-row td {
+            text-align: right;
+            font-style: italic;
+            padding-top: 15px;
+            color: #999;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            color: var(--primary-red);
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: 280px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        .image-gallery {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+            border-color: var(--primary-red);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .company-info {
+            background: var(--darker-bg);
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ccc;
+        }
+
+        .contact-item i {
+            color: var(--primary-red);
+            font-size: 20px;
+        }
+
+        .notes-section {
+            background: var(--darker-bg);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .notes-section h4 {
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .notes-section p, .notes-section ul {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .notes-section ul {
+            padding-left: 20px;
+        }
+
+        .notes-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .included-table {
+            background: var(--darker-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin: 40px 0;
+            border: 1px solid rgba(45, 80, 22, 0.3);
+        }
+
+        .included-table table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+        }
+
+        .included-table th {
+            background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+            color: #fff;
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .included-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            vertical-align: middle;
+            font-size: 0.95rem;
+        }
+
+        .included-table tr:hover {
+            background: rgba(45, 80, 22, 0.1);
+        }
+
+        .free-badge {
+            background: linear-gradient(135deg, #28a745 0%, #1e7e34 100%);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.9rem;
+        }
+
+        .equipment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .equipment-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .equipment-item:hover {
+            border-color: var(--primary-red);
+            transform: translateY(-5px);
+        }
+
+        .equipment-item i {
+            font-size: 2.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 15px;
+        }
+
+        .equipment-item h5 {
+            color: #fff;
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        @media (max-width: 768px) {
+            .tsc-strategic-logo {
+                max-width: 200px;
+            }
+
+            .download-section-hero {
+                padding: 40px 20px;
+            }
+
+            .download-section-hero h3 {
+                font-size: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+            .price-table thead {
+                display: none;
+            }
+
+            .price-table tbody tr, .price-table tfoot tr {
+                display: block;
+                margin-bottom: 2rem;
+                border: 1px solid rgba(223, 41, 25, 0.2);
+                border-radius: 10px;
+            }
+
+            .price-table td {
+                display: block;
+                padding: 12px 15px;
+                border: none;
+                position: relative;
+                text-align: right;
+            }
+
+            .price-table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: normal;
+                text-align: left;
+                font-weight: 700;
+                color: var(--accent-gold);
+                text-transform: uppercase;
+                font-size: .8rem;
+            }
+
+            .price-table td:first-child {
+                background: rgba(223, 41, 25, 0.1);
+                text-align: center;
+                border-radius: 8px 8px 0 0;
+            }
+
+            .price-table td:first-child:before {
+                display: none;
+            }
+
+            .price-table .total-row td {
+                text-align: center;
+                background: rgba(223, 41, 25, 0.2);
+                border-radius: 8px;
+            }
+
+            .price-table .total-row td:before {
+                display: none;
+            }
+
+            .price-table .iva-note-row td {
+                text-align: center;
+                background: transparent;
+            }
+
+            .price-table .iva-note-row td:before {
+                display: none;
+            }
+
+            .included-table thead {
+                display: none;
+            }
+
+            .included-table tbody tr {
+                display: block;
+                margin-bottom: 1.5rem;
+                border: 1px solid rgba(45, 80, 22, 0.3);
+                border-radius: 10px;
+                padding: 10px;
+            }
+
+            .included-table td {
+                display: block;
+                padding: 10px 15px;
+                border: none;
+                text-align: center;
+            }
+
+            .included-table td:first-child {
+                background: rgba(45, 80, 22, 0.2);
+                border-radius: 5px;
+                font-weight: bold;
+                color: #28a745;
+            }
+
+            .equipment-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <!-- header -->
+    <header class="header-area header">
+        <div id="header-sticky" class="menu-area">
+            <div class="container-fluid">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/"><img src="img/logo peque-02.png" alt="TSC Logo"
+                                        style="max-height: 55px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="/">Inicio</a></li>
+                                        <li><a href="/#work">Nosotros</a></li>
+                                        <li><a href="/#services">Servicios</a></li>
+                                        <li><a href="/#formulario-contacto"
+                                                class="boton-principal-moderno">
+                                                Contactanos
+                                            </a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
+                            <div class="header-cta">
+                                <ul>
+                                    <li>
+                                        <div class="call-box">
+                                            <div class="text">
+                                                Tel: 2202834673<br>TSC Seguridad Privada
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- TSC Custom Hamburger Menu -->
+    <button class="tsc-hamburger-btn" aria-label="Abrir menu de navegacion">
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+    </button>
+    <div class="tsc-menu-overlay"></div>
+    <nav class="tsc-menu-panel">
+        <div class="tsc-menu-header">
+            <img src="img/logo/tsc logo-06.png" alt="TSC Seguridad Privada" class="tsc-menu-logo">
+            <p class="tsc-menu-title">Seguridad Privada Profesional</p>
+        </div>
+        <div class="tsc-menu-nav">
+            <a href="/#formulario-contacto" class="tsc-cta-button">
+                Cotizar
+            </a>
+            <ul>
+                <li>
+                    <a href="/">
+                        <i class="fas fa-home tsc-menu-icon"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#work">
+                        <i class="fas fa-users tsc-menu-icon"></i>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#services">
+                        <i class="fas fa-shield-alt tsc-menu-icon"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End TSC Custom Hamburger Menu -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="cotizacion-hero">
+            <div class="container">
+                <div class="cotizacion-hero-content">
+                    <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="subtitle">Propuesta Tecnico - Economica</div>
+                        <h1>Gomar Services</h1>
+                        <p class="tagline">Propuesta de servicio de "Seguridad Privada en los Bienes" - Modalidad II.</p>
+                        <div class="client-badge">
+                            <i class="fas fa-user-shield"></i>
+                            ATN. SR. ANGEL VERGARA
+                        </div>
+                        <div class="tsc-logo-section mt-4">
+                            <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
+                        </div>
+
+                        <!-- Botones de Descarga Inmediatos -->
+                        <div class="download-section-hero mt-5">
+                            <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                                <h3 class="text-white mb-4">Propuesta Tecnico - Economica Detallada</h3>
+                                <p class="text-white mb-5">Descargue el documento completo para su revision.</p>
+                                 <div class="download-buttons">
+                                    <a href="img/cotizaciones/gomar-services/COTIZACION_02125.pdf" class="download-btn"
+                                        download="Propuesta_Gomar_Services_TSC.pdf">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Descargar Cotizacion Detallada
+                                    </a>
+                                    <a href="img/cotizaciones/presentacion/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                            <i class="fas fa-presentation"></i>
+                                            Descargar Presentacion Ejecutiva
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Inversion -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Seguridad Privada en los Bienes</div>
+                    <h2>Inversion del Servicio</h2>
+                    <p>Detalle de los elementos de seguridad para Gomar Services en Ciudad del Sol.</p>
+                </div>
+
+                <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Descripcion</th>
+                                <th>Ubicacion</th>
+                                <th>Dias</th>
+                                <th>Turno</th>
+                                <th>Modalidad</th>
+                                <th>Cant. por Turno</th>
+                                <th>Cantidad</th>
+                                <th>Monto Unitario</th>
+                                <th>Total Mensual</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="DESCRIPCION"><span class="location-cell">Tecnicos de Seguridad</span></td>
+                                <td data-label="UBICACION">Ciudad del Sol</td>
+                                <td data-label="DIAS">Lunes a Domingo</td>
+                                <td data-label="TURNO">24x24</td>
+                                <td data-label="MODALIDAD">Guardias Tipo B</td>
+                                <td data-label="CANT. POR TURNO">2</td>
+                                <td data-label="CANTIDAD">6</td>
+                                <td data-label="MONTO UNITARIO">$25,400.00</td>
+                                <td data-label="TOTAL MENSUAL">$25,400.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="8"><strong>INVERSION TOTAL MENSUAL:</strong></td>
+                                <td data-label="TOTAL"><strong>$152,400.00</strong></td>
+                            </tr>
+                            <tr class="iva-note-row">
+                                <td colspan="9"><span>* Precios mas IVA</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipo de Comunicacion Incluido -->
+        <section class="pricing-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Incluido Sin Costo</div>
+                    <h2>Equipo de Comunicacion</h2>
+                    <p>La propuesta incluye los siguientes servicios sin costo adicional.</p>
+                </div>
+
+                <div class="included-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Descripcion</th>
+                                <th>Tipo</th>
+                                <th>Modalidad</th>
+                                <th>Cantidad</th>
+                                <th>Monto Mensual</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="DESCRIPCION">Telefono Celular</td>
+                                <td data-label="TIPO">Smart</td>
+                                <td data-label="MODALIDAD">Plan</td>
+                                <td data-label="CANTIDAD">1</td>
+                                <td data-label="MONTO MENSUAL"><span class="free-badge">$0</span></td>
+                                <td data-label="SUBTOTAL"><span class="free-badge">$0</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCION">Centro de Monitoreo 24/7</td>
+                                <td data-label="TIPO">Remoto</td>
+                                <td data-label="MODALIDAD">Diferentes Horarios</td>
+                                <td data-label="CANTIDAD">1</td>
+                                <td data-label="MONTO MENSUAL"><span class="free-badge">$0</span></td>
+                                <td data-label="SUBTOTAL"><span class="free-badge">$0</span></td>
+                            </tr>
+                            <tr>
+                                <td data-label="DESCRIPCION">Supervision Operativa</td>
+                                <td data-label="TIPO">Patrulla Rotulada Attitude</td>
+                                <td data-label="MODALIDAD">Diferentes Horarios</td>
+                                <td data-label="CANTIDAD">1</td>
+                                <td data-label="MONTO MENSUAL"><span class="free-badge">$0</span></td>
+                                <td data-label="SUBTOTAL"><span class="free-badge">$0</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipamiento Tactico -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Equipo Tactico</div>
+                    <h2>Equipamiento del Personal</h2>
+                    <p>Nuestros elementos cuentan con equipo tactico profesional.</p>
+                </div>
+
+                <div class="equipment-grid wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <div class="equipment-item">
+                        <i class="fas fa-hard-hat"></i>
+                        <h5>Casco Tactico y Goggles</h5>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-vest-patches"></i>
+                        <h5>Chaleco Tactico</h5>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-gavel"></i>
+                        <h5>Baston Retractil</h5>
+                    </div>
+                    <div class="equipment-item">
+                        <i class="fas fa-spray-can"></i>
+                        <h5>Gas Lacrimogeno</h5>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Incluidos -->
+        <section class="pricing-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Servicios Incluidos</div>
+                    <h2>Nuestra Propuesta Incluye</h2>
+                    <p>Detalles sobre el equipamiento, supervision y beneficios del servicio.</p>
+                </div>
+
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-user-shield"></i>
+                    </div>
+                    <h3>Equipamiento y Beneficios</h3>
+                    <p>Cada elemento y servicio esta respaldado por el siguiente equipamiento y beneficios.</p>
+                    <ul class="value-list">
+                        <li>Supervision del servicio fisica a traves de nuestros supervisores y gerente de zona.</li>
+                        <li>Supervision virtual a traves de nuestro Centro de Monitoreo Remoto (CAS).</li>
+                        <li>2 Uniformes completos por elemento.</li>
+                        <li>Equipo de lluvia (manga impermeable, botas de hule).</li>
+                        <li>1 Analisis de riesgos entregado a los 15 dias de haber iniciado el servicio.</li>
+                        <li>Carga social de los elementos (IMSS, Infonavit, fondo para el retiro, caja de ahorro).</li>
+                        <li>Pruebas antidopaje y control de confianza (1 por ano).</li>
+                        <li>Expediente electronico de cada elemento.</li>
+                        <li>Carta de antecedentes no penales de cada elemento.</li>
+                        <li>Alta del elemento ante la SSP.</li>
+                        <li>1 Equipo Celular de red para reportes entre el servicio y nuestra base TSC.</li>
+                        <li>1 Chaleco tactico por guardia.</li>
+                        <li>1 Gas pimienta por guardia.</li>
+                        <li>1 Baston policial retractil por guardia.</li>
+                    </ul>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <h4>Condiciones Comerciales</h4>
+                    <ul>
+                        <li>Contrato inicial a <strong>24 meses</strong>.</li>
+                        <li>Pago quincenal dentro del mes corriente o a mes vencido.</li>
+                        <li>En caso de morosidad se genera recargo unico del 5% sobre saldo vencido.</li>
+                        <li>Precios mas IVA.</li>
+                        <li>Solo se reciben pagos por transferencia o cheque directo a: SANTANDER CTA. 65-50933818-4 CLABE. 014427655093381844</li>
+                    </ul>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <h4>Condiciones Operativas</h4>
+                    <ul>
+                        <li>A partir de la firma de contrato, se requieren <strong>30 dias</strong> para instalar el servicio.</li>
+                        <li>Durante los primeros 15 dias habra un supervisor de forma continua realizando capacitacion de campo.</li>
+                        <li>Durante los primeros 30 a 45 dias se entregaran los expedientes digitales del personal.</li>
+                        <li>Compromiso de cubrir eventualidades en un tiempo maximo de <strong>2 horas</strong>.</li>
+                        <li>Atencion a emergencias en un periodo de <strong>30 a 60 minutos</strong>.</li>
+                        <li>Visita fisica del Supervisor por lo menos <strong>1 vez por semana</strong>, Gerente de Operaciones 1 vez por mes, y Directivos 1 vez por trimestre.</li>
+                        <li>Contamos con permisos y fianzas vigentes para Estado de Mexico y Permiso Federal para todo el Territorio Nacional.</li>
+                        <li>Centro de monitoreo que opera 24 horas, los 365 dias del ano.</li>
+                        <li>Se asignara un ejecutivo para la cuenta.</li>
+                        <li>Se asignara una persona administrativa para revisar procesos y formas de pago.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Imagenes -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Nuestro Equipo</div>
+                     <h2>Capacidad Operativa</h2>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <img src="img/cotizaciones/img1.png" alt="Personal TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                        <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botones de Descarga -->
+        <section class="download-section">
+            <div class="container">
+                <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <h3 class="text-white mb-4">Listo para reforzar su seguridad?</h3>
+                    <p class="text-white mb-5">Descargue nuevamente la propuesta detallada para su analisis.</p>
+                     <div class="download-buttons">
+                        <a href="img/cotizaciones/gomar-services/COTIZACION_02125.pdf" class="download-btn"
+                            download="Propuesta_Gomar_Services_TSC.pdf">
+                            <i class="fas fa-file-pdf"></i>
+                            Descargar Cotizacion Detallada
+                        </a>
+                        <a href="img/cotizaciones/presentacion/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                <i class="fas fa-presentation"></i>
+                                Descargar Presentacion Ejecutiva
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info -->
+        <section class="company-info">
+            <div class="container">
+                <h3 class="text-white mb-2">TSC PRIVATE SECURITY CONSULTING</h3>
+                <p class="text-danger mb-4"><strong>FUERZA, TECNOLOGIA Y EXPERIENCIA</strong></p>
+                <h4 class="text-white">ISMAEL LOPEZ-SILVERO GUIMARAIS</h4>
+                <p class="text-muted">Chief Digital Officer</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Ismael.sg@tscseguridadprivada.com.mx</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>2202834673</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-muted text-center">
+                        <strong>Propuesta de Servicio para Gomar Services</strong><br>
+                        <small>Toluca Estado de Mexico, a 02 de Diciembre de 2025</small>
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-bg footer-p">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p>2025 TSC Private Security Consulting. Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom-hamburger-menu.js"></script>
+
+    <script>
+        // Initialize animations
+        new WOW().init();
+    </script>
+</body>
+
+</html>
