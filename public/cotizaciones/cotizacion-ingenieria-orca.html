@@ -307,6 +307,13 @@
             font-style: italic;
             padding-top: 15px;
         }
+        .special-note {
+            text-align: center;
+            font-style: italic;
+            color: #fff;
+            margin-top: 12px;
+            opacity: 0.9;
+        }
 
         /* Estilos para la tabla secundaria de inclusiones */
         .inclusions-table {
@@ -519,6 +526,10 @@
             .price-table table {
                 min-width: 100%;
             }
+            .special-note {
+                font-size: 0.95rem;
+                padding: 8px 12px;
+            }
             /* Opcional: Layout de tarjeta en móvil si se prefiere */
             /* 
             .price-table thead { display: none; }
@@ -691,21 +702,24 @@
                                 <td data-label="MODALIDAD">TIPO B</td>
                                 <td data-label="CANT. POR TURNO">1</td>
                                 <td data-label="CANTIDAD">1</td>
-                                <td data-label="MONTO UNITARIO">$26,500.00</td>
-                                <td data-label="TOTAL MENSUAL">$26,500.00</td>
+                                <td data-label="MONTO UNITARIO">$28,100.00</td>
+                                <td data-label="TOTAL MENSUAL">$28,100.00</td>
                             </tr>
+                            
                         </tbody>
                         <tfoot>
                             <tr class="total-row">
                                 <td colspan="8"><strong>TOTAL:</strong></td>
-                                <td data-label="Inversión Total"><strong>$26,500.00</strong></td>
+                                <td data-label="Inversión Total"><strong>$28,100.00</strong></td>
                             </tr>
                             <tr class="iva-note-row">
                                 <td colspan="9"><span>* Precios más IVA</span></td>
                             </tr>
                         </tfoot>
                     </table>
+                    <div class="special-note">Servicio especial por 3 meses.</div>
                 </div>
+                
 
                 <!-- Tabla Secundaria de Inclusiones (Azul en PDF) -->
                 <div class="row justify-content-center wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
