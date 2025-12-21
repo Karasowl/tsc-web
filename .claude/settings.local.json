@@ -15,7 +15,9 @@
       "Bash(git stash:*)",
       "Bash(git stash pop:*)",
       "Bash(del pnpm-lock.yaml)",
-      "Bash(rm:*)"
+      "Bash(rm:*)",
+      "Bash(cat:*)",
+      "Bash(find:*)"
     ],
     "deny": [],
     "ask": []

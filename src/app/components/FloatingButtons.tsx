@@ -69,7 +69,7 @@ const FloatingButtons = () => {
 
       {/* Script del Chatbot de Dindon usando next/script */}
       <Script
-        src="https://dindon.onrender.com/loader.js"
+        src="https://dingdon.onrender.com/loader.js"
         strategy="afterInteractive" // Carga el script después de que la página sea interactiva
         data-bot-color="#59211d"
         data-workspace-id="6bf877db-00ec-49c7-a1c2-6644e345cc91"
