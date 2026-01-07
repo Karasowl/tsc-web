@@ -1,0 +1,1326 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cotizacion de Seguridad Privada - RADEC</title>
+    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para RADEC">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/custom-hamburger-menu.css">
+    <link rel="stylesheet" href="css/header-mobile-adjustments.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+
+    <style>
+        :root {
+            --primary-red: #df2919;
+            --dark-bg: #1a1a1d;
+            --darker-bg: #222327;
+            --accent-gold: #ffd700;
+        }
+
+        .cotizacion-hero {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cotizacion-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/bg/quote_bg.png') no-repeat center center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cotizacion-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .strategic-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .strategic-header .subtitle {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .strategic-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .strategic-header .tagline {
+            font-size: 1.3rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .client-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(223, 41, 25, 0.3);
+        }
+
+        .tsc-strategic-logo {
+            max-width: 300px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .tsc-strategic-logo:hover {
+            transform: scale(1.05);
+        }
+
+        .download-section-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+            margin-top: 40px;
+        }
+
+        .download-section-hero h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .download-section-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header .section-tag {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
+            border-color: var(--primary-red);
+        }
+
+        .value-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .value-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .value-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+
+        .pricing-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .pricing-section.alt {
+            background: var(--darker-bg);
+        }
+
+        .price-table {
+            background: var(--darker-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin: 40px 0;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .price-table table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: #fff;
+            padding: 20px 15px;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-table td {
+            padding: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            vertical-align: middle;
+            font-size: 0.9rem;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .price-table tbody tr:hover {
+            background: rgba(223, 41, 25, 0.1);
+        }
+
+        .location-cell {
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-size: 1rem;
+        }
+
+        .subtotal-row {
+            background: rgba(223, 41, 25, 0.15);
+            font-weight: 600;
+        }
+
+        .subtotal-row td {
+            padding: 20px 15px;
+            color: var(--accent-gold);
+        }
+
+        .total-row {
+            background: rgba(223, 41, 25, 0.25);
+            font-weight: 700;
+            font-size: 1.2em;
+        }
+
+        .total-row td {
+            padding: 25px 15px;
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+        }
+
+        .iva-note-row td {
+            text-align: right;
+            font-style: italic;
+            padding-top: 15px;
+            color: #999;
+        }
+
+        .price-note {
+            background: rgba(255, 215, 0, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .price-note p {
+            color: var(--accent-gold);
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .table-title {
+            color: var(--accent-gold);
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin: 40px 0 20px;
+            padding-left: 15px;
+            border-left: 4px solid var(--primary-red);
+        }
+
+        .summary-box {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .summary-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .summary-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 25px;
+        }
+
+        .summary-item .label {
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .summary-item .value {
+            color: white;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .included-services {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            margin-top: 40px;
+        }
+
+        .included-services h4 {
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+
+        .included-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .included-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ccc;
+        }
+
+        .included-item i {
+            color: #28a745;
+            font-size: 1.2rem;
+        }
+
+        .included-item .free-tag {
+            background: #28a745;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .download-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            color: var(--primary-red);
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: 280px;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        .image-gallery {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+            border-color: var(--primary-red);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .company-info {
+            background: var(--darker-bg);
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ccc;
+        }
+
+        .contact-item i {
+            color: var(--primary-red);
+            font-size: 20px;
+        }
+
+        .notes-section {
+            background: var(--darker-bg);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .notes-section h4 {
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .notes-section p, .notes-section ul {
+            color: #ccc;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .notes-section ul {
+            padding-left: 20px;
+        }
+
+        .notes-section li {
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 992px) {
+            .price-table {
+                overflow-x: auto;
+            }
+
+            .price-table table {
+                min-width: 800px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .tsc-strategic-logo {
+                max-width: 200px;
+            }
+
+            .download-section-hero {
+                padding: 40px 20px;
+            }
+
+            .download-section-hero h3 {
+                font-size: 1.5rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+
+            .summary-item .value {
+                font-size: 1.4rem;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <!-- header -->
+    <header class="header-area header">
+        <div id="header-sticky" class="menu-area">
+            <div class="container-fluid">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/"><img src="img/logo peque-02.png" alt="TSC Logo"
+                                        style="max-height: 55px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="/">Inicio</a></li>
+                                        <li><a href="/#work">Nosotros</a></li>
+                                        <li><a href="/#services">Servicios</a></li>
+                                        <li><a href="/#formulario-contacto"
+                                                class="boton-principal-moderno">
+                                                Contactanos
+                                            </a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
+                            <div class="header-cta">
+                                <ul>
+                                    <li>
+                                        <div class="call-box">
+                                            <div class="text">
+                                                Tel: 2202834673<br>TSC Seguridad Privada
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- TSC Custom Hamburger Menu -->
+    <button class="tsc-hamburger-btn" aria-label="Abrir menu de navegacion">
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+    </button>
+    <div class="tsc-menu-overlay"></div>
+    <nav class="tsc-menu-panel">
+        <div class="tsc-menu-header">
+            <img src="img/logo/tsc logo-06.png" alt="TSC Seguridad Privada" class="tsc-menu-logo">
+            <p class="tsc-menu-title">Seguridad Privada Profesional</p>
+        </div>
+        <div class="tsc-menu-nav">
+            <a href="/#formulario-contacto" class="tsc-cta-button">
+                Cotizar
+            </a>
+            <ul>
+                <li>
+                    <a href="/">
+                        <i class="fas fa-home tsc-menu-icon"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#work">
+                        <i class="fas fa-users tsc-menu-icon"></i>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#services">
+                        <i class="fas fa-shield-alt tsc-menu-icon"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End TSC Custom Hamburger Menu -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="cotizacion-hero">
+            <div class="container">
+                <div class="cotizacion-hero-content">
+                    <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="subtitle">Propuesta Economica</div>
+                        <h1>RADEC</h1>
+                        <p class="tagline">Propuesta de servicio bajo la modalidad "Seguridad Privada en los Bienes".</p>
+                        <div class="client-badge">
+                            <i class="fas fa-user-shield"></i>
+                            ATN. CECILIA MARQUEZ
+                        </div>
+                        <div class="tsc-logo-section mt-4">
+                            <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
+                        </div>
+
+                        <!-- Botones de Descarga Inmediatos -->
+                        <div class="download-section-hero mt-5">
+                            <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                                <h3 class="text-white mb-4">Propuesta Economica Detallada</h3>
+                                <p class="text-white mb-5">Descargue el documento completo para su revision.</p>
+                                 <div class="download-buttons">
+                                    <a href="img/cotizaciones/radec/Cotizacion_RADEC.pdf" class="download-btn"
+                                        download="Cotizacion_RADEC_TSC.pdf">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Descargar Cotizacion Detallada
+                                    </a>
+                                    <a href="img/cotizaciones/presentacion/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                            <i class="fas fa-presentation"></i>
+                                            Descargar Presentacion Ejecutiva
+                                        </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Inversion -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Servicio de Seguridad Privada</div>
+                    <h2>Inversion del Servicio</h2>
+                    <p>Cobertura nacional con 23 guardias en 20 sucursales estrategicas.</p>
+                </div>
+
+                <div class="price-note wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <p><i class="fas fa-info-circle"></i> <strong>NOTA:</strong> Los precios de la columna "PRECIO 1er ANO" aplican durante los primeros 12 meses de servicio. A partir del mes 13, se aplicaran los precios de la columna "PRECIO 2do ANO".</p>
+                </div>
+
+                <!-- Tabla Zona Norte Premium -->
+                <h4 class="table-title wow fadeInUp" data-animation="fadeInUp" data-delay=".35s">
+                    <i class="fas fa-map-marker-alt"></i> Zona Norte - Premium
+                </h4>
+                <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SUCURSAL</th>
+                                <th>UBICACION</th>
+                                <th>DIAS</th>
+                                <th>TURNO</th>
+                                <th>MODALIDAD</th>
+                                <th>CANT.</th>
+                                <th>PRECIO 1er ANO</th>
+                                <th>PRECIO 2do ANO</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="location-cell">CR Guadalupe</span></td>
+                                <td>Guadalupe, Nuevo Leon</td>
+                                <td>Lunes a Viernes</td>
+                                <td>12x12 Diurno</td>
+                                <td>Guardias Tipo B</td>
+                                <td>2</td>
+                                <td>$30,400.00</td>
+                                <td>$32,000.00</td>
+                                <td><strong>$60,800.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CR Guadalupe</span></td>
+                                <td>Guadalupe, Nuevo Leon</td>
+                                <td>Lunes a Viernes</td>
+                                <td>12x12 Nocturno</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$30,400.00</td>
+                                <td>$32,000.00</td>
+                                <td><strong>$30,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Monterrey</span></td>
+                                <td>Monterrey, Nuevo Leon</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$30,400.00</td>
+                                <td>$32,000.00</td>
+                                <td><strong>$30,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CR Tijuana</span></td>
+                                <td>Tijuana, Baja California</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$30,400.00</td>
+                                <td>$32,000.00</td>
+                                <td><strong>$30,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Chihuahua</span></td>
+                                <td>Chihuahua, Chihuahua</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$30,400.00</td>
+                                <td>$32,000.00</td>
+                                <td><strong>$30,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Reynosa</span></td>
+                                <td>Reynosa, Tamaulipas</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$30,400.00</td>
+                                <td>$32,000.00</td>
+                                <td><strong>$30,400.00</strong></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="subtotal-row">
+                                <td colspan="8"><strong>Subtotal (7 guardias x $30,400.00):</strong></td>
+                                <td><strong>$212,800.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Tabla Zona Nacional -->
+                <h4 class="table-title wow fadeInUp" data-animation="fadeInUp" data-delay=".45s">
+                    <i class="fas fa-map-marker-alt"></i> Zona Nacional
+                </h4>
+                <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SUCURSAL</th>
+                                <th>UBICACION</th>
+                                <th>DIAS</th>
+                                <th>TURNO</th>
+                                <th>MODALIDAD</th>
+                                <th>CANT.</th>
+                                <th>PRECIO 1er ANO</th>
+                                <th>PRECIO 2do ANO</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="location-cell">CN Hermosillo</span></td>
+                                <td>Hermosillo, Sonora</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Culiacan</span></td>
+                                <td>Culiacan, Sinaloa</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Cancun</span></td>
+                                <td>Cancun, Quintana Roo</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Merida</span></td>
+                                <td>Merida, Yucatan</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN San Luis Potosi</span></td>
+                                <td>San Luis Potosi, SLP</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Puebla</span></td>
+                                <td>Puebla, Puebla</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Morelia</span></td>
+                                <td>Morelia, Michoacan</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Acapulco</span></td>
+                                <td>Acapulco, Guerrero</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Tuxtla Gutierrez</span></td>
+                                <td>Tuxtla Gutierrez, Chiapas</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CR Villahermosa</span></td>
+                                <td>Villahermosa, Tabasco</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Leon</span></td>
+                                <td>Leon, Guanajuato</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$24,700.00</td>
+                                <td>$26,000.00</td>
+                                <td><strong>$24,700.00</strong></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="subtotal-row">
+                                <td colspan="8"><strong>Subtotal (11 guardias x $24,700.00):</strong></td>
+                                <td><strong>$271,700.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Tabla Zona Centro -->
+                <h4 class="table-title wow fadeInUp" data-animation="fadeInUp" data-delay=".55s">
+                    <i class="fas fa-map-marker-alt"></i> Zona Centro (CDMX y Estado de Mexico)
+                </h4>
+                <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SUCURSAL</th>
+                                <th>UBICACION</th>
+                                <th>DIAS</th>
+                                <th>TURNO</th>
+                                <th>MODALIDAD</th>
+                                <th>CANT.</th>
+                                <th>PRECIO 1er ANO</th>
+                                <th>PRECIO 2do ANO</th>
+                                <th>TOTAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="location-cell">CN Iztapalapa</span></td>
+                                <td>Iztapalapa, CDMX</td>
+                                <td>Lunes a Sabado</td>
+                                <td>24x24</td>
+                                <td>Guardias Tipo B</td>
+                                <td>2</td>
+                                <td>$23,200.00</td>
+                                <td>$24,400.00</td>
+                                <td><strong>$46,400.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Peralvillo</span></td>
+                                <td>Peralvillo, CDMX</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$23,200.00</td>
+                                <td>$24,400.00</td>
+                                <td><strong>$23,200.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Tultitlan</span></td>
+                                <td>Tultitlan, Estado de Mexico</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$23,200.00</td>
+                                <td>$24,400.00</td>
+                                <td><strong>$23,200.00</strong></td>
+                            </tr>
+                            <tr>
+                                <td><span class="location-cell">CN Tecamac</span></td>
+                                <td>Tecamac, Estado de Mexico</td>
+                                <td>Lunes a Sabado</td>
+                                <td>12x12</td>
+                                <td>Guardias Tipo B</td>
+                                <td>1</td>
+                                <td>$23,200.00</td>
+                                <td>$24,400.00</td>
+                                <td><strong>$23,200.00</strong></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="subtotal-row">
+                                <td colspan="8"><strong>Subtotal (5 guardias x $23,200.00):</strong></td>
+                                <td><strong>$116,000.00</strong></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <!-- Resumen General -->
+                <div class="summary-box wow fadeInUp" data-animation="fadeInUp" data-delay=".65s">
+                    <h3><i class="fas fa-chart-pie"></i> Resumen General de Inversion</h3>
+                    <div class="summary-grid">
+                        <div class="summary-item">
+                            <div class="label">Total de Guardias</div>
+                            <div class="value">23</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="label">Sucursales Cubiertas</div>
+                            <div class="value">20</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="label">Total Mensual (1er Ano)</div>
+                            <div class="value">$600,500.00</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="label">Total Mensual (2do Ano)</div>
+                            <div class="value">$632,000.00</div>
+                        </div>
+                    </div>
+                    <p class="text-white mt-4" style="opacity: 0.8;">* Precios mas IVA</p>
+                </div>
+
+                <!-- Servicios Incluidos Sin Costo -->
+                <div class="included-services wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
+                    <h4><i class="fas fa-gift"></i> Servicios Incluidos Sin Costo Adicional</h4>
+                    <div class="included-grid">
+                        <div class="included-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Monitoreo Remoto 24/7</span>
+                            <span class="free-tag">INCLUIDO</span>
+                        </div>
+                        <div class="included-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>20 Telefonos Celulares</span>
+                            <span class="free-tag">INCLUIDO</span>
+                        </div>
+                        <div class="included-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Supervision Operativa 1x Semana</span>
+                            <span class="free-tag">INCLUIDO</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Incluidos -->
+        <section class="pricing-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Nuestra Propuesta Incluye</div>
+                    <h2>Valor Agregado y Cobertura</h2>
+                    <p>Detalles sobre el equipamiento, comunicacion y supervision que garantizan un servicio de excelencia.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-6 mb-4">
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-user-shield"></i>
+                            </div>
+                            <h3>Equipamiento y Prestaciones</h3>
+                            <p>Cada elemento cuenta con el equipo completo y todas las prestaciones de ley para un desempeno optimo.</p>
+                            <ul class="value-list">
+                                <li>2 Uniformes completos por elemento.</li>
+                                <li>Equipo de lluvia (manga impermeable, botas de hule).</li>
+                                <li>Carga social (IMSS, Infonavit, fondo de retiro, caja de ahorro).</li>
+                                <li>Pruebas antidopaje y control de confianza anuales.</li>
+                                <li>Expediente electronico de cada elemento.</li>
+                                <li>Carta de antecedentes no penales.</li>
+                                <li>Alta del elemento ante la SSP.</li>
+                                <li>1 Gas pimienta por guardia.</li>
+                                <li>1 Baston policial retractil por guardia.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 mb-4">
+                         <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <h3>Supervision y Comunicacion</h3>
+                            <p>Mantenemos una comunicacion y supervision constante para garantizar la calidad y respuesta inmediata.</p>
+                            <ul class="value-list">
+                                <li>Supervision fisica por supervisores y gerente de zona.</li>
+                                <li>Supervision virtual a traves de Centro de Monitoreo (CAS).</li>
+                                <li>Centro de Monitoreo Remoto 24/7, 365 dias.</li>
+                                <li>1 Equipo celular de red para reportes a base TSC.</li>
+                                <li>1 Analisis de riesgos (entregado a 30-45 dias).</li>
+                                <li>Ejecutivo asignado para la cuenta.</li>
+                                <li>Persona administrativa para procesos y pagos.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <h4>Condiciones Comerciales</h4>
+                    <ul>
+                        <li><strong>Contrato inicial:</strong> 24 meses.</li>
+                        <li><strong>Vigencia de precios:</strong> Tarifa 1er ano durante los primeros 12 meses; a partir del mes 13 aplica tarifa 2do ano.</li>
+                        <li><strong>Opciones de pago:</strong>
+                            <ul>
+                                <li>Quincenal dentro del mes corriente (facturacion dias 1 y 16).</li>
+                                <li>A mes vencido (factura del 1 al 3, pago del 4 al 7).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Morosidad:</strong> Recargo unico del 5% sobre saldo vencido.</li>
+                        <li><strong>Precios:</strong> Mas IVA.</li>
+                    </ul>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                    <h4>Condiciones Operativas</h4>
+                    <ul>
+                        <li>30 dias para instalacion del servicio a partir de firma de contrato.</li>
+                        <li>Expedientes digitales del personal entregados en los primeros 30-45 dias.</li>
+                        <li>Supervisor de capacitacion continua durante los primeros 15 dias.</li>
+                        <li>Cobertura de eventualidades en maximo 2 horas.</li>
+                        <li>Atencion a urgencias/emergencias en 30-60 minutos.</li>
+                        <li>Visita de Supervisor cada 15 dias, Gerente de Operaciones cada 2 meses.</li>
+                        <li>Permisos y fianzas vigentes para operar en todo el territorio nacional.</li>
+                        <li>Oficinas centrales en Toluca, junto al aeropuerto.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria de Imagenes -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Nuestro Equipo y Unidades</div>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <img src="img/cotizaciones/img1.png" alt="Monitoreo TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <img src="img/cotizaciones/img2.png" alt="Centro de Control TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                        <img src="img/cotizaciones/patrullas y guardias.JPG" alt="Patrullas y Guardias TSC"
+                            loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                        <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
+                        <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy">
+                        <div class="gallery-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Botones de Descarga -->
+        <section class="download-section">
+            <div class="container">
+                <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <h3 class="text-white mb-4">Listo para reforzar su seguridad?</h3>
+                    <p class="text-white mb-5">Descargue nuevamente la propuesta detallada para su analisis.</p>
+                     <div class="download-buttons">
+                        <a href="img/cotizaciones/radec/Cotizacion_RADEC.pdf" class="download-btn"
+                            download="Cotizacion_RADEC_TSC.pdf">
+                            <i class="fas fa-file-pdf"></i>
+                            Descargar Cotizacion Detallada
+                        </a>
+                        <a href="img/cotizaciones/presentacion/Presentacion_Universal_Logistics_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                <i class="fas fa-presentation"></i>
+                                Descargar Presentacion Ejecutiva
+                            </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info -->
+        <section class="company-info">
+            <div class="container">
+                <h3 class="text-white mb-2">TSC PRIVATE SECURITY CONSULTING</h3>
+                <p class="text-danger mb-4"><strong>FUERZA, TECNOLOGIA Y EXPERIENCIA</strong></p>
+                <h4 class="text-white">ISMAEL LOPEZ-SILVERO GUIMARAIS</h4>
+                <p class="text-muted">Ejecutivo de Ventas</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>Ismael.sg@tscseguridadprivada.com.mx</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <span>2202834673</span>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-muted text-center">
+                        <strong>RADEC - CECILIA MARQUEZ:</strong> Propuesta de Servicio de Seguridad Privada
+                    </p>
+                    <p class="text-muted text-center" style="font-size: 0.9rem;">
+                        Toluca Estado de Mexico, a 06 de Enero de 2026
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer-bg footer-p">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p>2025 TSC Private Security Consulting. Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer-end -->
+
+    <!-- JS here -->
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom-hamburger-menu.js"></script>
+
+    <script>
+        // Initialize animations
+        new WOW().init();
+    </script>
+</body>
+
+</html>
