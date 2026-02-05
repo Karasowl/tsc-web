@@ -44,7 +44,7 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: '/cotizaciones/:path*',
+        source: '/cotizaciones/:path*.html',
         headers: [
           {
             key: 'Content-Type',

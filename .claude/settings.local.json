@@ -17,7 +17,8 @@
       "Bash(del pnpm-lock.yaml)",
       "Bash(rm:*)",
       "Bash(cat:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []
