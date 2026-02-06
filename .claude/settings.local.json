@@ -18,7 +18,8 @@
       "Bash(rm:*)",
       "Bash(cat:*)",
       "Bash(find:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:guardias.tscseguridadprivada.com.mx)"
+      "WebFetch(domain:guardias.tscseguridadprivada.com.mx)",
+      "Bash(grep:*)"
     ]
   }
 }
