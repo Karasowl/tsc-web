@@ -1,0 +1,1035 @@
+<!doctype html>
+<html class="no-js" lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Cotización de Seguridad Privada - Servifacil</title>
+    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para Servifacil - Estaciones de Servicio en Querétaro y Guanajuato">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="css/dripicons.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/botones.css">
+    <link rel="stylesheet" href="css/custom-hamburger-menu.css">
+    <link rel="stylesheet" href="css/header-mobile-adjustments.css">
+    <link rel="stylesheet" href="css/language-selector.css">
+
+    <style>
+        :root {
+            --primary-red: #df2919;
+            --dark-bg: #1a1a1d;
+            --darker-bg: #222327;
+            --accent-gold: #ffd700;
+        }
+
+        .cotizacion-hero {
+            background: linear-gradient(135deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            padding: 150px 0 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cotizacion-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('img/bg/quote_bg.png') no-repeat center center;
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .cotizacion-hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .strategic-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .strategic-header .subtitle {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .strategic-header h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #fff 0%, var(--primary-red) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .strategic-header .tagline {
+            font-size: 1.3rem;
+            color: #ccc;
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .client-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(223, 41, 25, 0.3);
+        }
+
+        .tsc-strategic-logo {
+            max-width: 300px;
+            filter: brightness(0) invert(1);
+            transition: transform 0.3s ease;
+        }
+
+        .tsc-strategic-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        .download-section-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+            margin-top: 40px;
+        }
+
+        .download-section-hero h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .download-section-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header .section-tag {
+            display: inline-block;
+            background: var(--primary-red);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(223, 41, 25, 0.2);
+            border-color: var(--primary-red);
+        }
+
+        .value-card-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--accent-gold) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .value-card h3 {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .value-card p {
+            color: #ccc;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .value-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .value-list li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            color: #ccc;
+            font-size: 0.95rem;
+        }
+
+        .value-list li::before {
+            content: '\f058';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            color: var(--accent-gold);
+            margin-right: 12px;
+            font-size: 1rem;
+        }
+
+        .pricing-section {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .pricing-section.alt {
+            background: var(--darker-bg);
+        }
+
+        .price-table {
+            background: var(--darker-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            margin: 60px 0;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .price-table table {
+            width: 100%;
+            margin: 0;
+            border-collapse: collapse;
+        }
+
+        .price-table th {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            color: #fff;
+            padding: 25px 20px;
+            text-align: left;
+            font-weight: 700;
+            border: none;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .price-table td {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            color: #fff;
+            vertical-align: middle;
+        }
+
+        .price-table tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .price-table tr:hover {
+            background: rgba(223, 41, 25, 0.1);
+        }
+
+        .location-cell {
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-size: 1.1rem;
+        }
+        
+        .total-row {
+            background: rgba(223, 41, 25, 0.2);
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+
+        .total-row td {
+            padding: 30px 20px;
+            text-align: right;
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+        }
+
+        .total-row td:first-child {
+            text-align: left;
+        }
+        
+        .iva-note-row td {
+            text-align: right;
+            font-style: italic;
+            padding-top: 15px;
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            color: var(--primary-red);
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: 280px;
+        }
+
+        .download-btn.secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .download-btn.secondary:hover {
+            background: #fff;
+            color: var(--primary-red);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
+        }
+
+        .image-gallery {
+            padding: 100px 0;
+            background: var(--dark-bg);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 15px;
+            height: 250px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(223, 41, 25, 0.2);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center top;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(223, 41, 25, 0.3);
+            border-color: var(--primary-red);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .company-info {
+            background: var(--darker-bg);
+            padding: 80px 0;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #ccc;
+        }
+        
+        .contact-item i {
+            color: var(--primary-red);
+            font-size: 20px;
+        }
+        
+        .notes-section {
+            background: var(--darker-bg);
+            border: 1px solid rgba(223, 41, 25, 0.2);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 900px;
+        }
+
+        .notes-section h4 {
+            color: var(--accent-gold);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .notes-section p {
+            color: #ccc;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        @media (max-width: 768px) {
+            .tsc-strategic-logo {
+                max-width: 200px;
+            }
+
+            .download-section-hero {
+                padding: 40px 20px;
+            }
+
+            .download-section-hero h3 {
+                font-size: 1.5rem;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .gallery-item {
+                height: 200px;
+            }
+            
+            .price-table thead {
+                display: none;
+            }
+
+            .price-table tbody tr, .price-table tfoot tr {
+                display: block;
+                margin-bottom: 2rem;
+                border: 1px solid rgba(223, 41, 25, 0.2);
+                border-radius: 10px;
+            }
+
+            .price-table td {
+                display: block;
+                padding: 15px;
+                border: none;
+                position: relative;
+                text-align: right;
+            }
+            
+            .price-table td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 15px;
+                width: 50%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: 700;
+                color: var(--accent-gold);
+                text-transform: uppercase;
+                font-size: .9rem;
+            }
+            
+            .price-table .total-row td {
+                 text-align: right;
+            }
+            
+            .price-table .total-row td:first-child {
+                font-weight: bold;
+            }
+        }
+    </style>
+</head>
+
+<body class="dark">
+    <!-- header -->
+    <header class="header-area header">
+        <div id="header-sticky" class="menu-area">
+            <div class="container-fluid">
+                <div class="second-menu">
+                    <div class="row align-items-center">
+                        <div class="col-xl-2 col-lg-2">
+                            <div class="logo">
+                                <a href="/"><img src="img/logo peque-02.png" alt="TSC Logo"
+                                        style="max-height: 55px;"></a>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-4 col-md-6">
+                            <div class="main-menu">
+                                <nav id="mobile-menu">
+                                    <ul>
+                                        <li><a href="/">Inicio</a></li>
+                                        <li><a href="/#work">Nosotros</a></li>
+                                        <li><a href="/#services">Servicios</a></li>
+                                        <li><a href="/#formulario-contacto"
+                                                class="boton-principal-moderno">
+                                                Contáctanos
+                                            </a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-6 text-right d-none d-lg-block text-right text-xl-right">
+                            <div class="header-cta">
+                                <ul>
+                                    <li>
+                                        <div class="call-box">
+                                            <div class="text">
+                                                Tel: 2202834673<br>TSC Seguridad Privada
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+    <!-- TSC Custom Hamburger Menu -->
+    <button class="tsc-hamburger-btn" aria-label="Abrir menú de navegación">
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+        <span class="tsc-hamburger-line"></span>
+    </button>
+    <div class="tsc-menu-overlay"></div>
+    <nav class="tsc-menu-panel">
+        <div class="tsc-menu-header">
+            <img src="img/logo/tsc logo-06.png" alt="TSC Seguridad Privada" class="tsc-menu-logo">
+            <p class="tsc-menu-title">Seguridad Privada Profesional</p>
+        </div>
+        <div class="tsc-menu-nav">
+            <a href="/#formulario-contacto" class="tsc-cta-button">
+                Cotizar
+            </a>
+            <ul>
+                <li>
+                    <a href="/">
+                        <i class="fas fa-home tsc-menu-icon"></i>
+                        <span>Inicio</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#work">
+                        <i class="fas fa-users tsc-menu-icon"></i>
+                        <span>Nosotros</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="/#services">
+                        <i class="fas fa-shield-alt tsc-menu-icon"></i>
+                        <span>Servicios</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- End TSC Custom Hamburger Menu -->
+
+    <main>
+        <!-- Hero Section -->
+        <section class="cotizacion-hero">
+            <div class="container">
+                <div class="cotizacion-hero-content">
+                    <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                        <div class="subtitle">Propuesta Económica</div>
+                        <h1>SERVIFACIL</h1>
+                        <p class="tagline">Servicio de Vigilancia Nocturna para Estaciones de Servicio</p>
+                        <div class="client-badge">
+                            <i class="fas fa-user-shield"></i>
+                            ATN. INGRID LESLIE ANGEL IRINEO
+                        </div>
+                        <div class="tsc-logo-section mt-4">
+                            <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
+                        </div>
+
+                        <!-- Botones de Descarga Inmediatos -->
+                        <div class="download-section-hero mt-5">
+                            <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                                <h3 class="text-white mb-4">Propuesta Económica Detallada</h3>
+                                <p class="text-white mb-5">Descargue el documento completo para su revisión.</p>
+                                 <div class="download-buttons">
+                                    <a href="pdf/cotizacion-servifacil.pdf" class="download-btn"
+                                        download="Cotizacion_Servifacil_TSC.pdf">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Descargar Cotización Detallada
+                                    </a>
+                                    <a href="img/cotizaciones/presentación/Presentacion_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                                        <i class="fas fa-file-powerpoint"></i>
+                                        Descargar Presentación Ejecutiva
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabla de Inversión -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Servicio Mensual SERVIFACIL</div>
+                    <h2>Inversión del Servicio</h2>
+                    <p>Servicio profesional de vigilancia nocturna para 7 estaciones de servicio en Querétaro y Guanajuato. Esquema de 9 elementos con cobertura 19:00-07:00 hrs L-D.</p>
+                </div>
+
+                <div class="price-table wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SERVICIO</th>
+                                <th>ESQUEMA</th>
+                                <th>COSTO UNITARIO</th>
+                                <th>COSTO MENSUAL</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td data-label="SERVICIO"><span class="location-cell">7 Guardias de Base</span></td>
+                                <td data-label="ESQUEMA">Nocturno L-D (19:00-07:00)</td>
+                                <td data-label="COSTO UNITARIO">$26,500.00</td>
+                                <td data-label="COSTO MENSUAL">$185,500.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="SERVICIO"><span class="location-cell">1 Elemento Comodín</span></td>
+                                <td data-label="ESQUEMA">Nocturno L-D (19:00-07:00)</td>
+                                <td data-label="COSTO UNITARIO">$26,500.00</td>
+                                <td data-label="COSTO MENSUAL">$26,500.00</td>
+                            </tr>
+                            <tr>
+                                <td data-label="SERVICIO"><span class="location-cell">1 Supervisor Trasladista</span></td>
+                                <td data-label="ESQUEMA">Nocturno L-D (19:00-07:00)</td>
+                                <td data-label="COSTO UNITARIO">$32,000.00</td>
+                                <td data-label="COSTO MENSUAL">$32,000.00</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="total-row">
+                                <td colspan="3"><strong>TOTAL MENSUAL:</strong></td>
+                                <td data-label="Total Mensual"><strong>$244,000.00</strong></td>
+                            </tr>
+                            <tr class="iva-note-row">
+                                <td colspan="4"><span>* Precios más IVA</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <h4>Esquema de Cobertura: 9 Elementos para 7 Estaciones</h4>
+                    <p><strong>Distribución:</strong> 7 guardias están desplegados uno en cada estación de servicio. El elemento comodín rota estratégicamente para cubrir descansos, días festivos y emergencias, garantizando cobertura 100% en cada punto. El supervisor trasladista realiza visitas de supervisión a todas las ubicaciones durante el turno nocturno.</p>
+                    <p><strong>Horario:</strong> Turno nocturno de 19:00 a 07:00 hrs (12 horas), L-D. <strong>Cumple la Ley Federal del Trabajo al 100%</strong> con rotaciones y descansos programados.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explicación de 3 Niveles de Cobertura -->
+        <section class="pricing-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Diferenciador TSC</div>
+                    <h2>3 Niveles de Cobertura en Seguridad Privada</h2>
+                    <p>No todas las empresas de seguridad funcionan igual. Entender la diferencia es crucial para tomar la decisión correcta.</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Nivel 1: Cobertura Mínima (Posiciones)</h3>
+                            <p>La empresa proporciona <strong>solo el número mínimo de guardias necesarios</strong> para cubrir las posiciones. Si un guardia falta, la posición queda descubierta o se cubre con retraso.</p>
+                            <p><strong>Ejemplo:</strong> 7 estaciones = 7 guardias contratados. Si uno falta, esa estación queda sin servicio.</p>
+                            <p style="color: var(--primary-red); font-weight: 600;"><i class="fas fa-exclamation-triangle"></i> Riesgo: Servicio interrumpido frecuentemente por faltas, vacaciones, incapacidades.</p>
+                        </div>
+
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Nivel 2: Cobertura Básica (Posiciones + Elemento Comodín)</h3>
+                            <p>Se añade <strong>1 elemento comodín</strong> que rota para cubrir ausencias, descansos obligatorios y días festivos. Esto garantiza que las posiciones principales no queden vacías.</p>
+                            <p><strong>Ejemplo:</strong> 7 estaciones = 7 guardias de base + 1 comodín (8 elementos). El comodín cubre faltas y rotaciones de descanso.</p>
+                            <p style="color: var(--accent-gold); font-weight: 600;"><i class="fas fa-check-circle"></i> Ventaja: Continuidad operativa mejorada, pero sin supervisión activa.</p>
+                        </div>
+
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-medal"></i>
+                            </div>
+                            <h3>Nivel 3: Cobertura Profesional (Posiciones + Comodín + Supervisor) — TSC</h3>
+                            <p>Además de los guardias y el comodín, se incluye <strong>1 supervisor trasladista</strong> que visita todas las ubicaciones durante el turno para verificar cumplimiento, atender incidencias y coordinar respuestas en tiempo real.</p>
+                            <p><strong>Ejemplo:</strong> 7 estaciones = 7 guardias de base + 1 comodín + 1 supervisor trasladista (9 elementos). <strong>Este es el esquema que TSC propone para Servifacil.</strong></p>
+                            <p style="color: #4ade80; font-weight: 600;"><i class="fas fa-star"></i> Ventaja: Calidad operativa superior, control de calidad constante, resolución inmediata de problemas.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                    <h4><i class="fas fa-lightbulb" style="color: var(--accent-gold);"></i> ¿Por qué TSC recomienda el Nivel 3 para Estaciones de Servicio?</h4>
+                    <p>Las estaciones de servicio (gasolineras) son objetivos frecuentes de robo y vandalismo nocturno debido al manejo de efectivo, combustible y productos en tienda. La supervisión activa permite detectar irregularidades antes de que escalen, coordinar respuestas con autoridades y garantizar que los guardias cumplan protocolos sin "dormirse en el turno". Un supervisor trasladista es la diferencia entre seguridad reactiva y seguridad preventiva profesional.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ¿Por qué no cubrir con dobletes? -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Mito vs Realidad</div>
+                    <h2>¿Por qué no cubrir con dobletes?</h2>
+                    <p>Análisis objetivo del esquema más costoso y menos efectivo en la industria.</p>
+                </div>
+
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-exclamation-triangle"></i>
+                            </div>
+                            <h3>El Problema de los "Dobletes" (Turnos de 24 Horas)</h3>
+                            <p>Algunas empresas ofrecen esquemas donde un guardia trabaja 24 horas seguidas. Esto puede parecer eficiente en papel, pero genera múltiples problemas:</p>
+                            <ul class="value-list">
+                                <li><strong>Fatiga extrema:</strong> Después de 12 horas, la atención y capacidad de reacción caen drásticamente. Un guardia exhausto es un riesgo, no un activo.</li>
+                                <li><strong>Riesgo legal:</strong> La LFT limita la jornada a 8-12 horas según el turno. Turnos de 24 horas se cubren con "descanso en sitio" o "guardias dormidos", lo cual <strong>no es seguridad real</strong>.</li>
+                                <li><strong>Alto índice de rotación:</strong> Los guardias renuncian rápidamente por agotamiento. Esto genera inestabilidad, pérdida de familiaridad con el sitio y costos ocultos de reclutamiento constante.</li>
+                                <li><strong>Mayor costo a largo plazo:</strong> Las horas extra, incapacidades por estrés y multas laborales hacen que el "ahorro" inicial se convierta en un gasto mayor.</li>
+                            </ul>
+                        </div>
+
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>La Ventaja del Esquema TSC (Turnos de 12 Horas con Rotación)</h3>
+                            <p>TSC propone un esquema con guardias que trabajan <strong>12 horas nocturnas (19:00-07:00)</strong>, rotando de forma que cada uno descansa adecuadamente. Esto asegura:</p>
+                            <ul class="value-list">
+                                <li><strong>Guardias descansados y alertas:</strong> La vigilancia nocturna requiere máxima atención. Un guardia que inicia turno fresco es 3x más efectivo que uno en su hora 18.</li>
+                                <li><strong>Cumplimiento legal total:</strong> Turnos de 12 horas nocturnos están dentro del marco legal si se compensa correctamente (LFT Art. 61). TSC maneja esto con transparencia.</li>
+                                <li><strong>Estabilidad operativa:</strong> Los guardias permanecen más tiempo en la empresa, conocen mejor los protocolos y generan relaciones de confianza con el cliente.</li>
+                                <li><strong>Costo predecible y transparente:</strong> Sin sorpresas de horas extra, sin conflictos laborales que puedan interrumpir el servicio.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <h4><i class="fas fa-balance-scale" style="color: var(--accent-gold);"></i> Resumen: Dobletes vs Rotación</h4>
+                    <p><strong>Dobletes (24 hrs):</strong> Guardia exhausto, alto riesgo de incidentes, rotación constante de personal, problemas legales potenciales.</p>
+                    <p><strong>Esquema TSC (12 hrs + rotación):</strong> Guardias descansados, servicio profesional constante, cumplimiento legal, costo predecible.</p>
+                    <p><strong>Conclusión:</strong> La seguridad no es un lugar donde "ahorrar" con esquemas baratos. El esquema de TSC prioriza efectividad real sobre eficiencia aparente.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Equipamiento -->
+        <section class="pricing-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Equipamiento</div>
+                    <h2>Presentación Formal Nocturna</h2>
+                    <p>Personal equipado con uniforme oscuro formal y herramientas profesionales de seguridad.</p>
+                </div>
+                
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                            <div class="value-card-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Equipo de Protección Incluido</h3>
+                            <p>Presentación formal nocturna con equipo de alto rendimiento.</p>
+                            <ul class="value-list">
+                                <li>Uniforme oscuro completo (formal nocturno)</li>
+                                <li>Gas pimienta (1 por guardia)</li>
+                                <li>Bastón retráctil (1 por guardia)</li>
+                                <li>Chaleco táctico oscuro (1 por guardia)</li>
+                                <li>Radio de comunicación (1 por guardia)</li>
+                                <li>Gafete con foto (1 por guardia)</li>
+                                <li>Linterna táctica LED</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <div class="value-card-icon">
+                        <i class="fas fa-gift"></i>
+                    </div>
+                    <h3>Beneficios Incluidos SIN COSTO</h3>
+                    <ul class="value-list">
+                        <li>Monitoreo remoto 24/7 (CAS) - no dedicado</li>
+                        <li>Cámaras IP (1 por ubicación, sujeto a autorización y conectividad Wi-Fi)</li>
+                        <li>Supervisión operativa en patrulla por supervisor trasladista</li>
+                        <li>Fianza de Responsabilidad por $1,000,000</li>
+                        <li>Seguro de Responsabilidad Civil por $1,000,000</li>
+                        <li>Equipo Celular en Plan de Renta para comunicación 24/7</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Propuesta Incluye -->
+        <section class="pricing-section">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Servicios Incluidos</div>
+                    <h2>Nuestra Propuesta Incluye</h2>
+                    <p>Todo lo que necesita para una operación profesional de seguridad privada.</p>
+                </div>
+                
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <div class="value-card-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Detalle de Servicios</h3>
+                    <p>Cada elemento cuenta con respaldo operativo y administrativo completo.</p>
+                    <ul class="value-list">
+                        <li>Supervisión física (supervisor trasladista) y virtual (CAS)</li>
+                        <li>2 uniformes completos por elemento</li>
+                        <li>Equipo de lluvia</li>
+                        <li>Análisis de riesgos (30-45 días después de inicio)</li>
+                        <li>Carga social completa (IMSS, Infonavit, fondo de retiro, caja de ahorro)</li>
+                        <li>Pruebas antidopaje y control de confianza (anual)</li>
+                        <li>Expediente electrónico y antecedentes no penales</li>
+                        <li>Alta ante SSP</li>
+                        <li>Equipo celular para reportes 24/7</li>
+                        <li>Manual de consignas específicas del servicio</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Condiciones Comerciales y Operativas -->
+        <section class="pricing-section alt">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Condiciones</div>
+                    <h2>Condiciones Comerciales y Operativas</h2>
+                    <p>Transparencia total en nuestros términos de servicio.</p>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <h4>Condiciones Comerciales</h4>
+                    <ul class="value-list">
+                        <li>Contrato inicial a 24 meses</li>
+                        <li>Pagos: quincenal o a mes vencido</li>
+                        <li>Recargo del 5% sobre saldo vencido en caso de morosidad</li>
+                        <li>Precios más IVA</li>
+                    </ul>
+                </div>
+
+                <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                    <h4>Datos Bancarios</h4>
+                    <p>
+                        <strong>Banco:</strong> SANTANDER<br>
+                        <strong>Cuenta:</strong> 65-50933818-4<br>
+                        <strong>CLABE:</strong> 014427655093381844<br>
+                        <strong>Razón Social:</strong> TSC PRIVATE SECURITY CONSULTING SA DE CV
+                    </p>
+                </div>
+
+                <div class="value-card wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                    <div class="value-card-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Condiciones Operativas</h3>
+                    <ul class="value-list">
+                        <li>30 días para instalar servicio tras firma de contrato</li>
+                        <li>Consignas específicas requeridas para capacitación</li>
+                        <li>Expedientes digitales del personal en 30-45 días</li>
+                        <li>Acompañamiento y supervisión de campo primeros 15 días</li>
+                        <li>Cobertura de faltas en máximo 2 horas</li>
+                        <li>Atención a urgencias: 30-60 minutos</li>
+                        <li>Supervisor trasladista visita todas las ubicaciones cada turno</li>
+                        <li>Gerente de Operaciones cada 2 meses</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section class="image-gallery">
+            <div class="container">
+                <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
+                    <div class="section-tag">Nuestro Equipo</div>
+                </div>
+                <div class="gallery-grid">
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                        <img src="img/cotizaciones/img1.png" alt="Monitoreo TSC" loading="lazy"><div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
+                        <img src="img/cotizaciones/img2.png" alt="Centro de Control TSC" loading="lazy"><div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".5s">
+                        <img src="img/cotizaciones/patrullas y guardias.JPG" alt="Patrullas y Guardias TSC" loading="lazy"><div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".6s">
+                        <img src="img/cotizaciones/patrulla.jpg" alt="Patrulla TSC" loading="lazy"><div class="gallery-overlay"></div>
+                    </div>
+                    <div class="gallery-item wow fadeInUp" data-animation="fadeInUp" data-delay=".7s">
+                        <img src="img/cotizaciones/Frame 25.png" alt="Operaciones TSC" loading="lazy"><div class="gallery-overlay"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Descarga Final -->
+        <section class="download-section">
+            <div class="container">
+                <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <h3 class="text-white mb-4">¿Listo para proteger sus estaciones de servicio?</h3>
+                    <p class="text-white mb-5">Descargue la propuesta detallada para su análisis.</p>
+                    <div class="download-buttons">
+                        <a href="pdf/cotizacion-servifacil.pdf" class="download-btn" download="Cotizacion_Servifacil_TSC.pdf">
+                            <i class="fas fa-file-pdf"></i> Descargar Cotización Detallada
+                        </a>
+                        <a href="img/cotizaciones/presentación/Presentacion_TSC.pdf" class="download-btn secondary" download="Presentacion_TSC.pdf">
+                            <i class="fas fa-file-powerpoint"></i> Descargar Presentación Ejecutiva
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Info -->
+        <section class="company-info">
+            <div class="container">
+                <h3 class="text-white mb-2">TSC PRIVATE SECURITY CONSULTING</h3>
+                <p class="text-danger mb-4"><strong>FUERZA, TECNOLOGÍA Y EXPERIENCIA</strong></p>
+                <h4 class="text-white">ISMAEL LÓPEZ-SILVERO GUIMARAIS</h4>
+                <p class="text-muted">Director de Marketing y Ventas</p>
+                <div class="contact-info">
+                    <div class="contact-item"><i class="fas fa-envelope"></i><span>Ismael.sg@tscseguridadprivada.com.mx</span></div>
+                    <div class="contact-item"><i class="fas fa-phone"></i><span>220 283 4673</span></div>
+                </div>
+                <div class="mt-4">
+                    <p class="text-muted text-center"><strong>SERVIFACIL:</strong> Propuesta de Servicio de Seguridad Privada · Marzo 2026</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer-bg footer-p">
+        <div class="footer-bottom-area">
+            <div class="container">
+                <div class="footer-border">
+                    <div class="row d-flex align-items-center">
+                        <div class="col-xl-12">
+                            <div class="footer-copy-right text-center">
+                                <p>© 2026 TSC Private Security Consulting. Todos los derechos reservados.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/one-page-nav-min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/paroller.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/parallax.min.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/element-in-view.js"></script>
+    <script src="js/jquery.meanmenu.min.js"></script>
+    <script src="js/imagesloaded.min.js"></script>
+    <script src="js/js_isotope.pkgd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/custom-hamburger-menu.js"></script>
+    <script>new WOW().init();</script>
+</body>
+</html>
