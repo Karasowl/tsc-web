@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Cotización de Seguridad Privada - Hospital Veterinario 24 Horas Querétaro</title>
-    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para Hospital Veterinario 24 Horas Querétaro">
+    <title>Cotización de Seguridad Privada - Hospital Veterinario Querétaro</title>
+    <meta name="description" content="Propuesta de Servicio de Seguridad Privada para Hospital Veterinario Querétaro">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
     <!-- CSS here -->
@@ -108,6 +108,25 @@
             transform: scale(1.05);
         }
         
+        .download-section-hero {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(223, 41, 25, 0.4);
+            margin-top: 40px;
+        }
+
+        .download-section-hero h3 {
+            font-size: 2rem;
+            font-weight: 700;
+        }
+
+        .download-section-hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
         .section-header {
             text-align: center;
             margin-bottom: 80px;
@@ -263,6 +282,13 @@
             font-size: 1.1rem;
         }
         
+        .price-strikethrough {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 0.9em;
+            margin-right: 10px;
+        }
+        
         .total-row {
             background: rgba(223, 41, 25, 0.2);
             font-weight: 700;
@@ -284,6 +310,58 @@
             text-align: right;
             font-style: italic;
             padding-top: 15px;
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, var(--primary-red) 0%, #b91c1c 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .download-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            background: #fff;
+            color: var(--primary-red);
+            padding: 20px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            min-width: 280px;
+        }
+
+        .download-btn.secondary {
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+        }
+
+        .download-btn.secondary:hover {
+            background: #fff;
+            color: var(--primary-red);
+        }
+
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+            color: var(--primary-red);
+            text-decoration: none;
+        }
+
+        .download-btn i {
+            font-size: 1.5rem;
         }
 
         .image-gallery {
@@ -424,6 +502,14 @@
         @media (max-width: 768px) {
             .tsc-strategic-logo {
                 max-width: 200px;
+            }
+
+            .download-section-hero {
+                padding: 40px 20px;
+            }
+
+            .download-section-hero h3 {
+                font-size: 1.5rem;
             }
             
             .gallery-grid {
@@ -573,8 +659,8 @@
                 <div class="cotizacion-hero-content">
                     <div class="strategic-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
                         <div class="subtitle">Propuesta Económica</div>
-                        <h1>Hospital Veterinario 24 Horas Querétaro</h1>
-                        <p class="tagline">Servicio de Vigilancia Permanente para Inauguración de Nueva Sucursal</p>
+                        <h1>Hospital Veterinario Querétaro</h1>
+                        <p class="tagline">Servicio de Seguridad Privada Patrimonial</p>
                         <div class="client-badge">
                             <i class="fas fa-user-shield"></i>
                             ATN. MAYRA VÁZQUEZ AGUILERA
@@ -582,15 +668,31 @@
                         <div class="tsc-logo-section mt-4">
                             <img src="img/LOGO BLANCO SA DE CV-04.png" alt="TSC Logo" class="tsc-strategic-logo">
                         </div>
+
+                        <!-- Botón de Descarga Inmediato -->
+                        <div class="download-section-hero mt-5">
+                            <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                                <h3 class="text-white mb-4">Propuesta Económica Detallada</h3>
+                                <p class="text-white mb-5">Descargue el documento completo para su revisión.</p>
+                                 <div class="download-buttons">
+                                    <a href="pdf/cotizacion-hospital-veterinario-queretaro.pdf" class="download-btn"
+                                        download="Cotizacion_Hospital_Veterinario_Queretaro_TSC.pdf">
+                                        <i class="fas fa-file-pdf"></i>
+                                        Descargar Cotización Completa (PDF)
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
 
                     <!-- Información del Cliente -->
                     <div class="location-info wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
                         <h4><i class="fas fa-map-marker-alt"></i> Información del Servicio</h4>
                         <p><strong>Fecha:</strong> 6 de Marzo de 2026</p>
-                        <p><strong>Ubicación:</strong> Col. Ensueño, Querétaro (detrás de Hospital Ángeles Querétaro)</p>
-                        <p><strong>Giro:</strong> Hospital veterinario 24 horas - Inauguración nueva sucursal</p>
-                        <p><strong>Ver Mapa:</strong> <a href="https://maps.google.com/maps?q=20.581085205078125,-100.41722106933594&z=17&hl=es" target="_blank" rel="noopener noreferrer">Google Maps <i class="fas fa-external-link-alt"></i></a></p>
+                        <p><strong>Cliente:</strong> Hospital Veterinario Querétaro</p>
+                        <p><strong>Ubicación:</strong> Querétaro</p>
+                        <p><strong>Giro:</strong> Hospital Veterinario - Servicio 24 horas</p>
                     </div>
                 </div>
             </div>
@@ -601,16 +703,14 @@
             <div class="container">
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
                     <div class="section-tag">Carta de Presentación</div>
-                    <h2>Protección Especializada para Instalaciones de Salud Veterinaria</h2>
-                    <p>Esquema de seguridad diseñado para el entorno único de un hospital veterinario 24 horas con operación continua y flujo constante de clientes.</p>
+                    <h2>Servicio de Seguridad Privada Patrimonial</h2>
+                    <p>TSC Private Security Consulting es una empresa debidamente constituida con oficinas centrales en Toluca Estado de México, cuenta con el Permiso Estatal de la Secretaria de Seguridad del Estado de México y con el Permiso Federal de la Secretaría de Seguridad Pública para operar en toda la República Mexicana.</p>
                 </div>
 
                 <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
                     <p>Estimada <strong>Mayra Vázquez Aguilera</strong>,</p>
-                    <p>Es un honor para <strong>TSC Private Security Consulting</strong> presentar esta propuesta de servicio de vigilancia para el <strong>Hospital Veterinario 24 Horas Querétaro</strong>.</p>
-                    <p>Entendemos que su nueva sucursal en Col. Ensueño, ubicada estratégicamente cerca del Hospital Ángeles Querétaro, requiere un esquema de seguridad que equilibre <strong>control de acceso efectivo</strong> con una experiencia amigable para clientes que acuden en situaciones de emergencia veterinaria.</p>
-                    <p>La operación 24/7 de un hospital veterinario presenta desafíos únicos: flujo constante de personas durante el día, urgencias nocturnas impredecibles, y la necesidad de mantener un ambiente seguro sin obstaculizar la atención médica veterinaria. Nuestro esquema está diseñado para estas condiciones específicas.</p>
-                    <p>Con más de <strong>15 años de experiencia</strong> protegiendo instalaciones de salud, comerciales e industriales, TSC combina <strong>presencia física profesional</strong> con <strong>tecnología de monitoreo remoto</strong> para garantizar la seguridad de su personal, pacientes y activos.</p>
+                    <p>Sirva la presente para enviarle un cordial saludo y, a su vez, poner a su consideración nuestra propuesta técnico-económica para el servicio de Seguridad Privada Patrimonial para las instalaciones de <strong>Hospital Veterinario Querétaro</strong>, ubicadas en Querétaro, bajo la modalidad II "Seguridad Privada en los Bienes".</p>
+                    <p>TSC Private Security Consulting cuenta con Registro Vigente de REPSE, Opiniones Positivas del SAT, IMSS e INFONAVIT, Póliza de Responsabilidad Civil por $1,000,000.00, Fianza de Fidelidad por $1,000,000.00 y toda la documentación que nos respalda como una empresa formal y legalmente establecida. Estamos a su disposición para compartir cualquiera de estos documentos cuando así lo requiera.</p>
                 </div>
             </div>
         </section>
@@ -621,24 +721,16 @@
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
                     <div class="section-tag">Esquema de Servicio</div>
                     <h2>Propuesta Técnico-Económica</h2>
-                    <p>4 elementos para cobertura 365 días con respaldo nocturno y cumplimiento total de la Ley Federal del Trabajo.</p>
+                    <p>Con base a su requerimiento, compartimos la cotización solicitada bajo un esquema de cobertura con 4 elementos (2 nocturnos + 1 diurno + 1 comodín con perfil supervisor), diseñado para garantizar control de acceso y presencia disuasiva en las instalaciones del Hospital Veterinario los 365 días del año.</p>
                 </div>
 
                 <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
                     <h4>Esquema de 4 Elementos: Cobertura Total 365 Días</h4>
                     <p><strong>Distribución:</strong></p>
                     <ul class="value-list">
-                        <li><strong>2 Guardias Nocturnos (8pm-8am L-D):</strong> Turno de mayor vulnerabilidad. Dos elementos garantizan respaldo mutuo: si uno atiende un incidente en el interior, el otro mantiene control de acceso. Después de 1am se cierra la puerta y se vigila por cámara.</li>
-                        <li><strong>1 Guardia Diurno (8am-8pm L-D):</strong> Control de acceso durante horario de mayor flujo. Un solo elemento es suficiente dado que la zona es transitada y hay más personal del hospital presente.</li>
-                        <li><strong>1 Elemento Comodín (Rotativo L-D):</strong> Cubre descansos de los 3 guardias de base. La Ley Federal del Trabajo establece mínimo 1 día de descanso semanal por trabajador. Con 3 posiciones a cubrir L-D, este elemento garantiza que las 3 posiciones estén ocupadas los 365 días del año.</li>
-                    </ul>
-                    <p><strong>Contexto Operativo:</strong></p>
-                    <ul class="value-list">
-                        <li>Hospital veterinario 24 horas con flujo constante de personas</li>
-                        <li>Ubicación cerca de Hospital Ángeles, zona de urgencias con flujo nocturno</li>
-                        <li>Control de acceso es la función principal</li>
-                        <li>Cierre de puerta post-1am con vigilancia por cámara</li>
-                        <li>Turno nocturno con 2 elementos para respaldo mutuo en incidentes</li>
+                        <li><strong>Turno nocturno (20:00 a 08:00 hrs) — 2 elementos.</strong> Mayor riesgo por flujo nocturno de urgencias en la zona de Hospital Ángeles. Dos guardias permiten respaldo mutuo: mientras uno controla el acceso, el otro realiza rondines perimetrales. Después de la 1:00 am, con puerta cerrada, mantienen vigilancia por cámara y control de acceso restringido.</li>
+                        <li><strong>Turno diurno (08:00 a 20:00 hrs) — 1 elemento.</strong> Zona transitada con mayor presencia de personal interno, lo que reduce el nivel de riesgo. Un elemento es suficiente para control de acceso y presencia disuasiva durante el día.</li>
+                        <li><strong>Comodín con perfil supervisor — 1 elemento.</strong> La Ley Federal del Trabajo exige mínimo 1 día de descanso semanal por trabajador. Con 3 posiciones a cubrir de lunes a domingo, el comodín rota cubriendo los descansos de los 3 guardias de base para que ninguna posición quede descubierta. Al contar con perfil de supervisor, este elemento además verifica el cumplimiento de consignas, revisa bitácoras, evalúa presentación y puntualidad del personal, y reporta tanto a TSC como al cliente. <strong>Cumplimiento LFT al 100% sin recurrir a dobletes ni tiempo extra.</strong></li>
                     </ul>
                 </div>
 
@@ -655,34 +747,37 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td data-label="SERVICIO"><span class="location-cell">Guardia Nocturno</span></td>
+                                <td data-label="SERVICIO"><span class="location-cell">Guardia nocturno</span></td>
                                 <td data-label="ESQUEMA">8pm-8am L-D</td>
                                 <td data-label="ELEMENTOS">2</td>
                                 <td data-label="COSTO UNITARIO">$26,000.00</td>
                                 <td data-label="COSTO MENSUAL">$52,000.00</td>
                             </tr>
                             <tr>
-                                <td data-label="SERVICIO"><span class="location-cell">Guardia Diurno</span></td>
+                                <td data-label="SERVICIO"><span class="location-cell">Guardia diurno</span></td>
                                 <td data-label="ESQUEMA">8am-8pm L-D</td>
                                 <td data-label="ELEMENTOS">1</td>
                                 <td data-label="COSTO UNITARIO">$26,000.00</td>
                                 <td data-label="COSTO MENSUAL">$26,000.00</td>
                             </tr>
                             <tr>
-                                <td data-label="SERVICIO"><span class="location-cell">Elemento Comodín</span></td>
+                                <td data-label="SERVICIO"><span class="location-cell">Comodín (perfil supervisor)</span></td>
                                 <td data-label="ESQUEMA">Rotativo L-D</td>
                                 <td data-label="ELEMENTOS">1</td>
-                                <td data-label="COSTO UNITARIO">$26,000.00</td>
-                                <td data-label="COSTO MENSUAL">$26,000.00</td>
+                                <td data-label="COSTO UNITARIO"><span class="price-strikethrough">$32,000.00</span>$26,500.00</td>
+                                <td data-label="COSTO MENSUAL">$26,500.00</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr class="total-row">
                                 <td colspan="4"><strong>TOTAL MENSUAL:</strong></td>
-                                <td data-label="Total Mensual"><strong>$104,000.00</strong></td>
+                                <td data-label="Total Mensual"><strong>$104,500.00</strong></td>
                             </tr>
                             <tr class="iva-note-row">
-                                <td colspan="5"><span>* Precios más IVA</span></td>
+                                <td colspan="5"><span>*Precios más IVA en pesos mexicanos.</span></td>
+                            </tr>
+                            <tr class="iva-note-row">
+                                <td colspan="5"><span>4 elementos: 2 guardias nocturnos (20:00-08:00) + 1 guardia diurno (08:00-20:00) + 1 comodín con perfil supervisor. Cobertura 365 días, cumplimiento LFT al 100%. Precio del comodín supervisor: $26,500.00 por contrato a 24 meses (precio regular $32,000.00).</span></td>
                             </tr>
                         </tfoot>
                     </table>
@@ -696,7 +791,7 @@
                 <div class="section-header wow fadeInUp" data-animation="fadeInUp" data-delay=".2s">
                     <div class="section-tag">Equipamiento</div>
                     <h2>Presentación Táctica</h2>
-                    <p>Personal equipado con equipo de protección para mayor presencia disuasiva.</p>
+                    <p>Presentación con equipo de protección - Uniforme Táctico con insignias TSC.</p>
                 </div>
                 
                 <div class="row justify-content-center">
@@ -706,12 +801,11 @@
                                 <i class="fas fa-shield-alt"></i>
                             </div>
                             <h3>Equipo de Protección Incluido</h3>
-                            <p>Presentación táctica profesional para instalaciones de salud con operación 24 horas.</p>
+                            <p><strong>Ideal para:</strong> Mayor presencia disuasiva en control de acceso y vigilancia de instalaciones con operación 24 horas.</p>
                             <ul class="value-list">
-                                <li>Uniforme táctico con insignias TSC</li>
-                                <li>Chaleco táctico (1 por guardia)</li>
                                 <li>Gas pimienta (1 por guardia)</li>
                                 <li>Bastón policía retráctil (1 por guardia)</li>
+                                <li>Chaleco Táctico</li>
                             </ul>
                         </div>
                     </div>
@@ -721,13 +815,14 @@
                     <div class="value-card-icon">
                         <i class="fas fa-gift"></i>
                     </div>
-                    <h3>Beneficios Incluidos SIN COSTO</h3>
+                    <h3>Beneficios de Valor Agregado SIN COSTO AÑADIDO</h3>
                     <ul class="value-list">
-                        <li>Monitoreo remoto 24/7 (CAS) - rotativo, no dedicado</li>
-                        <li>1 cámara IP (sujeto a autorización, requiere Wi-Fi del cliente)</li>
-                        <li>Fianza de Responsabilidad por $1,000,000</li>
-                        <li>Seguro de Responsabilidad Civil por $1,000,000</li>
-                        <li>Equipo Celular en Plan de Renta para comunicación 24/7</li>
+                        <li><strong>Monitoreo remoto 24/7 (CAS):</strong> Monitoreo rotativo (no dedicado) con verificación aleatoria de servicio, apoyo ante incidencias y seguimiento a reportes.</li>
+                        <li><strong>1 cámara IP (sujeto a autorización):</strong> Instalación y vinculación para monitoreo remoto (requiere Wi-Fi del cliente). Enfocada al acceso principal del hospital para control operativo. Sujeto a autorización.</li>
+                        <li><strong>Supervisión operativa:</strong> Supervisión en patrulla rotulada 1 vez por semana en horarios diversos.</li>
+                        <li><strong>Fianza de Responsabilidad por Un Millón de pesos:</strong> Aplica en situaciones donde se documente y determine la responsabilidad de alguno de los guardias de TSC en la realización de hecho delictivo que haya afectado a nuestro cliente en sus bienes, hasta por el monto máximo de la Fianza.</li>
+                        <li><strong>Seguro de Responsabilidad Civil por Un Millón de pesos:</strong> Aplica en situaciones donde se documente y determine la responsabilidad de alguno de los guardias de TSC en actos que hayan afectado a alguien en sus bienes, hasta por el monto máximo de la póliza del seguro.</li>
+                        <li><strong>Equipo Celular en Plan de Renta:</strong> Equipo Celular en Plan de Renta para la comunicación 24/7/365 entre el Guardia en Servicio, el Responsable de Seguridad por parte del Cliente y el CAS (Centro de Atención a Siniestros TSC).</li>
                     </ul>
                 </div>
             </div>
@@ -747,16 +842,17 @@
                     <h3>Detalle de Servicios</h3>
                     <p>Cada elemento cuenta con respaldo operativo y administrativo completo.</p>
                     <ul class="value-list">
-                        <li>Supervisión física y virtual (CAS)</li>
-                        <li>2 uniformes completos por elemento</li>
-                        <li>Equipo de lluvia</li>
-                        <li>Análisis de riesgos (30-45 días después de inicio)</li>
-                        <li>Carga social completa (IMSS, Infonavit, fondo de retiro, caja de ahorro)</li>
-                        <li>Pruebas antidopaje y control de confianza (anual)</li>
-                        <li>Expediente electrónico y antecedentes no penales</li>
-                        <li>Alta ante SSP</li>
-                        <li>Equipo celular para reportes 24/7</li>
-                        <li>Manual de consignas específicas (IMPORTANTE: incluye deslinde de responsabilidad con 1 solo elemento diurno)</li>
+                        <li>Supervisión del servicio en las modalidades: física (supervisores) y virtual (CAS).</li>
+                        <li>2 uniformes completos por elemento.</li>
+                        <li>Equipo de lluvia (manga impermeable, botas de hule).</li>
+                        <li>1 análisis de riesgos entregado a los 30 a 45 días de haber iniciado el servicio.</li>
+                        <li>Carga social de los elementos (IMSS, Infonavit, fondo para el retiro, caja de ahorro).</li>
+                        <li>Pruebas antidopaje y control de confianza (1 por año).</li>
+                        <li>Expediente electrónico de cada elemento.</li>
+                        <li>Carta de antecedentes no penales de cada elemento.</li>
+                        <li>Alta del elemento ante la SSP.</li>
+                        <li>1 equipo celular de red para reportes entre el servicio y nuestra base TSC.</li>
+                        <li>Manual de consignas específicas del servicio.</li>
                     </ul>
                 </div>
             </div>
@@ -774,15 +870,16 @@
                 <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
                     <h4>Condiciones Comerciales</h4>
                     <ul class="value-list">
-                        <li><strong>Contrato inicial a 12 meses</strong> (esquema flexible para inauguración)</li>
-                        <li>Opciones de pago: (1) Quincenal (2) A mes vencido (3) Crédito (recotizar)</li>
-                        <li>Recargo del 5% sobre saldo vencido en caso de morosidad</li>
-                        <li>Precios más IVA</li>
+                        <li><strong>Contrato inicial a 24 meses.</strong></li>
+                        <li>Se definirá una de dos variantes para los pagos: (1) Quincenal dentro del mes corriente; facturación los días 1 y 16. (2) A mes vencido; factura del 1 al 3 y pago del 4 al 7 del mes siguiente. (3) Crédito; se debe recotizar conforme a el tiempo requerido de crédito.</li>
+                        <li>En caso de morosidad se genera recargo único del 5% sobre saldo vencido.</li>
+                        <li>Precios más IVA.</li>
                     </ul>
                 </div>
 
                 <div class="notes-section wow fadeInUp" data-animation="fadeInUp" data-delay=".4s">
                     <h4>Datos Bancarios</h4>
+                    <p>Solo se reciben pagos por transferencia o cheque directo a la cuenta:</p>
                     <p>
                         <strong>Banco:</strong> SANTANDER<br>
                         <strong>Cuenta:</strong> 65-50933818-4<br>
@@ -795,13 +892,16 @@
                     <div class="value-card-icon"><i class="fas fa-clock"></i></div>
                     <h3>Condiciones Operativas</h3>
                     <ul class="value-list">
-                        <li>30 días para instalar servicio tras firma de contrato</li>
-                        <li>Consignas específicas requeridas para capacitación</li>
-                        <li>Expedientes digitales del personal en 30-45 días</li>
-                        <li>Acompañamiento y supervisión de campo primeros 15 días</li>
-                        <li>Cobertura de faltas en máximo 2 horas</li>
-                        <li>Atención a urgencias: 30-60 minutos</li>
-                        <li>Supervisión periódica por Gerente de Operaciones</li>
+                        <li>A partir de la firma de contrato o carta de intención por el representante legal del cliente, se requieren 30 días para instalar el servicio.</li>
+                        <li>Se requiere conocer las consignas específicas del servicio para la capacitación inicial al personal.</li>
+                        <li>Durante los primeros 30 a 45 días de haber montado el servicio, se entregarán al cliente los expedientes digitales del personal asignado.</li>
+                        <li>Durante los primeros 15 días habrá acompañamiento de supervisión de campo, en horarios y días diversos, para acelerar la curva de aprendizaje.</li>
+                        <li>Cobertura de eventualidades generales (ausencias, faltas, permisos, etc.) en un tiempo máximo de 2 horas, después de reportada la incidencia.</li>
+                        <li>Atención a urgencias o emergencias en un periodo de 30 a 60 minutos, después de reportada la situación (coordinación con autoridades, bomberos, ambulancias, etc.).</li>
+                        <li>Política de calidad y mejora continua: supervisión en patrulla rotulada 1 vez por semana en horarios diversos; y visita del Gerente de Operaciones 1 vez cada 2 meses.</li>
+                        <li>Contamos con permisos y fianzas vigentes para la prestación del servicio de Seguridad Privada, incluyendo Permiso Federal para operar en todo el territorio nacional (cobertura en Querétaro y todos los estados), Licencia de Funcionamiento, Vo. Bo. de Protección Civil, REPSE y pólizas de seguro correspondientes.</li>
+                        <li>Contamos con oficinas centrales en Toluca a un costado del Aeropuerto y con un centro de monitoreo que opera 24 horas, los 365 días del año.</li>
+                        <li>Se asignará un ejecutivo para la cuenta y una persona administrativa para revisar procesos y formas de pago.</li>
                     </ul>
                 </div>
             </div>
@@ -833,6 +933,21 @@
             </div>
         </section>
 
+        <!-- Descarga Final -->
+        <section class="download-section">
+            <div class="container">
+                <div class="wow fadeInUp" data-animation="fadeInUp" data-delay=".3s">
+                    <h3 class="text-white mb-4">¿Listo para proteger su hospital veterinario?</h3>
+                    <p class="text-white mb-5">Descargue la propuesta detallada para su análisis.</p>
+                    <div class="download-buttons">
+                        <a href="pdf/cotizacion-hospital-veterinario-queretaro.pdf" class="download-btn" download="Cotizacion_Hospital_Veterinario_Queretaro_TSC.pdf">
+                            <i class="fas fa-file-pdf"></i> Descargar Cotización Completa (PDF)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Company Info -->
         <section class="company-info">
             <div class="container">
@@ -845,7 +960,7 @@
                     <div class="contact-item"><i class="fas fa-phone"></i><span>220 283 4673</span></div>
                 </div>
                 <div class="mt-4">
-                    <p class="text-muted text-center"><strong>Hospital Veterinario 24 Horas Querétaro:</strong> Propuesta de Servicio de Seguridad Privada · Marzo 2026</p>
+                    <p class="text-muted text-center"><strong>Hospital Veterinario Querétaro:</strong> Propuesta de Servicio de Seguridad Privada · Marzo 2026</p>
                 </div>
             </div>
         </section>
