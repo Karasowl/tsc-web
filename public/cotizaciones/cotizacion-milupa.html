@@ -310,11 +310,19 @@
         }
 
         .download-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
             margin-top: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        @media (max-width: 576px) {
+            .download-buttons {
+                grid-template-columns: 1fr;
+            }
         }
 
         .download-btn {
@@ -330,7 +338,8 @@
             font-size: 1.1rem;
             transition: all 0.3s ease;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-            min-width: 280px;
+            justify-content: center;
+            width: 100%;
         }
 
         .download-btn.secondary {
