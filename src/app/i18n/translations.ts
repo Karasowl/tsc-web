@@ -7,16 +7,16 @@ export const translations = {
       contactanos: "Contáctanos",
       avisoPrivacidad: "Aviso de Privacidad"
     },
-    hero: {
-      titulo: "Seguridad Privada",
-      titulo2: "Profesional",
-      tituloComplemento: "para Empresas",
-      subtitulo: "Soluciones expertas en seguridad intramuros y custodia de mercancías. Personal certificado y con",
-      registroREPSE: "registro REPSE",
-      subtituloFinal: "para tu total tranquilidad.",
-      botonCotiza: "Cotiza gratis",
-      botonExplorar: "Explorar Soluciones →"
-    },
+  hero: {
+    titulo: "Guardias de Seguridad",
+    titulo2: "para Empresas",
+    tituloComplemento: "en el Valle de Toluca",
+    subtitulo: "Servicio intramuros y vigilancia profesional para industrias, corporativos, bodegas y operaciones del Valle de Toluca.",
+    registroREPSE: "REPSE vigente",
+    subtituloFinal: "Atención comercial desde Toluca.",
+    botonCotiza: "Solicitar Cotización",
+    botonExplorar: "Ver Servicios →"
+  },
     services: {
       titulo: "Nuestros Servicios",
       subtitulo: "Soluciones integrales de seguridad adaptadas a tus necesidades específicas.",
@@ -52,76 +52,76 @@ export const translations = {
       subtitulo: "Opiniones reales de nuestros clientes y colaboradores."
     },
     about: {
-      titulo: "Expertos Protegiendo el Valor de tu Empresa",
-      descripcion: "En TSC, combinamos un equipo de guardias de élite, capacitados bajo rigurosos estándares, con tecnología de supervisión avanzada. Contamos con",
-      permisosFederales: "permisos federales y estatales",
-      acreditacionCTPAT: "acreditación CTPAT",
-      registroREPSE: "registro REPSE",
-      descripcionFinal: "garantizando una protección profesional y una respuesta eficaz para asegurar la continuidad de tu negocio.",
+      titulo: "Seguridad Local con Estándares Profesionales",
+      descripcion: "TSC Seguridad Privada opera desde Toluca ofreciendo servicios de vigilancia intramuros para empresas del Valle de Toluca, Metepec, Lerma y zonas aledañas. Nuestro equipo está certificado y contamos con",
+      permisosFederales: "permisos vigentes",
+      acreditacionCTPAT: "estándares de calidad",
+      registroREPSE: "registro REPSE vigente",
+      descripcionFinal: "garantizando un servicio profesional y con respuesta ágil para proteger tu operación.",
       permisos: {
-        titulo: "Permisos Federales y Estatales",
-        descripcion: "Contamos con toda la documentación en regla para operar en todo el territorio nacional."
+        titulo: "Permisos Vigentes",
+        descripcion: "Contamos con toda la documentación en regla para operar legalmente en el Estado de México."
       },
       ctpat: {
-        titulo: "Acreditación CTPAT",
-        descripcion: "Cumplimos con los más altos estándares de seguridad en la cadena de suministro."
+        titulo: "Estándares de Calidad",
+        descripcion: "Implementamos protocolos de supervisión y control de calidad en cada servicio."
       },
       repse: {
-        titulo: "Registro REPSE",
-        descripcion: "Nuestro personal cuenta con la certificación oficial del Registro de Prestadores de Servicios Especializados."
+        titulo: "REPSE Vigente",
+        descripcion: "Personal completamente registrado y certificado ante la STPS."
       }
     },
     operations: {
-      titulo: "Operando en Todo México",
-      descripcion: "Con presencia nacional, brindamos servicios de seguridad privada de alta calidad en toda la República Mexicana.",
+      titulo: "Cobertura Local en el Valle de Toluca",
+      descripcion: "Desde nuestra oficina cerca del aeropuerto de Toluca, atendemos empresas en Toluca, Metepec, Lerma y comunidades cercanas del Valle de Toluca. Atención comercial directa, sin intermediarios.",
       contactBox: {
-        titulo: "¿Necesitas Seguridad Profesional?",
-        descripcion: "Cotiza sin compromiso. Diseñamos soluciones a tu medida.",
-        boton: "Solicitar Cotización Gratis"
+        titulo: "¿Necesitas Cotizar?",
+        descripcion: "Contáctanos y recibe una propuesta personalizada para tu empresa.",
+        boton: "Cotizar Ahora"
       }
     },
     cta: {
-      titulo: "Obtén tu Propuesta de Vigilancia Inmediata",
-      descripcion1: "¿Listo para dar el siguiente paso? Contacta a nuestros asesores y descubre cómo un plan de seguridad a la medida de TSC puede fortalecer tu empresa. Solicita una cotización detallada y empecemos a construir tu tranquilidad.",
-      descripcion2: "Si tienes alguna pregunta o estás listo para dar el siguiente paso, no dudes en ponerte en contacto. Estamos aquí para asistirte.",
-      boton: "Contáctanos ahora",
+      titulo: "Protege tu Empresa con Guardias de Seguridad Locales",
+      descripcion1: "En TSC atendemos directamente desde Toluca. Si buscas guardias de seguridad intramuros para tu industria, bodega o corporativo en el Valle de Toluca, contáctanos y recibe una cotización sin compromiso.",
+      descripcion2: "Cotiza en minutos. Te respondemos rápido.",
+      boton: "Cotizar Ahora por WhatsApp",
       videoError: "Tu navegador no soporta la etiqueta de video."
     },
     contact: {
-      titulo: "¿Necesitas Protección Profesional?",
-      subtitulo: "Obtén tu Cotización Gratuita en 24 Horas",
+      titulo: "Solicita tu Cotización de Seguridad",
+      subtitulo: "Guardias intramuros para empresas del Valle de Toluca",
       seguridad: {
-        titulo: "Seguridad Garantizada",
-        descripcion: "Personal certificado y equipos de última tecnología para proteger tu empresa las 24/7."
+        titulo: "Personal Local Certificado",
+        descripcion: "Guardias de seguridad con REPSE vigente, supervisión constante y atención directa desde Toluca."
       },
-      urgencia: "¡No esperes más! Cada día sin protección es un riesgo para tu negocio.",
-      garantia: "Cotización 100% Gratuita • Sin Compromiso • Respuesta Garantizada"
+      urgencia: "Empresas de Toluca, Metepec y Lerma nos prefieren.",
+      garantia: "Cotización sin compromiso • Respuesta rápida"
     },
     contactForm: {
-      titulo: "Solicita tu Cotización Gratuita",
-      nombre: "Nombre completo",
-      nombrePlaceholder: "Tu nombre completo",
-      empresa: "Empresa",
-      empresaPlaceholder: "Nombre de tu empresa",
-      email: "Correo electrónico",
-      emailPlaceholder: "tu@email.com",
+      titulo: "Solicitar Cotización",
+      nombre: "Nombre",
+      nombrePlaceholder: "Tu nombre",
+      empresa: "Empresa o giro",
+      empresaPlaceholder: "Ej: Industria, bodega, corporativo",
+      email: "Correo",
+      emailPlaceholder: "tu@empresa.com",
       telefono: "Teléfono",
-      telefonoPlaceholder: "Tu número de teléfono",
-      servicio: "Servicio de interés",
-      servicioDefault: "Selecciona un servicio",
+      telefonoPlaceholder: "10 dígitos",
+      servicio: "¿Qué necesitas?",
+      servicioDefault: "Selecciona una opción",
       servicios: {
-        intramuros: "Seguridad Intramuros",
-        custodia: "Custodia de Mercancías",
-        ejecutiva: "Protección Ejecutiva",
-        consultoria: "Consultoría",
-        otro: "Otro"
+        intramuros: "Guardias intramuros para mi empresa",
+        bodega: "Seguridad para bodega o almacén",
+        industria: "Vigilancia industrial",
+        corporativo: "Seguridad para oficinas o corporativo",
+        otro: "Otro tipo de servicio"
       },
-      mensaje: "Mensaje",
-      mensajePlaceholder: "Cuéntanos sobre tus necesidades de seguridad...",
+      mensaje: "Detalles de tu necesidad",
+      mensajePlaceholder: "Ej: Necesito guardias para planta en Metepec, 24/7...",
       enviando: "Enviando...",
       enviar: "Enviar Solicitud",
-      exito: "¡Mensaje enviado con éxito! Nos pondremos en contacto contigo pronto.",
-      error: "Hubo un error al enviar el mensaje. Por favor, intenta de nuevo."
+      exito: "¡Solicitud enviada! Te contactamos pronto.",
+      error: "Error al enviar. Intenta de nuevo o contáctanos por WhatsApp."
     },
     footer: {
       derechos: "Copyright © 2025 TSC Protección Total"
