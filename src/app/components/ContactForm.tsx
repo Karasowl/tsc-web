@@ -122,6 +122,26 @@ const ContactForm = () => {
             />
           </div>
 
+          {/* Servicio (select) — importante para calificación comercial */}
+          <div>
+            <label htmlFor="servicio" className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
+              {t('contactForm.servicio')}
+            </label>
+            <select
+              id="servicio"
+              name="servicio"
+              defaultValue=""
+              className="w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/60 focus:border-red-500/60 transition-all appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2020%2020%27%20fill=%27%239ca3af%27%3e%3cpath%20fill-rule=%27evenodd%27%20d=%27M5.23%207.21a.75.75%200%20011.06.02L10%2011.06l3.71-3.83a.75.75%200%20111.08%201.04l-4.25%204.39a.75.75%200%2001-1.08%200L5.21%208.27a.75.75%200%2001.02-1.06z%27%20clip-rule=%27evenodd%27/%3e%3c/svg%3e')] bg-no-repeat bg-[right_1rem_center] pr-10"
+            >
+              <option value="" className="bg-gray-900">{t('contactForm.servicioDefault')}</option>
+              <option value="intramuros" className="bg-gray-900">{t('contactForm.servicios.intramuros')}</option>
+              <option value="bodega" className="bg-gray-900">{t('contactForm.servicios.bodega')}</option>
+              <option value="industria" className="bg-gray-900">{t('contactForm.servicios.industria')}</option>
+              <option value="corporativo" className="bg-gray-900">{t('contactForm.servicios.corporativo')}</option>
+              <option value="otro" className="bg-gray-900">{t('contactForm.servicios.otro')}</option>
+            </select>
+          </div>
+
           {/* Mensaje */}
           <div>
             <label htmlFor="comentarios" className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
