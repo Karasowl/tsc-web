@@ -4,13 +4,22 @@
 
 import Image from 'next/image';
 import React from 'react';
+import { FaAward } from 'react-icons/fa';
 import { useI18n } from '../i18n/I18nContext';
+
+type Accreditation = {
+  imageSrc?: string;
+  icon?: React.ReactNode;
+  alt: string;
+  titleKey: string;
+  descriptionKey: string;
+};
 
 const AboutSection = () => {
   const { t } = useI18n();
-  
+
   // Datos para las tarjetas de acreditaciones
-  const accreditations = [
+  const accreditations: Accreditation[] = [
     {
       imageSrc: "/img/permisos-y-acreditaciones/permisos.webp",
       alt: "Icono de Permisos Federales y Estatales",
@@ -18,8 +27,8 @@ const AboutSection = () => {
       descriptionKey: "about.permisos.descripcion",
     },
     {
-      imageSrc: "/img/permisos-y-acreditaciones/ctpat-logo-horizontal-300x69.png",
-      alt: "Logo de Acreditación CTPAT",
+      icon: <FaAward className="text-red-500 text-6xl" />,
+      alt: "Icono de Estándares de Calidad",
       titleKey: "about.ctpat.titulo",
       descriptionKey: "about.ctpat.descripcion",
     },
@@ -51,13 +60,19 @@ const AboutSection = () => {
               className="bg-gray-900/50 ring-1 ring-white/10 p-8 rounded-xl flex flex-col items-center text-center transition-all duration-300 ease-in-out hover:scale-105 hover:ring-red-500/50 hover:shadow-2xl hover:shadow-red-900/20"
             >
               <div className="h-24 flex items-center justify-center mb-6">
-                <Image
-                  src={item.imageSrc}
-                  alt={item.alt}
-                  width={150}
-                  height={60}
-                  className="max-h-16 w-auto" // Controla el tamaño de la imagen dentro del contenedor
-                />
+                {item.imageSrc ? (
+                  <Image
+                    src={item.imageSrc}
+                    alt={item.alt}
+                    width={150}
+                    height={60}
+                    className="max-h-16 w-auto" // Controla el tamaño de la imagen dentro del contenedor
+                  />
+                ) : (
+                  <div aria-label={item.alt} role="img" className="flex items-center justify-center">
+                    {item.icon}
+                  </div>
+                )}
               </div>
               <h3 className="text-xl font-semibold mb-2">{t(item.titleKey)}</h3>
               <p className="text-gray-400 leading-relaxed">{t(item.descriptionKey)}</p>
