@@ -20,9 +20,6 @@ type Location = {
 };
 
 const locations: Location[] = [
-  { name: 'Toluca', coords: [19.2927, -99.6557], type: 'city' },
-  { name: 'Metepec', coords: [19.2700, -99.6059], type: 'city' },
-  { name: 'Lerma', coords: [19.2841, -99.5077], type: 'city' },
   { name: 'TSC · Oficina', sub: 'Cerca del Aeropuerto de Toluca', coords: [19.3322, -99.5886], type: 'office' },
 ];
 
