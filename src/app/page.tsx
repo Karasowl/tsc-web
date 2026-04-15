@@ -9,7 +9,10 @@ import ClientsSection from './components/ClientsSection';
 import GallerySection from './components/GallerySection';
 import OperationsSection from './components/OperationsSection';
 import ServicesSection from './components/ServicesSection';
-import TestimonialsSection from './components/TestimonialsSection';
+// import TestimonialsSection from './components/TestimonialsSection';
+// ^ Oculta temporalmente: los testimonios actuales son de empleados y el subtítulo
+//   dice "Opiniones reales de nuestros clientes" — incoherente para landing B2B.
+//   Restaurar cuando el cliente provea testimonios reales de empresas clientes.
 import Footer from './components/Footer';
 
 export default function HomePage() {
@@ -25,8 +28,8 @@ export default function HomePage() {
 
       <OperationsSection />
       <ServicesSection />
-      
-      <TestimonialsSection />
+
+      {/* <TestimonialsSection /> */}
       <Footer />
     </main>
   );

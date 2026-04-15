@@ -14,36 +14,36 @@ const ServicesSection = () => {
   // Datos de los servicios con keys de traducción
   const servicesData = [
     {
-      id: 'seguridad-industrial',
+      id: 'guardias-intramuros',
+      titleKey: 'services.intramuros.titulo',
+      initialDescKey: 'services.intramuros.descripcionInicial',
+      moreDescKey: 'services.intramuros.descripcionCompleta',
+      imageSrc: '/img/Services/segindustrial.jpeg',
+      imageAlt: 'Guardia de seguridad intramuros en planta industrial en Toluca'
+    },
+    {
+      id: 'vigilancia-industrial',
       titleKey: 'services.industrial.titulo',
       initialDescKey: 'services.industrial.descripcionInicial',
       moreDescKey: 'services.industrial.descripcionCompleta',
-      imageSrc: '/img/Services/segindustrial.jpeg',
-      imageAlt: 'Guardia de seguridad industrial inspeccionando un camión'
-    },
-    {
-      id: 'custodias',
-      titleKey: 'services.custodia.titulo',
-      initialDescKey: 'services.custodia.descripcionInicial',
-      moreDescKey: 'services.custodia.descripcionCompleta',
       imageSrc: '/img/Services/custodia2.webp',
-      imageAlt: 'Vehículo de custodia en carretera'
+      imageAlt: 'Vigilancia industrial para bodegas y naves en el Valle de Toluca'
     },
     {
-      id: 'proteccion-ejecutiva',
-      titleKey: 'services.ejecutiva.titulo',
-      initialDescKey: 'services.ejecutiva.descripcionInicial',
-      moreDescKey: 'services.ejecutiva.descripcionCompleta',
+      id: 'seguridad-corporativa',
+      titleKey: 'services.corporativa.titulo',
+      initialDescKey: 'services.corporativa.descripcionInicial',
+      moreDescKey: 'services.corporativa.descripcionCompleta',
       imageSrc: '/img/Services/peje.jpeg',
-      imageAlt: 'Guardaespaldas protegiendo a un ejecutivo'
+      imageAlt: 'Guardia de seguridad en edificio corporativo en Toluca'
     },
     {
-      id: 'seguridad-tecnologica',
-      titleKey: 'services.tecnologica.titulo',
-      initialDescKey: 'services.tecnologica.descripcionInicial',
-      moreDescKey: 'services.tecnologica.descripcionCompleta',
+      id: 'control-acceso',
+      titleKey: 'services.accesos.titulo',
+      initialDescKey: 'services.accesos.descripcionInicial',
+      moreDescKey: 'services.accesos.descripcionCompleta',
       imageSrc: '/img/Services/telemetria.webp',
-      imageAlt: 'Monitor con cámaras de seguridad y datos de telemetría'
+      imageAlt: 'Sistema de control de acceso y supervisión 24/7'
     },
   ];
 

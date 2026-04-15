@@ -18,7 +18,7 @@ const CtaSection = () => {
             <div className="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-2xl shadow-red-900/20">
               {/* Usamos la etiqueta <video> nativa de HTML con controles */}
               <video controls muted playsInline className="w-full h-full object-cover">
-                <source src="/img/videos/spot TSC-1.mp4" type="video/mp4" />
+                <source src="/img/Videos/spot%20TSC-1.mp4" type="video/mp4" />
                 {t('cta.videoError')}
               </video>
             </div>

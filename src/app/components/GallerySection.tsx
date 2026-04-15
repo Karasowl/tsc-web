@@ -14,12 +14,12 @@ const galleryImages = [
 
 // Lista de servicios para el ticker. Se duplicará para el efecto infinito.
 const servicesTicker = [
-  "Seguridad privada",
-  { text: "Custodia", highlighted: true },
-  "Consultoría",
-  "Protección ejecutiva",
-  "Examen de confianza",
-  "Intramuros",
+  "Seguridad Privada",
+  { text: "Guardias Intramuros", highlighted: true },
+  "Vigilancia para Empresas",
+  "Control de Acceso",
+  "Seguridad Industrial",
+  "Toluca · Metepec · Lerma",
 ];
 
 const GallerySection = () => {

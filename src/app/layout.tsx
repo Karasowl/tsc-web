@@ -20,8 +20,42 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TSC Seguridad Privada - Protección Total",
-  description: "Soluciones expertas en seguridad privada, custodia de mercancías y protección ejecutiva. Personal certificado con registro REPSE.",
+  title: "Guardias de Seguridad en Toluca | TSC Seguridad Privada",
+  description:
+    "Servicio de guardias intramuros y vigilancia privada para empresas del Valle de Toluca, Metepec y Lerma. Empresa de seguridad privada con REPSE vigente. Cotiza desde Toluca.",
+  keywords: [
+    "seguridad privada",
+    "empresas seguridad privada",
+    "servicio de seguridad privada",
+    "guardias intramuros",
+    "vigilancia privada",
+    "contratar seguridad privada",
+    "seguridad para empresas",
+    "servicio de guardias de seguridad",
+    "servicio de seguridad intramuros",
+    "cotizar seguridad privada",
+    "Toluca",
+    "Metepec",
+    "Lerma",
+    "Valle de Toluca",
+    "REPSE",
+  ],
+  alternates: {
+    canonical: "https://guardias.tscseguridadprivada.com.mx/",
+  },
+  openGraph: {
+    title: "Guardias de Seguridad en Toluca | TSC Seguridad Privada",
+    description:
+      "Guardias intramuros y vigilancia privada para empresas del Valle de Toluca, Metepec y Lerma. Cotiza sin compromiso.",
+    url: "https://guardias.tscseguridadprivada.com.mx/",
+    siteName: "TSC Seguridad Privada",
+    locale: "es_MX",
+    type: "website",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
   icons: {
     icon: "/img/cropped-fav-1.ico",
     shortcut: "/img/cropped-fav-1.ico",
