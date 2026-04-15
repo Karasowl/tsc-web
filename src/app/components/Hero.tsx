@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-start pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-20 text-white overflow-hidden"
+      className="relative min-h-screen flex items-start pt-36 sm:pt-36 md:pt-40 lg:pt-44 pb-20 text-white overflow-hidden"
     >
       {/* Videos de fondo */}
       <video
