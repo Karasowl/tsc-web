@@ -23,7 +23,7 @@ const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen flex items-center text-white overflow-hidden"
+      className="relative min-h-screen flex items-start pt-28 sm:pt-32 md:pt-36 lg:pt-40 pb-20 text-white overflow-hidden"
     >
       {/* Videos de fondo */}
       <video
@@ -53,7 +53,7 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(220,38,38,0.15),transparent_60%)] pointer-events-none" />
 
       {/* Contenido */}
-      <div className="container mx-auto px-6 sm:px-10 lg:px-16 relative z-10 pt-28 pb-20">
+      <div className="container mx-auto px-6 sm:px-10 lg:px-16 relative z-10 w-full">
         <div className="max-w-4xl">
           {/* Badge pill superior con dot animado */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/30 backdrop-blur-md mb-6 sm:mb-8">
