@@ -111,3 +111,90 @@ body {
     flex: 0 0 100% !important;
   }
 }
+
+/* ===== Leaflet / Mapa de Cobertura Valle de Toluca ===== */
+
+/* Contenedor del mapa — fondo transparente para mezclar con card dark */
+.tsc-map {
+  background: transparent !important;
+  border-radius: 0.75rem;
+  font-family: var(--font-geist-sans), Arial, sans-serif;
+}
+
+.tsc-map .leaflet-container {
+  background: #0a0a0a !important;
+  outline: none;
+}
+
+/* Atribución discreta (obligatoria por licencia OSM/CARTO) */
+.tsc-map .leaflet-control-attribution {
+  background: rgba(0, 0, 0, 0.6) !important;
+  color: #6b7280 !important;
+  font-size: 10px !important;
+  padding: 2px 6px !important;
+  backdrop-filter: blur(4px);
+}
+
+.tsc-map .leaflet-control-attribution a {
+  color: #9ca3af !important;
+}
+
+/* Tooltips permanentes como labels de ciudad */
+.leaflet-tooltip.tsc-map-label {
+  background: rgba(17, 24, 39, 0.85);
+  border: 1px solid rgba(156, 163, 175, 0.3);
+  border-radius: 6px;
+  color: #e5e7eb;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+  white-space: nowrap;
+}
+
+.leaflet-tooltip.tsc-map-label::before {
+  border-top-color: rgba(156, 163, 175, 0.3) !important;
+}
+
+/* Label destacado de la oficina TSC */
+.leaflet-tooltip.tsc-map-label--office {
+  background: rgba(127, 29, 29, 0.9);
+  border: 1px solid rgba(252, 165, 165, 0.5);
+  color: #fff;
+  font-weight: 700;
+  padding: 6px 12px;
+  text-align: center;
+}
+
+.leaflet-tooltip.tsc-map-label--office::before {
+  border-top-color: rgba(252, 165, 165, 0.5) !important;
+}
+
+.tsc-map-label__name {
+  display: block;
+}
+
+.tsc-map-label__sub {
+  display: block;
+  font-size: 10px;
+  font-weight: 400;
+  color: #fecaca;
+  margin-top: 2px;
+  letter-spacing: 0.02em;
+}
+
+/* Pulso sutil en el marker de la oficina */
+.tsc-map-office {
+  filter: drop-shadow(0 0 6px rgba(220, 38, 38, 0.6));
+  animation: tsc-map-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes tsc-map-pulse {
+  0%, 100% {
+    filter: drop-shadow(0 0 4px rgba(220, 38, 38, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(220, 38, 38, 0.95));
+  }
+}
