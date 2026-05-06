@@ -92,16 +92,17 @@ const ContactForm = () => {
             </div>
           </div>
 
-          {/* Empresa */}
+          {/* Empresa / Condominio / Instalación */}
           <div>
             <label htmlFor="empresa" className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
-              {t('contactForm.empresa')}
+              {t('contactForm.empresa')} *
             </label>
             <input
               type="text"
               id="empresa"
               name="empresa"
               placeholder={t('contactForm.empresaPlaceholder')}
+              required
               className="w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/60 focus:border-red-500/60 transition-all"
             />
           </div>

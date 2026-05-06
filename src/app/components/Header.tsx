@@ -82,7 +82,7 @@ const Header = () => {
                   ))}
                   <li>
                     <a
-                      href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola!%20Solicito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad%20privada."
+                      href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="group inline-flex items-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-2 px-4 rounded-lg shadow-lg shadow-red-900/40 hover:shadow-red-700/50 hover:scale-[1.03] transition-all duration-300 text-sm"
@@ -260,7 +260,7 @@ const Header = () => {
                 Contacto directo
               </span>
               <a
-                href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola!%20Solicito%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios%20de%20seguridad%20privada."
+                href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={closeMenu}
