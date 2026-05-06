@@ -56,7 +56,7 @@ const FloatingButtons = () => {
         {/* Botón de WhatsApp - AJUSTA bottom y right según necesites */}
         {/* bottom: distancia desde abajo, right: distancia desde la derecha */}
         <a
-          href="https://wa.me/5217291068887"
+          href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg fixed"

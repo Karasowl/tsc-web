@@ -89,7 +89,7 @@ const OperationsSection = () => {
             {/* CTAs */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
               <a
-                href="https://api.whatsapp.com/send/?phone=5217291068887"
+                href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center justify-center gap-2 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 text-white font-bold py-3 px-6 rounded-lg shadow-xl shadow-red-900/50 hover:shadow-red-700/60 hover:scale-[1.02] transition-all"
