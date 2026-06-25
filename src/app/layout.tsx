@@ -6,6 +6,7 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import AttributionTracker from "@/app/components/AttributionTracker";
 import FloatingButtons from "@/app/components/FloatingButtons";
 import { I18nProvider } from "@/app/i18n/I18nContext";
 
@@ -90,6 +91,7 @@ export default function RootLayout({
           ></iframe>
         </noscript>
         <I18nProvider>
+          <AttributionTracker />
           <FloatingButtons />
           {children}
         </I18nProvider>

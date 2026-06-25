@@ -7,6 +7,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaWhatsapp, FaPhoneAlt, FaMapMarkerAlt } from 'react-icons/fa';
 import { FiMenu, FiX, FiHome, FiUsers, FiShield, FiChevronRight } from 'react-icons/fi';
+import TrackedLeadLink from '@/app/components/TrackedLeadLink';
 import { useI18n } from '../i18n/I18nContext';
 
 type NavLink = {
@@ -81,7 +82,9 @@ const Header = () => {
                     </li>
                   ))}
                   <li>
-                    <a
+                    <TrackedLeadLink
+                      channel="whatsapp"
+                      placement="header_desktop_whatsapp"
                       href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
                       target="_blank"
                       rel="noopener noreferrer"
@@ -89,7 +92,7 @@ const Header = () => {
                     >
                       <FaWhatsapp className="text-base" />
                       {t('header.contactanos')}
-                    </a>
+                    </TrackedLeadLink>
                   </li>
                 </ul>
               </nav>
@@ -101,7 +104,7 @@ const Header = () => {
                 <li>
                   <div className="text-right">
                     <div className="font-bold text-base text-white leading-tight">
-                      Tel: <a href="tel:7291068887" className="hover:text-red-400 transition-colors">729 106 8887</a>
+                      Tel: <TrackedLeadLink channel="phone" placement="header_desktop_phone" href="tel:7291068887" className="hover:text-red-400 transition-colors">729 106 8887</TrackedLeadLink>
                     </div>
                     <div className="text-xs text-gray-400 mt-0.5">TSC Seguridad Privada</div>
                   </div>
@@ -259,7 +262,9 @@ const Header = () => {
               <span className="inline-block text-[10px] font-bold uppercase tracking-[0.25em] text-red-400 mb-3 px-1">
                 Contacto directo
               </span>
-              <a
+              <TrackedLeadLink
+                channel="whatsapp"
+                placement="header_mobile_whatsapp"
                 href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -268,7 +273,7 @@ const Header = () => {
               >
                 <FaWhatsapp className="text-2xl" />
                 <span>{t('header.contactanos')}</span>
-              </a>
+              </TrackedLeadLink>
             </div>
 
             {/* Language selector */}
@@ -320,12 +325,14 @@ const Header = () => {
               <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-red-500/10 ring-1 ring-red-500/30 text-red-400">
                 <FaPhoneAlt className="text-sm" />
               </span>
-              <a
+              <TrackedLeadLink
+                channel="phone"
+                placement="header_mobile_phone"
                 href="tel:7291068887"
                 className="font-bold text-white hover:text-red-400 transition-colors"
               >
                 729 106 8887
-              </a>
+              </TrackedLeadLink>
             </div>
             <div className="flex items-start gap-3 text-gray-400 text-xs leading-relaxed">
               <span className="inline-flex items-center justify-center w-9 h-9 rounded-lg bg-red-500/10 ring-1 ring-red-500/30 text-red-400 flex-shrink-0">

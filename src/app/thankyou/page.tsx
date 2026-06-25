@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { FaCheckCircle, FaWhatsapp, FaHome } from 'react-icons/fa';
+import TrackedLeadLink from '@/app/components/TrackedLeadLink';
 
 export default function ThankYouPage() {
   return (
@@ -36,7 +37,9 @@ export default function ThankYouPage() {
           <p className="text-gray-400 mb-4">
             Si tu solicitud es urgente, contáctanos directamente por WhatsApp
           </p>
-          <a
+          <TrackedLeadLink
+            channel="whatsapp"
+            placement="thankyou_whatsapp"
             href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola!%20Acabo%20de%20enviar%20el%20formulario%20y%20necesito%20atenci%C3%B3n%20inmediata."
             target="_blank"
             rel="noopener noreferrer"
@@ -44,7 +47,7 @@ export default function ThankYouPage() {
           >
             <FaWhatsapp className="text-2xl" />
             Contactar por WhatsApp
-          </a>
+          </TrackedLeadLink>
         </div>
 
         {/* Botones de acción */}

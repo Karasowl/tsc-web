@@ -5,6 +5,7 @@
 import { useEffect, useState } from 'react';
 import Script from 'next/script';
 import { FaWhatsapp, FaArrowUp } from 'react-icons/fa';
+import TrackedLeadLink from '@/app/components/TrackedLeadLink';
 
 const FloatingButtons = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -55,7 +56,9 @@ const FloatingButtons = () => {
 
         {/* Botón de WhatsApp - AJUSTA bottom y right según necesites */}
         {/* bottom: distancia desde abajo, right: distancia desde la derecha */}
-        <a
+        <TrackedLeadLink
+          channel="whatsapp"
+          placement="floating_whatsapp"
           href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
           target="_blank"
           rel="noopener noreferrer"
@@ -64,7 +67,7 @@ const FloatingButtons = () => {
           aria-label="Contactar por WhatsApp"
         >
           <FaWhatsapp className="text-4xl" />
-        </a>
+        </TrackedLeadLink>
       </div>
 
       {/* Script del Chatbot de Dindon usando next/script */}

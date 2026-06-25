@@ -5,6 +5,7 @@
 import { useState, FormEvent } from 'react';
 import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import { useI18n } from '../i18n/I18nContext';
+import { appendAdsAttributionToFormData } from '@/app/lib/adsAttribution';
 
 const ContactForm = () => {
   const { t } = useI18n();
@@ -18,6 +19,7 @@ const ContactForm = () => {
 
     const form = event.currentTarget;
     const data = new FormData(form);
+    appendAdsAttributionToFormData(data);
 
     try {
       const response = await fetch("https://formspree.io/f/xnnvdqdo", {

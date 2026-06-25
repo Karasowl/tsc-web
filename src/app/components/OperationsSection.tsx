@@ -5,6 +5,7 @@
 import React from 'react';
 import dynamic from 'next/dynamic';
 import { FaWhatsapp, FaMapMarkerAlt, FaPlaneDeparture, FaBuilding, FaArrowRight } from 'react-icons/fa';
+import TrackedLeadLink from '@/app/components/TrackedLeadLink';
 import { useI18n } from '../i18n/I18nContext';
 
 // Leaflet accede a `window` al importar → cargar sólo en client
@@ -88,7 +89,9 @@ const OperationsSection = () => {
 
             {/* CTAs */}
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a
+              <TrackedLeadLink
+                channel="whatsapp"
+                placement="operations_section_whatsapp"
                 href="https://api.whatsapp.com/send/?phone=5217291068887&text=%C2%A1Hola%21%20Quisiera%20contratar%20servicios%20de%20seguridad%20privada"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,7 +99,7 @@ const OperationsSection = () => {
               >
                 <FaWhatsapp className="text-lg" />
                 <span>{t('header.contactanos')}</span>
-              </a>
+              </TrackedLeadLink>
               <a
                 href="#formulario-contacto"
                 className="group inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 backdrop-blur-md border border-white/20 hover:border-red-500/60 text-white font-semibold py-3 px-6 rounded-lg transition-all"
