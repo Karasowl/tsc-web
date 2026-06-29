@@ -1,0 +1,164 @@
+================================================================================
+  CONTINUAR.txt — Cómo recrear el proyecto en otra PC y seguir trabajando
+  Proyecto: tsc-web (landing-seguridad-tsc)
+  Última actualización: 2026-06-29
+================================================================================
+
+QUÉ ES ESTO
+--------------------------------------------------------------------------------
+Landing page de TSC (seguridad) hecha con Next.js 15 (App Router) + React 19 +
+TypeScript + Tailwind CSS 4. Incluye:
+  - La landing en sí (código en src/app/).
+  - Un set grande de cotizaciones en HTML estático (public/cotizaciones/).
+  - Formulario de contacto que envía a Formspree.
+  - Google Tag Manager para analítica / rastreo de Google Ads.
+
+Se despliega en Vercel (proyecto "tsc-web"). El deploy es automático: cada push
+a la rama master en GitHub dispara un despliegue.
+
+Repo: https://github.com/Karasowl/tsc-web.git
+
+
+--------------------------------------------------------------------------------
+PASO 0 — REQUISITOS EN LA PC NUEVA
+--------------------------------------------------------------------------------
+  - Git
+  - Node.js 20 LTS o superior (esta PC usa Node 24.7.0; npm 11.5.1)
+    Verifica con:  node -v   y   npm -v
+  - Un editor (VS Code recomendado)
+
+NO necesitas: base de datos, Docker, ni servidores externos. Es 100% estático +
+funciones de Next. No hay backend propio ni secretos que configurar.
+
+
+--------------------------------------------------------------------------------
+PASO 1 — BAJAR EL REPO
+--------------------------------------------------------------------------------
+Primera vez en la PC nueva:
+    git clone https://github.com/Karasowl/tsc-web.git
+    cd tsc-web
+
+Si ya lo tenías clonado, solo actualiza:
+    git pull
+
+
+--------------------------------------------------------------------------------
+PASO 2 — INSTALAR DEPENDENCIAS
+--------------------------------------------------------------------------------
+    npm install
+
+(Esto recrea node_modules/, que NO se sube al repo. Tarda 1-2 min.)
+
+
+--------------------------------------------------------------------------------
+PASO 3 — LEVANTAR EN MODO DESARROLLO
+--------------------------------------------------------------------------------
+    npm run dev
+
+Abre:  http://localhost:3000
+
+Eso es TODO. No hay nada más que configurar para empezar a trabajar.
+
+
+--------------------------------------------------------------------------------
+VARIABLES DE ENTORNO (.env)
+--------------------------------------------------------------------------------
+NO HAY. El proyecto no usa ninguna variable de entorno (no existe un solo
+`process.env` en el código). Por eso NO hay archivo .env.example: sería vacío y
+solo confundiría.
+
+Los dos valores "configurables" están hardcodeados en el código porque son
+públicos del lado del cliente (no son secretos):
+
+  - Formspree (formulario de contacto):
+      ID "xnnvdqdo"
+      Archivo: src/app/components/ContactForm.tsx
+      URL: https://formspree.io/f/xnnvdqdo
+
+  - Google Tag Manager (analítica / Google Ads):
+      ID "GTM-P9JTR8ZV"
+      Archivo: src/app/layout.tsx
+
+Si algún día quieres mover estos a variables de entorno, créalas como
+NEXT_PUBLIC_FORMSPREE_ID y NEXT_PUBLIC_GTM_ID y reemplaza los valores fijos.
+
+
+--------------------------------------------------------------------------------
+COMANDOS DISPONIBLES (package.json)
+--------------------------------------------------------------------------------
+    npm run dev     -> servidor de desarrollo (http://localhost:3000)
+    npm run build   -> compila para producción
+    npm run start   -> sirve el build de producción localmente
+    npm run lint    -> ESLint
+
+
+--------------------------------------------------------------------------------
+DÓNDE ESTÁ CADA COSA
+--------------------------------------------------------------------------------
+  src/app/                  Código de la landing (App Router de Next.js)
+    ├─ page.tsx             Página principal
+    ├─ layout.tsx           Layout global + Google Tag Manager
+    ├─ components/          Componentes React (incl. ContactForm.tsx)
+    ├─ i18n/                Textos / internacionalización
+    ├─ lib/                 Utilidades
+    ├─ thankyou/            Página de "gracias" tras enviar formulario
+    └─ test-video/          Pruebas de video
+
+  public/                   Archivos estáticos servidos tal cual
+    └─ cotizaciones/        Cotizaciones en HTML (+ css/, js/, img/, fontawesome/)
+                            Ver public/cotizaciones/README.txt para detalles.
+
+  next.config.ts            Config de Next: rewrites que mapean las URLs de
+                            cotizaciones (ej. /cotizacion-cliente -> el HTML real)
+                            y headers. Si agregas cotizaciones, revisa aquí.
+
+  README.md                 Readme genérico de create-next-app (no crítico).
+
+
+--------------------------------------------------------------------------------
+AGREGAR UNA COTIZACIÓN NUEVA (flujo común)
+--------------------------------------------------------------------------------
+  1. Pon el HTML en public/cotizaciones/cotizacion-<cliente>.html
+  2. Sus recursos (css/js/img) ya se sirven por los rewrites de next.config.ts.
+  3. Quedará accesible en /cotizacion-<cliente> (sin .html, gracias al rewrite).
+  4. git add, commit y push -> Vercel la publica sola.
+
+
+--------------------------------------------------------------------------------
+DESPLIEGUE
+--------------------------------------------------------------------------------
+Automático vía GitHub + Vercel: haz push a master y Vercel despliega.
+
+    git add -A
+    git commit -m "tu mensaje"
+    git push
+
+(Opcional) Si quieres usar la CLI de Vercel desde la PC nueva, instálala con
+`npm i -g vercel` y vincula con `vercel link` (proyecto: tsc-web). NO es
+necesario para el flujo normal por git. La carpeta .vercel/ NO se sube al repo.
+
+
+--------------------------------------------------------------------------------
+QUÉ NO SE SUBE AL REPO (y está bien que falte al clonar)
+--------------------------------------------------------------------------------
+  node_modules/     -> se recrea con `npm install`
+  .next/            -> se recrea con `npm run dev` o `npm run build`
+  tmp/              -> logs locales de desarrollo (no hacen falta)
+  .vercel/          -> vínculo local con Vercel (re-vincular con `vercel link`)
+  .claude/          -> config local de Claude Code
+  .env*             -> aquí no aplica, no hay variables de entorno
+
+Todo lo anterior es regenerable. Tu trabajo real (código + cotizaciones) sí está
+versionado en git.
+
+
+--------------------------------------------------------------------------------
+ESTADO ACTUAL DEL TRABAJO
+--------------------------------------------------------------------------------
+Última función agregada (commit más reciente):
+  "Agregar rastreo de atribucion de Google Ads en leads"
+
+Para ver el historial reciente al llegar a la PC nueva:
+    git log --oneline -10
+
+================================================================================
