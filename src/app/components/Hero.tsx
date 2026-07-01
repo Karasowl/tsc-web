@@ -101,6 +101,11 @@ const Hero = () => {
             </Link>
           </div>
 
+          {/* Franja de confianza */}
+          <p className="mt-4 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.14em] text-gray-400">
+            Empresa registrada · Permiso vigente EdoMex · REPSE · Cotización el mismo día
+          </p>
+
           {/* Stats strip */}
           <div className="mt-12 sm:mt-16 grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-3xl">
             <Stat label="Registro" value="REPSE Vigente" />

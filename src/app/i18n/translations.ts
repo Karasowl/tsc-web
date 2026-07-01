@@ -8,9 +8,9 @@ export const translations = {
       avisoPrivacidad: "Aviso de Privacidad"
     },
   hero: {
-    titulo: "Servicio de Seguridad Privada",
+    titulo: "Empresas de Seguridad Privada",
     titulo2: "y Vigilancia",
-    tituloComplemento: "en el Valle de Toluca",
+    tituloComplemento: "en Toluca y Metepec",
     subtitulo: "Servicio intramuros y vigilancia privada para industrias, corporativos, bodegas, plazas comerciales, condominios y operaciones del Valle de Toluca.",
     registroREPSE: "REPSE vigente",
     subtituloFinal: "Atención comercial desde Toluca.",
@@ -142,9 +142,9 @@ export const translations = {
       avisoPrivacidad: "Privacy Notice"
     },
     hero: {
-      titulo: "Private Security Service",
+      titulo: "Private Security Companies",
       titulo2: "and Surveillance",
-      tituloComplemento: "in the Valle de Toluca",
+      tituloComplemento: "in Toluca and Metepec",
       subtitulo: "Intramural guard service and professional surveillance for industrial, corporate, warehouse, commercial plazas, condominiums and business operations in the Valle de Toluca region.",
       registroREPSE: "Active REPSE registration",
       subtituloFinal: "Commercial service from Toluca.",
