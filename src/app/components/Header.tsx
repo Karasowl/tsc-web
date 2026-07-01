@@ -104,7 +104,7 @@ const Header = () => {
                 <li>
                   <div className="text-right">
                     <div className="font-bold text-base text-white leading-tight">
-                      Tel: <TrackedLeadLink channel="phone" placement="header_desktop_phone" href="tel:7291068887" className="hover:text-red-400 transition-colors">729 106 8887</TrackedLeadLink>
+                      Tel: <TrackedLeadLink channel="phone" placement="header_desktop_phone" href="tel:+527291068887" className="hover:text-red-400 transition-colors">729 106 8887</TrackedLeadLink>
                     </div>
                     <div className="text-xs text-gray-400 mt-0.5">TSC Seguridad Privada</div>
                   </div>
@@ -328,7 +328,7 @@ const Header = () => {
               <TrackedLeadLink
                 channel="phone"
                 placement="header_mobile_phone"
-                href="tel:7291068887"
+                href="tel:+527291068887"
                 className="font-bold text-white hover:text-red-400 transition-colors"
               >
                 729 106 8887
