@@ -4,6 +4,7 @@ import Header from '@/app/components/Header';
 import Hero from '@/app/components/Hero';
 import AboutSection from './components/AboutSection';
 import CtaSection from './components/CtaSection';
+import CumplimientoSection from './components/CumplimientoSection';
 import ContactSection from './components/ContactSection';
 import ClientsSection from './components/ClientsSection';
 import GallerySection from './components/GallerySection';
@@ -20,6 +21,7 @@ export default function HomePage() {
     <main className="bg-gray-900">
       <Header />
       <Hero />
+      <CumplimientoSection />
       <AboutSection />
       <CtaSection />
       <ContactSection />

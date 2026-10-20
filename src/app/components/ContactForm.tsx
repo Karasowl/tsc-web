@@ -7,6 +7,8 @@ import { FaArrowRight, FaCheckCircle } from 'react-icons/fa';
 import { useI18n } from '../i18n/I18nContext';
 import { appendAdsAttributionToFormData } from '@/app/lib/adsAttribution';
 
+const selectClass = "w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/60 focus:border-red-500/60 transition-all appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2020%2020%27%20fill=%27%239ca3af%27%3e%3cpath%20fill-rule=%27evenodd%27%20d=%27M5.23%207.21a.75.75%200%20011.06.02L10%2011.06l3.71-3.83a.75.75%200%20111.08%201.04l-4.25%204.39a.75.75%200%2001-1.08%200L5.21%208.27a.75.75%200%2001.02-1.06z%27%20clip-rule=%27evenodd%27/%3e%3c/svg%3e')] bg-no-repeat bg-[right_1rem_center] pr-10";
+
 const ContactForm = () => {
   const { t } = useI18n();
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -134,7 +136,7 @@ const ContactForm = () => {
               id="servicio"
               name="servicio"
               defaultValue=""
-              className="w-full bg-black/50 border border-white/10 rounded-lg py-3 px-4 text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-red-500/60 focus:border-red-500/60 transition-all appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3csvg%20xmlns=%27http://www.w3.org/2000/svg%27%20viewBox=%270%200%2020%2020%27%20fill=%27%239ca3af%27%3e%3cpath%20fill-rule=%27evenodd%27%20d=%27M5.23%207.21a.75.75%200%20011.06.02L10%2011.06l3.71-3.83a.75.75%200%20111.08%201.04l-4.25%204.39a.75.75%200%2001-1.08%200L5.21%208.27a.75.75%200%2001.02-1.06z%27%20clip-rule=%27evenodd%27/%3e%3c/svg%3e')] bg-no-repeat bg-[right_1rem_center] pr-10"
+              className={selectClass}
             >
               <option value="" className="bg-gray-900">{t('contactForm.servicioDefault')}</option>
               <option value="intramuros" className="bg-gray-900">{t('contactForm.servicios.intramuros')}</option>
@@ -143,6 +145,46 @@ const ContactForm = () => {
               <option value="corporativo" className="bg-gray-900">{t('contactForm.servicios.corporativo')}</option>
               <option value="otro" className="bg-gray-900">{t('contactForm.servicios.otro')}</option>
             </select>
+          </div>
+
+          {/* Puestos + arranque: califican el tamaño y la urgencia antes de la primera llamada */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+            <div>
+              <label htmlFor="puestos" className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
+                ¿Cuántos puestos? *
+              </label>
+              <select
+                id="puestos"
+                name="puestos"
+                defaultValue=""
+                required
+                className={selectClass}
+              >
+                <option value="" className="bg-gray-900">Elige</option>
+                <option value="1 puesto" className="bg-gray-900">1 puesto</option>
+                <option value="2 a 3 puestos" className="bg-gray-900">2 a 3 puestos</option>
+                <option value="4 o más puestos" className="bg-gray-900">4 o más puestos</option>
+                <option value="No lo sé aún" className="bg-gray-900">No lo sé aún</option>
+              </select>
+            </div>
+            <div>
+              <label htmlFor="arranque" className="block text-xs font-semibold text-gray-300 mb-1.5 uppercase tracking-wider">
+                ¿Para cuándo? *
+              </label>
+              <select
+                id="arranque"
+                name="arranque"
+                defaultValue=""
+                required
+                className={selectClass}
+              >
+                <option value="" className="bg-gray-900">Elige</option>
+                <option value="Lo antes posible" className="bg-gray-900">Lo antes posible</option>
+                <option value="Este mes" className="bg-gray-900">Este mes</option>
+                <option value="En 1 a 3 meses" className="bg-gray-900">En 1 a 3 meses</option>
+                <option value="Solo estoy comparando" className="bg-gray-900">Solo estoy comparando</option>
+              </select>
+            </div>
           </div>
 
           {/* Mensaje */}

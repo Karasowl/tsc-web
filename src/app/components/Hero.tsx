@@ -68,8 +68,8 @@ const Hero = () => {
 
           {/* Título con gradiente en la línea final */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.02]">
-            <span className="block text-white">{t('hero.titulo')}</span>
-            <span className="block text-white">{t('hero.titulo2')}</span>
+            <span className="block text-white">{t('hero.titulo')}</span>{' '}
+            <span className="block text-white">{t('hero.titulo2')}</span>{' '}
             <span className="block bg-gradient-to-r from-red-400 via-red-500 to-red-700 bg-clip-text text-transparent">
               {t('hero.tituloComplemento')}
             </span>
