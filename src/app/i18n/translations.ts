@@ -53,7 +53,7 @@ export const translations = {
     },
     about: {
       titulo: "Seguridad Local con Estándares Profesionales",
-      descripcion: "TSC Seguridad Privada opera desde Toluca ofreciendo servicios de vigilancia intramuros para empresas del Valle de Toluca, Metepec, Lerma y zonas aledañas. Nuestro equipo está certificado y contamos con",
+      descripcion: "TSC Seguridad Privada opera desde Toluca ofreciendo servicios de vigilancia intramuros para empresas del Valle de Toluca, Metepec, Lerma y zonas aledañas. Nuestro equipo está capacitado y contamos con",
       permisosFederales: "permisos vigentes",
       acreditacionCTPAT: "estándares de calidad",
       registroREPSE: "registro REPSE vigente",
@@ -68,7 +68,7 @@ export const translations = {
       },
       repse: {
         titulo: "REPSE Vigente",
-        descripcion: "Personal completamente registrado y certificado ante la STPS."
+        descripcion: "Registro vigente ante la STPS para prestar servicios especializados de seguridad."
       }
     },
     operations: {
@@ -91,7 +91,7 @@ export const translations = {
       titulo: "Solicita tu Cotización de Seguridad",
       subtitulo: "Guardias intramuros para empresas del Valle de Toluca",
       seguridad: {
-        titulo: "Personal Local Certificado",
+        titulo: "Personal Local Capacitado",
         descripcion: "Guardias de seguridad con REPSE vigente, supervisión constante y atención directa desde Toluca."
       },
       urgencia: "Empresas de Toluca, Metepec y Lerma nos prefieren.",
@@ -187,7 +187,7 @@ export const translations = {
     },
     about: {
       titulo: "Local Security with Professional Standards",
-      descripcion: "TSC Seguridad Privada operates from Toluca offering intramural surveillance services to companies in the Valle de Toluca, Metepec, Lerma and surrounding areas. Our team is certified and we hold",
+      descripcion: "TSC Seguridad Privada operates from Toluca offering intramural surveillance services to companies in the Valle de Toluca, Metepec, Lerma and surrounding areas. Our team is trained and we hold",
       permisosFederales: "active permits",
       acreditacionCTPAT: "quality standards",
       registroREPSE: "active REPSE registration",
@@ -202,7 +202,7 @@ export const translations = {
       },
       repse: {
         titulo: "Active REPSE Registration",
-        descripcion: "Personnel fully registered and certified before STPS."
+        descripcion: "Active STPS registration to provide specialized security services."
       }
     },
     operations: {
@@ -225,7 +225,7 @@ export const translations = {
       titulo: "Request Your Security Quote",
       subtitulo: "Intramural guards for companies in the Valle de Toluca",
       seguridad: {
-        titulo: "Certified Local Personnel",
+        titulo: "Trained Local Personnel",
         descripcion: "Security guards with active REPSE, constant supervision and direct service from Toluca."
       },
       urgencia: "Companies in Toluca, Metepec and Lerma choose us.",
